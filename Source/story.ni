@@ -8,17 +8,36 @@ Release along with the source text, an interpreter, and a website.
 
 The time of day is 11:04 AM.
 
-The player carries a rusty knife.  The description of the knife is "Rust covers the long, thin blade, which ends in a tattered leather hilt."
+The player carries a rusty knife.  The description of the knife is "Rust covers the long, thin blade of the knife, which ends in a tattered leather hilt."  [TO DO: find the knife somewhere else, cut something with it]
 
 The Wabe is a room. "A grass plot around a sundial."  The grass is in the wabe.  The grass is scenery.
 
-A sundial is in the wabe.  The bronze plate is part of the sundial.  The hole is a privately-named part of the plate.
+The sundial is scenery in the wabe.  The description of the sundial is "The sundial is a flat circular slab of granite, about three feet in diameter.  Markings carved around its top edge allow the time to be indicated to the nearest minute."  ["[if anything is in the sundial]  .[else]  "  ]  Understand "time" as the sundial.  Understand "slab" or "granite" or "markings" or "shadow" as the sundial when we have examined the sundial.
 
-The sundial is undescribed and fixed in place.  The description of the sundial is "A flat circular slab of granite, about three feet in diameter, with a bronze plate embedded on top.[if anything is in the hole]  [A gnomon] protrudes from the center of the bronze plate at an angle, casting a shadow onto the plate.[else]  A hole in the center of the bronze plate would typically hold something long and thin to cast a shadow onto the plate.[end if]".  Understand "slab" or "granite" as the sundial.
+[To avoid printing the sundial contents separately:]
+This is the examine sundial rule:
+	if the noun is the sundial:
+		if anything is in the sundial:
+			say "[A gnomon] protrudes from the center of the sundial at an angle, casting a shadow pointing to [the sundial time].";
+		otherwise:
+			say "At the moment, there's nothing to cast a shadow onto the markings.";
+	otherwise:
+		follow the examine containers rule.
+The examine sundial rule is listed instead of the examine containers rule in the carry out examining rules.
 
-To say a gnomon: say "[contents of the hole]" in sentence case.
+The box is a container in the wabe.  The description is "A cardboard box."
 
-The description of the bronze plate is "Markings engraved along the edge of the plate indicate the time to the nearest minute.[if anything is in the hole]  The shadow currently points to [the sundial time]."  To say the sundial time: say "[if the knife is in the hole]9:37 am[else][the time of day]"
+[
+The sundial can be examined.
+Instead of examining the sundial:
+    say "[the description of the sundial]";
+    now the sundial is examined.
+    ]
+
+[TO DO: message for x time when there is no gnomon]
+[TO DO: sun is scenery]
+
+To say a gnomon: say "[contents of the sundial]" in sentence case. To say the sundial time: say "[if the knife is in the sundial]9:37 am[else][the time of day]".
 
 [TO DO: this doesn't work in Parchment!!]
 To say the uppercase time of day:
@@ -32,9 +51,22 @@ To say the uppercase time of day:
 The taking action has an object called previous locale (matched as "from"). 
 Setting action variables for taking: now previous locale is the holder of the noun.
 
-The brass key is a privately-named thing in the hole.  The printed name of the key is "[if the key is in the hole]slender brass rod[else]brass key".  Understand "slender" and "brass" and "rod" and "gnomon" as the key.  Understand "key" as the key when the key is handled.  The key is undescribed.  After taking the key from the hole: say "You twist the rod and remove it from the sundial."  After taking the key from the hole for the first time: say "You twist the rod and remove it from the sundial.  Huh, look at that[--]it's actually a key!"
-[TO DO: don't repeat the removal message.] [TO DO: after the key is handled, always call it the key, not the rod]
+The brass key is a privately-named thing in the sundial.  The printed name of the key is "[if the key is handled]brass key[else]slender brass rod".
+Understand "slender" and "brass" and "rod" as the key when the key is mentioned.
+Understand "gnomon" as the key when the key is mentioned and the key is in the sundial.
+Understand "key" as the key when the key is handled.
+After taking the key from the sundial: say "You twist [the key] and remove it from [the sundial]."
+After taking the key for the first time:
+    say "You twist [the key] and remove it from [the sundial].[paragraph break]Huh, look at that[--]it's actually a key!";
+    now the description of the key is "A slender brass rod with key-teeth on one end."
+[TO DO: don't repeat the removal message in both rules.]  
 
-The carrying capacity of the hole is 1.  Understand "hole" as the hole when nothing is in the hole.  Understand "hole" as the sundial when anything is in the hole and the key is handled.  Instead of inserting something into the sundial: try inserting the noun into the hole.  Instead of inserting something into the plate: try inserting the noun into the hole.
+Instead of turning or pulling the key when the key is in the sundial, try removing the key from the sundial.
+[TO DO: disallow turning when not in the sundial?]
 
+The carrying capacity of the sundial is 1.    [TO DO: only allow the key and knife?]  [TO DO: better message when the sundial is "full".]
+
+Understand the command "screw" as something new.  Understand "screw [something] into [sundial]" as inserting it into.  After inserting the key into the sundial: say "You screw [the key] back into [the sundial]."
+
+Understand "jam [something] into [sundial]" as inserting it into.  After inserting the knife into the sundial: say "You jam [the knife] into [the sundial].  Strangely, the direction of its shadow seems to have nothing to do with the position of the sun..."  [TO DO: handle "screw knife"?]
 
