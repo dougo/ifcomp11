@@ -1,6 +1,21 @@
 "ifcomp11-D" by Pseudonym TBD
+[
+* Game D: (Sunny town. Also a building site, with building stones piled around.)
 
-To say --: say Unicode em dash.  em dash translates into Unicode as 8212.  [From Emily.  Put this in an extension?]
+You find a rusty knife, which you use to cut some stuff. You also come across a sundial, and (in the spirit of Trinity) unscrew the gnomon -- it's a repurposed brass key which you need. You then meet a man who wants the knife. In return, he gives you his hat, which you need to disguise your face for some reason or other.
+
+Somewhere in this town, you come across a legend: a man who has stolen the treasure of time. Even worse, he then lost it. He is cursed to wander until he finds it again, and replaces it on the altar he stole it from.
+
+The rusty knife in game D is the magic knife in game C.
+If you unscrew the sundial gnomon and stick the knife in it, the shadow
+points at a specific time.  The magic time is 9:37.
+
+The hat has no specific physical description, but the protagonist in game D finds it surprising.
+
+How about we focus on the hat, and leave the man vague? Of course I already suggested leaving the hat vague too.
+
+We could mention different but not mutually exclusive characteristics: he's tall, he's spry, he's unshaven, he's dark.
+]
 
 Include Neutral Library Messages by Aaron Reed and Small Kindnesses by Aaron Reed.  Use American dialect, the serial comma, and no scoring.
 
@@ -20,12 +35,10 @@ This is the examine sundial rule:
 		if anything is in the sundial:
 			say "[A gnomon] protrudes from the center of the sundial at an angle, casting a shadow pointing to [the sundial time].";
 		otherwise:
-			say "At the moment, there's nothing to cast a shadow onto the markings.";
+			say "There's nothing to cast a shadow onto the markings, making it pretty useless as a sundial.";
 	otherwise:
 		follow the examine containers rule.
 The examine sundial rule is listed instead of the examine containers rule in the carry out examining rules.
-
-The box is a container in the wabe.  The description is "A cardboard box."
 
 [
 The sundial can be examined.
@@ -34,7 +47,6 @@ Instead of examining the sundial:
     now the sundial is examined.
     ]
 
-[TO DO: message for x time when there is no gnomon]
 [TO DO: sun is scenery]
 
 To say a gnomon: say "[contents of the sundial]" in sentence case. To say the sundial time: say "[if the knife is in the sundial]9:37 am[else][the time of day]".
@@ -70,3 +82,4 @@ Understand the command "screw" as something new.  Understand "screw [something] 
 
 Understand "jam [something] into [sundial]" as inserting it into.  After inserting the knife into the sundial: say "You jam [the knife] into [the sundial].  Strangely, the direction of its shadow seems to have nothing to do with the position of the sun..."  [TO DO: handle "screw knife"?]
 
+To say --: say Unicode em dash.  em dash translates into Unicode as 8212.  [From Emily.  Put this in an extension?]
