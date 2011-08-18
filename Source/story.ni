@@ -1,3 +1,5 @@
+[ Copyright © 2011, Doug Orleans.  This program is distributed under the terms of the GNU Affero General Public License.  See the file COPYING for details. ]
+
 "ifcomp11-D" by Pseudonym TBD
 [
 * Game D: (Sunny town. Also a building site, with building stones piled around.)
