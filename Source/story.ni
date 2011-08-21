@@ -1,6 +1,7 @@
 [ Copyright © 2011, Doug Orleans.  This program is distributed under the terms of the GNU Affero General Public License.  See the file COPYING for details. ]
 
-"ifcomp11-D" by Pseudonym TBD
+"ifcomp11-D" by Cameron Fox
+
 [
 * Game D: (Sunny town. Also a building site, with building stones piled around.)
 
@@ -13,75 +14,101 @@ If you unscrew the sundial gnomon and stick the knife in it, the shadow
 points at a specific time.  The magic time is 9:37.
 
 The hat has no specific physical description, but the protagonist in game D finds it surprising.
-
-How about we focus on the hat, and leave the man vague? Of course I already suggested leaving the hat vague too.
-
-We could mention different but not mutually exclusive characteristics: he's tall, he's spry, he's unshaven, he's dark.
+The man is also vaguely described, but is unshaven.
 ]
 
-Include Neutral Library Messages by Aaron Reed and Small Kindnesses by Aaron Reed.  Use American dialect, the serial comma, and no scoring.
+Use American dialect, the serial comma, and no scoring.
+
+Include Unicode Full Character Names by Graham Nelson.
+To say --: say Unicode em dash.
+
+Include Neutral Library Messages by Aaron Reed.
+[Use library message alerts.]
+
+Include Small Kindnesses by Aaron Reed, and Extended Grammar by Aaron Reed.
 
 Release along with the source text, an interpreter, and a website.
 
 The time of day is 11:04 AM.
 
-The player carries a rusty knife.  The description of the knife is "Rust covers the long, thin blade of the knife, which ends in a tattered leather hilt."  [TO DO: find the knife somewhere else, cut something with it]
+Section - The Rusty Knife
+
+The player carries a rusty knife.  The description of the knife is "Rust covers the blade of the knife, which ends in a tattered leather hilt."
+
+[TO DO: find the knife somewhere else, cut something with it]
+
+Section - The Sunny Town
+
+Section - The Building Site
+
+Section - The Sundial
 
 The Wabe is a room. "A grass plot around a sundial."  The grass is in the wabe.  The grass is scenery.
 
-The sundial is scenery in the wabe.  The description of the sundial is "The sundial is a flat circular slab of granite, about three feet in diameter.  Markings carved around its top edge allow the time to be indicated to the nearest minute."  ["[if anything is in the sundial]  .[else]  "  ]  Understand "time" as the sundial.  Understand "slab" or "granite" or "markings" or "shadow" as the sundial when we have examined the sundial.
+The sundial is scenery in the wabe.  The description of the sundial is "The sundial is a flat circular slab of granite, about three feet in diameter.  Markings carved around its top edge allow the time to be indicated to the nearest minute."
+Understand "time" as the sundial.
+Understand "slab" or "granite" or "markings" or "shadow" as the sundial when we have examined the sundial.
 
-[To avoid printing the sundial contents separately:]
-This is the examine sundial rule:
-	if the noun is the sundial:
-		if anything is in the sundial:
-			say "[A gnomon] protrudes from the center of the sundial at an angle, casting a shadow pointing to [the sundial time].";
-		otherwise:
-			say "There's nothing to cast a shadow onto the markings, making it pretty useless as a sundial.";
+[Avoid printing the sundial contents separately:]
+Carry out examining the sundial (this is the examine the sundial rule):
+	if anything is in the sundial:
+		say "[A gnomon] protrudes from the center of the sundial at an angle, casting a shadow pointing to [the sundial time].";
 	otherwise:
-		follow the examine containers rule.
-The examine sundial rule is listed instead of the examine containers rule in the carry out examining rules.
+		say "There's nothing to cast a shadow onto the markings, making it pretty useless as a sundial.";
+	rule succeeds.
+	The examine the sundial rule is listed after the standard examining rule in the carry out examining rules.
 
-[
-The sundial can be examined.
-Instead of examining the sundial:
-    say "[the description of the sundial]";
-    now the sundial is examined.
-    ]
+To say a gnomon: say "[contents of the sundial]" in sentence case.
+To say the sundial time: say "[if the knife is in the sundial]9:37 am[else][the time of day]".
 
 [TO DO: sun is scenery]
 
-To say a gnomon: say "[contents of the sundial]" in sentence case. To say the sundial time: say "[if the knife is in the sundial]9:37 am[else][the time of day]".
+[TO DO: night time?]
 
-[TO DO: this doesn't work in Parchment!!]
-To say the uppercase time of day:
-  let N be indexed text;
-  let N be "[the time of day]";
-  say N in upper case.
+The brass key is a privately-named thing in the sundial.
+The printed name of the key is "slender brass rod".
+Understand "slender" and "brass" and "rod" as the key when the key is mentioned.
+Understand "gnomon" as the key when the key is mentioned and the key is in the sundial.
 
-[TO DO: night time?]  ["apparent solar time" "A calendar scale engraved around the center shows the number of minutes to be added or subtracted depending on the day of the year to determine the mean solar time."]
+Instead of turning or pulling the key when the key is in the sundial, try taking the key.
 
 [From the "Removal" example:]
 The taking action has an object called previous locale (matched as "from"). 
 Setting action variables for taking: now previous locale is the holder of the noun.
 
-The brass key is a privately-named thing in the sundial.  The printed name of the key is "[if the key is handled]brass key[else]slender brass rod".
-Understand "slender" and "brass" and "rod" as the key when the key is mentioned.
-Understand "gnomon" as the key when the key is mentioned and the key is in the sundial.
+After taking the key from the sundial:
+	say "You twist [the key] and remove it from [the sundial].";
+	unless the key is handled:
+		[TO DO: this ends up printing two line breaks.  Should be a real paragraph break?]
+		say "[line break]Huh, look at that[--]it's actually a key!";
+		now the printed name of the key is "brass key";
+		now the description of the key is "A slender brass rod with key-teeth on one end."
+
 Understand "key" as the key when the key is handled.
-After taking the key from the sundial: say "You twist [the key] and remove it from [the sundial]."
-After taking the key for the first time:
-    say "You twist [the key] and remove it from [the sundial].[paragraph break]Huh, look at that[--]it's actually a key!";
-    now the description of the key is "A slender brass rod with key-teeth on one end."
-[TO DO: don't repeat the removal message in both rules.]  
 
-Instead of turning or pulling the key when the key is in the sundial, try removing the key from the sundial.
-[TO DO: disallow turning when not in the sundial?]
+The carrying capacity of the sundial is 1.
+[TO DO: only allow the key and knife?]
+[TO DO: better message when the sundial is "full".]
 
-The carrying capacity of the sundial is 1.    [TO DO: only allow the key and knife?]  [TO DO: better message when the sundial is "full".]
+After inserting the key into the sundial, say "You screw [the key] back into [the sundial]."
+After inserting the knife into the sundial, say "You jam [the knife] into [the sundial].  Strangely, the direction of its shadow seems to have nothing to do with the position of the sun..."
 
-Understand the command "screw" as something new.  Understand "screw [something] into [sundial]" as inserting it into.  After inserting the key into the sundial: say "You screw [the key] back into [the sundial]."
+Understand the command "screw" as something new.  Understand "screw [something] into [something]" and "jam [something] into [something]" as inserting it into.
 
-Understand "jam [something] into [sundial]" as inserting it into.  After inserting the knife into the sundial: say "You jam [the knife] into [the sundial].  Strangely, the direction of its shadow seems to have nothing to do with the position of the sun..."  [TO DO: handle "screw knife"?]
+Section - The Man in the Hat
 
-To say --: say Unicode em dash.  em dash translates into Unicode as 8212.  [From Emily.  Put this in an extension?]
+The unshaven man is a man in the Wabe.  He wears a surprising hat.
+
+Wanting relates a person to various things.  The verb to want (he wants, they want, he wanted, it is wanted, he is wanting) implies the wanting relation.
+
+This is the giving things to those who want them rule:
+	unless the second noun wants the noun:
+		abide by the block giving rule.
+The giving things to those who want them rule is listed instead of the block giving rule in the check giving it to rules.
+
+The unshaven man wants the knife.
+
+[TO DO: better message for giving him anything else]
+
+[TO DO: man gives hat in exchange]
+
