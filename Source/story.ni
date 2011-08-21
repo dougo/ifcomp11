@@ -31,6 +31,13 @@ Release along with the source text, an interpreter, and a website.
 
 The time of day is 11:04 AM.
 
+Section - New Rules
+
+The after reporting rules is a rulebook.
+
+A specific action-processing rule (this is the after report stage rule):
+	if action in world is true, abide by the after reporting rules.
+
 Section - The Rusty Knife
 
 The player carries a rusty knife.  The description of the knife is "Rust covers the blade of the knife, which ends in a tattered leather hilt."
@@ -76,13 +83,14 @@ Instead of turning or pulling the key when the key is in the sundial, try taking
 The taking action has an object called previous locale (matched as "from"). 
 Setting action variables for taking: now previous locale is the holder of the noun.
 
-After taking the key from the sundial:
+Report taking the key from the sundial:
 	say "You twist [the key] and remove it from [the sundial].";
-	unless the key is handled:
-		[TO DO: this ends up printing two line breaks.  Should be a real paragraph break?]
-		say "[line break]Huh, look at that[--]it's actually a key!";
-		now the printed name of the key is "brass key";
-		now the description of the key is "A slender brass rod with key-teeth on one end."
+	rule succeeds. [Don't also report "Taken."]
+
+After reporting taking the key for the first time:
+	say "Huh, look at that[--]it's actually a key!";
+	now the printed name of the key is "brass key";
+	now the description of the key is "A slender brass rod with key-teeth on one end."
 
 Understand "key" as the key when the key is handled.
 
@@ -98,6 +106,7 @@ Understand the command "screw" as something new.  Understand "screw [something] 
 Section - The Man in the Hat
 
 The unshaven man is a man in the Wabe.  He wears a surprising hat.
+[TO DO: mention the hat!]
 
 Wanting relates a person to various things.  The verb to want (he wants, they want, he wanted, it is wanted, he is wanting) implies the wanting relation.
 
@@ -107,8 +116,12 @@ This is the giving things to those who want them rule:
 The giving things to those who want them rule is listed instead of the block giving rule in the check giving it to rules.
 
 The unshaven man wants the knife.
+[TO DO: indicate to the player that he wants the knife]
 
 [TO DO: better message for giving him anything else]
 
 [TO DO: man gives hat in exchange]
+The player wants the hat.
+After reporting giving the knife to the man:
+	try the unshaven man giving the hat to the actor.
 
