@@ -59,15 +59,15 @@ The player carries a rusty knife.  The description of the knife is "Rust covers 
 
 Section - The Sunny Town
 
-Section - The Building Site
+Town Square is a room.
 
 Section - The Sundial
 
-The Wabe is a room. "A grass plot around a sundial."  The grass is scenery in the wabe.
+The Wabe is east of the Town Square. "A grass plot around a sundial."  The grass is scenery in the wabe.
 
-The sundial is scenery in the wabe.  The description of the sundial is "The sundial is a flat circular slab of granite, about three feet in diameter.  Markings carved around its top edge allow the time to be indicated to the nearest minute."
+The sundial is scenery in the wabe.  The description of the sundial is "The sundial is a flat circular slab of granite.  Markings carved around its top edge allow the time to be indicated to the nearest minute."
 Understand "time" as the sundial. [TO DO: this is so e.g. 'check time' works, but 'get time' shouldn't try to lift the sundial!]
-Understand "slab" or "granite" as the sundial when we have examined the sundial.
+Understand "slab/granite" as the sundial when we have examined the sundial.
 
 The markings are a privately-named part of the sundial.
 The description of the markings is "[if anything is in the sundial][A gnomon] protrudes from the center of the sundial at an angle, casting a shadow pointing to [the sundial time].[otherwise]There's nothing to cast a shadow onto the markings, making it pretty useless as a sundial."
@@ -88,7 +88,7 @@ Instead of examining the sundial:
 
 The brass key is a privately-named thing in the sundial.
 The printed name of the key is "slender brass rod".
-Understand "slender" and "brass" and "rod" as the key when the key is mentioned.
+Understand "slender/brass/rod" as the key when the key is mentioned.
 Understand "gnomon" as the key when the key is mentioned and the key is in the sundial.
 
 Instead of taking the sundial, say "[The sundial] is far too heavy to lift."
@@ -117,16 +117,50 @@ The carrying capacity of the sundial is 1.
 After inserting the key into the sundial, say "You screw [the key] back into [the sundial]."
 After inserting the knife into the sundial, say "You jam [the knife] into [the sundial].  Strangely, the direction of its shadow seems to have nothing to do with the position of the sun..."
 
-Understand the command "screw" as something new.  Understand "screw [something] into [something]" and "jam [something] into [something]" as inserting it into.
+Understand the command "screw" as something new.
+Understand "screw [something] into [something]" and "jam [something] into [something]" as inserting it into.
 
 Section - The Man in the Hat
 
-The unshaven man is a man in the Wabe.  He wears a surprising hat.
-[TO DO: mention the hat!]
+Well-Worn Path [TO DO: need better name] is north of the Wabe. "A well-worn path through the grass leads to the front door of a rickety wooden chapel that was once painted white."
 
-The unshaven man wants the knife.
+The old man is a man in Well-Worn Path.  "An old man sits here, leaning back against the chapel (or perhaps the chapel is leaning against him).  A hat shades his eyes from the sun."
+
+The old man wears a hat.
+[TO DO: the hat is "surprising"...?]
+
+The old man wants the knife.
 [TO DO: indicate to the player that he wants the knife]
 
 The player wants the hat.
 After reporting giving the knife to the man:
-	try the unshaven man giving the hat to the actor.
+	try the old man giving the hat to the actor.
+
+After reporting the old man giving the hat to the player:
+	say "Surprisingly, without his hat, the man doesn't look old at all: his face, though unshaven, is smooth and unwrinkled, and his eyes are sharp and clear.  With a crooked grin, he gives a little salute and wanders off.";
+	now the old man is off-stage.
+
+Section - The Chapel
+
+The front door is north of the Well-Worn Path and south of the Chapel.
+
+The front door is an undescribed lockable and locked door.  The brass key unlocks the front door.
+
+The can't go through undescribed doors rule is not listed in the check going rules.
+
+Some pews are an enterable supporter in the Chapel.  The pulpit is scenery in the Chapel.
+
+Section - The Tavern
+
+Outside the Tavern is south of the Town Square and north of the Tavern.
+
+The bouncer is a man in Outside the Tavern.  "A man stands by the entrance to the tavern, arms crossed."
+
+Instead of going south from Outside the Tavern when the actor is not wearing the hat:
+	say "The man shakes his head and pushes you back.  'Uh-uh, kid, you ain't old enough to drink.'"
+Before going south from Outside the Tavern:
+	say "The man nods at you, then resumes staring into the distance."
+
+Section - The Building Site
+
+The Building Site is west of the Town Square.  "Large building stones are piled around."
