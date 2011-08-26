@@ -17,6 +17,13 @@ The hat has no specific physical description, but the protagonist in game D find
 The man is also vaguely described, but is unshaven.
 ]
 
+[
+Ideas:
+PC is a teen boy, perhaps on an errand in town to buy and/or sell something for his family, but discovers some other thing he needs to do-- perhaps help someone who is in trouble?
+Needs the hat to make him look older, in order to get past the bouncer at a pub.
+Key is for a locked door nearby the sundial, perhaps a basement?  What's in there?  And why would someone hide the key in the sundial?  Was the sundial made to hold the key, or did the original gnomon just go missing or something?
+]
+
 Use American dialect, the serial comma, and no scoring.
 
 Include Unicode Full Character Names by Graham Nelson.
@@ -38,6 +45,12 @@ The after reporting rules is a rulebook.
 A specific action-processing rule (this is the after report stage rule):
 	if action in world is true, abide by the after reporting rules.
 
+Wanting relates a person to various things.  The verb to want (he wants, they want, he wanted, it is wanted, he is wanting) implies the wanting relation.
+
+The block giving rule is not listed in the check giving it to rules.
+Instead of giving something to someone when the second noun does not want the noun:
+	say "[The second noun] doesn't want [the noun]."
+
 Section - The Rusty Knife
 
 The player carries a rusty knife.  The description of the knife is "Rust covers the blade of the knife, which ends in a tattered leather hilt."
@@ -50,23 +63,24 @@ Section - The Building Site
 
 Section - The Sundial
 
-The Wabe is a room. "A grass plot around a sundial."  The grass is in the wabe.  The grass is scenery.
+The Wabe is a room. "A grass plot around a sundial."  The grass is scenery in the wabe.
 
 The sundial is scenery in the wabe.  The description of the sundial is "The sundial is a flat circular slab of granite, about three feet in diameter.  Markings carved around its top edge allow the time to be indicated to the nearest minute."
-Understand "time" as the sundial.
-Understand "slab" or "granite" or "markings" or "shadow" as the sundial when we have examined the sundial.
+Understand "time" as the sundial. [TO DO: this is so e.g. 'check time' works, but 'get time' shouldn't try to lift the sundial!]
+Understand "slab" or "granite" as the sundial when we have examined the sundial.
 
-[Avoid printing the sundial contents separately:]
-Carry out examining the sundial (this is the examine the sundial rule):
-	if anything is in the sundial:
-		say "[A gnomon] protrudes from the center of the sundial at an angle, casting a shadow pointing to [the sundial time].";
-	otherwise:
-		say "There's nothing to cast a shadow onto the markings, making it pretty useless as a sundial.";
-	rule succeeds.
-	The examine the sundial rule is listed after the standard examining rule in the carry out examining rules.
+The markings are a privately-named part of the sundial.
+The description of the markings is "[if anything is in the sundial][A gnomon] protrudes from the center of the sundial at an angle, casting a shadow pointing to [the sundial time].[otherwise]There's nothing to cast a shadow onto the markings, making it pretty useless as a sundial."
+Understand "markings" as the markings when we have examined the sundial.
+Understand "shadow" as the markings when we have examined the sundial and anything is in the sundial.
 
 To say a gnomon: say "[contents of the sundial]" in sentence case.
 To say the sundial time: say "[if the knife is in the sundial]9:37 am[else][the time of day]".
+
+[Custom printing of the sundial contents:]
+Instead of examining the sundial:
+	say "[the description of the noun][paragraph break][the description of the markings][line break]";
+	rule succeeds. [So that "we have examined the sundial" will be true.]
 
 [TO DO: sun is scenery]
 
@@ -77,20 +91,22 @@ The printed name of the key is "slender brass rod".
 Understand "slender" and "brass" and "rod" as the key when the key is mentioned.
 Understand "gnomon" as the key when the key is mentioned and the key is in the sundial.
 
+Instead of taking the sundial, say "[The sundial] is far too heavy to lift."
+
 Instead of turning or pulling the key when the key is in the sundial, try taking the key.
 
 [From the "Removal" example:]
 The taking action has an object called previous locale (matched as "from"). 
 Setting action variables for taking: now previous locale is the holder of the noun.
 
-Report taking the key from the sundial:
-	say "You twist [the key] and remove it from [the sundial].";
-	rule succeeds. [Don't also report "Taken."]
-
-After reporting taking the key for the first time:
-	say "Huh, look at that[--]it's actually a key!";
-	now the printed name of the key is "brass key";
-	now the description of the key is "A slender brass rod with key-teeth on one end."
+After taking the key from the sundial:
+	say "You twist [the key] and remove it from [the sundial].[no line break]";
+	if the key is handled:
+		say "[line break]";
+	otherwise:
+		say "[paragraph break]Huh, look at that[--]it's actually a key!";
+		now the printed name of the key is "brass key";
+		now the description of the key is "A slender brass rod with key-teeth on one end."
 
 Understand "key" as the key when the key is handled.
 
@@ -108,20 +124,9 @@ Section - The Man in the Hat
 The unshaven man is a man in the Wabe.  He wears a surprising hat.
 [TO DO: mention the hat!]
 
-Wanting relates a person to various things.  The verb to want (he wants, they want, he wanted, it is wanted, he is wanting) implies the wanting relation.
-
-This is the giving things to those who want them rule:
-	unless the second noun wants the noun:
-		abide by the block giving rule.
-The giving things to those who want them rule is listed instead of the block giving rule in the check giving it to rules.
-
 The unshaven man wants the knife.
 [TO DO: indicate to the player that he wants the knife]
 
-[TO DO: better message for giving him anything else]
-
-[TO DO: man gives hat in exchange]
 The player wants the hat.
 After reporting giving the knife to the man:
 	try the unshaven man giving the hat to the actor.
-
