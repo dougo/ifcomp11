@@ -26,8 +26,7 @@ Key is for a locked door nearby the sundial, perhaps a basement?  What's in ther
 
 Use American dialect, the serial comma, and no scoring.
 
-Include Unicode Full Character Names by Graham Nelson.
-To say --: say Unicode em dash.
+To say --: say Unicode 8212.
 
 Include Neutral Library Messages by Aaron Reed.
 [Use library message alerts.]
@@ -158,7 +157,7 @@ The bouncer is a man in Outside the Tavern.  "A man stands by the entrance to th
 
 Instead of going south from Outside the Tavern when the actor is not wearing the hat:
 	say "The man shakes his head and pushes you back.  'Uh-uh, kid, you ain't old enough to drink.'"
-Before going south from Outside the Tavern:
+Before going south from Outside the Tavern when the actor is wearing the hat:
 	say "The man nods at you, then resumes staring into the distance."
 
 Section - The Building Site
