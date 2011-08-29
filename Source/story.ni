@@ -32,6 +32,8 @@ Include Neutral Library Messages by Aaron Reed.
 [Use library message alerts.]
 
 Include Small Kindnesses by Aaron Reed, and Extended Grammar by Aaron Reed.
+[Don't print the exits list after going in a wrong direction:] 
+The Small Kindnesses reporting on exits rule is not listed in the instead rules.
 
 Release along with the source text, an interpreter, and a website.
 
@@ -49,6 +51,11 @@ Wanting relates a person to various things.  The verb to want (he wants, they wa
 The block giving rule is not listed in the check giving it to rules.
 Instead of giving something to someone when the second noun does not want the noun:
 	say "[The second noun] doesn't want [the noun]."
+
+Fitting into relates various things to various containers.  The verb to fit into (he fits into, they fit into, he fit into, it is fit into, he is fitting into) implies the fitting into relation.
+
+Instead of inserting a thing into a container when the noun does not fit into the second noun:
+	say "It doesn't seem to fit."
 
 Section - The Rusty Knife
 
@@ -101,7 +108,7 @@ Setting action variables for taking: now previous locale is the holder of the no
 After taking the key from the sundial:
 	say "You twist [the key] and remove it from [the sundial].[no line break]";
 	if the key is handled:
-		say "[line break]";
+		say line break;
 	otherwise:
 		say "[paragraph break]Huh, look at that[--]it's actually a key!";
 		now the printed name of the key is "brass key";
@@ -109,15 +116,19 @@ After taking the key from the sundial:
 
 Understand "key" as the key when the key is handled.
 
-The carrying capacity of the sundial is 1.
-[TO DO: only allow the key and knife?]
-[TO DO: better message when the sundial is "full".]
+The key fits into the sundial.
+After inserting the key into the sundial:
+	say "You screw [the key] back into [the sundial]."
 
-After inserting the key into the sundial, say "You screw [the key] back into [the sundial]."
-After inserting the knife into the sundial, say "You jam [the knife] into [the sundial].  Strangely, the direction of its shadow seems to have nothing to do with the position of the sun..."
+The knife fits into the sundial.
+After inserting the knife into the sundial:
+	say "You jam [the knife] into [the sundial].  Strangely, the direction of its shadow seems to have nothing to do with the position of the sun..."
 
 Understand the command "screw" as something new.
 Understand "screw [something] into [something]" and "jam [something] into [something]" as inserting it into.
+
+Instead of inserting something into the sundial when the sundial contains something:
+	say "It doesn't seem to fit."
 
 Section - The Man in the Hat
 
@@ -148,6 +159,8 @@ The front door is an undescribed lockable and locked door.  The brass key unlock
 The can't go through undescribed doors rule is not listed in the check going rules.
 
 Some pews are an enterable supporter in the Chapel.  The pulpit is scenery in the Chapel.
+
+[TO DO: legend of man who stole time]
 
 Section - The Tavern
 
