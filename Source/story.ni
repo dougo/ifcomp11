@@ -2,12 +2,18 @@
 
 "ifcomp11-D" by Cameron Fox
 
+Part - Notes
+
 [
+Specification (from Zarf):
+
 * Game D: (Sunny town. Also a building site, with building stones piled around.)
 
 You find a rusty knife, which you use to cut some stuff. You also come across a sundial, and (in the spirit of Trinity) unscrew the gnomon -- it's a repurposed brass key which you need. You then meet a man who wants the knife. In return, he gives you his hat, which you need to disguise your face for some reason or other.
 
 Somewhere in this town, you come across a legend: a man who has stolen the treasure of time. Even worse, he then lost it. He is cursed to wander until he finds it again, and replaces it on the altar he stole it from.
+
+So maybe just add a legend, or a legend element, that the treasure was split into two pieces which must be reunited?
 
 The rusty knife in game D is the magic knife in game C.
 If you unscrew the sundial gnomon and stick the knife in it, the shadow
@@ -20,27 +26,68 @@ The man is also vaguely described, but is unshaven.
 [
 Ideas:
 PC is a teen boy, perhaps on an errand in town to buy and/or sell something for his family, but discovers some other thing he needs to do-- perhaps help someone who is in trouble?
-Needs the hat to make him look older, in order to get past the bouncer at a pub.
+
+Need the hat to ward off a bird who keeps attacking your red hair? 
+
 Key is for a locked door nearby the sundial, perhaps a basement?  What's in there?  And why would someone hide the key in the sundial?  Was the sundial made to hold the key, or did the original gnomon just go missing or something?
 ]
+
+[
+Two ideas from a list of short story prompts I found online:
+
+At the airport, a stranger offers your character money to carry a mysterious package onto the plane. The stranger assures your character that it's nothing illegal and points out that it has already been through the security check. Your character has serious doubts, but needs the money, and therefore agrees...
+
+Your character is caught shoplifting. The shop owner says that she won't call the police in exchange for a personal favor....
+
+]
+
+[
+
+You are a boy, Tolmy Cubbins, and you are going into town with a basket of cranberries to sell to a greengrocer at the market.
+
+]
+
+[
+
+First, you come to a river, but the bridge was washed out by a recent storm.  Down the river a ways you find a boat tied to a tree, but the rope is all gummed up with mud and you can't untie the knot.  If you look into the river (or try to drink from it), you find a rusty knife, but it's good enough to cut the rope, letting you ride the boat across the river.
+
+Hm, not that interesting a puzzle...  Why would you think of looking in the water?  (Should be clued, e.g. you start getting thirsty.)  Maybe you just find the knife somewhere on the way to town and the cutting happens somewhere else?
+
+In game C, the magic knife is stuck in a tree stump.  Maybe you find it in a stump, or near a stump?
+
+]
+
+[
+You get to the market, find the greengrocer, sell the cranberries... then something happens on your way home?  Or is there some other obstacle/event before the market?
+]
+
+[TO DO:
+Make pseudonym email address.
+Make cover art.
+Write a blurb.
+Implement help, about, hints, amusing?
+] 
+
+Part - Declarations
 
 Use American dialect, the serial comma, and no scoring.
 
 To say --: say Unicode 8212.
 
-Include Neutral Library Messages by Aaron Reed.
-[Use library message alerts.]
-
 Include Small Kindnesses by Aaron Reed, and Extended Grammar by Aaron Reed.
-[Don't print the exits list after going in a wrong direction:] 
-The Small Kindnesses reporting on exits rule is not listed in the instead rules.
+
+[This has to be after Small Kindnesses:]
+Include Neutral Library Messages by Aaron Reed.
+[For debugging:]
+[Use library message alerts.]
 
 Release along with the source text, an interpreter, and a website.
 
 The time of day is 11:04 AM.
 
-Section - New Rules
+Part - Rules and Relations
 
+[TO DO: this is probably unnecessary.  Just do everything in after rules.]
 The after reporting rules is a rulebook.
 
 A specific action-processing rule (this is the after report stage rule):
@@ -57,17 +104,19 @@ Fitting into relates various things to various containers.  The verb to fit into
 Instead of inserting a thing into a container when the noun does not fit into the second noun:
 	say "It doesn't seem to fit."
 
-Section - The Rusty Knife
+Part - The Story
+
+Chapter - The Rusty Knife
 
 The player carries a rusty knife.  The description of the knife is "Rust covers the blade of the knife, which ends in a tattered leather hilt."
 
 [TO DO: find the knife somewhere else, cut something with it]
 
-Section - The Sunny Town
+Chapter - The Sunny Town
 
 Town Square is a room.
 
-Section - The Sundial
+Chapter - The Sundial
 
 The Wabe is east of the Town Square. "A grass plot around a sundial."  The grass is scenery in the wabe.
 
@@ -130,7 +179,7 @@ Understand "screw [something] into [something]" and "jam [something] into [somet
 Instead of inserting something into the sundial when the sundial contains something:
 	say "It doesn't seem to fit."
 
-Section - The Man in the Hat
+Chapter - The Man in the Hat
 
 Well-Worn Path [TO DO: need better name] is north of the Wabe. "A well-worn path through the grass leads to the front door of a rickety wooden chapel that was once painted white."
 
@@ -150,7 +199,7 @@ After reporting the old man giving the hat to the player:
 	say "Surprisingly, without his hat, the man doesn't look old at all: his face, though unshaven, is smooth and unwrinkled, and his eyes are sharp and clear.  With a crooked grin, he gives a little salute and wanders off.";
 	now the old man is off-stage.
 
-Section - The Chapel
+Chapter - The Chapel
 
 The front door is north of the Well-Worn Path and south of the Chapel.
 
@@ -160,9 +209,9 @@ The can't go through undescribed doors rule is not listed in the check going rul
 
 Some pews are an enterable supporter in the Chapel.  The pulpit is scenery in the Chapel.
 
-[TO DO: legend of man who stole time]
+[TO DO: legend of man who stole time - or maybe you hear it in the tavern?]
 
-Section - The Tavern
+Chapter - The Tavern
 
 Outside the Tavern is south of the Town Square and north of the Tavern.
 
@@ -173,6 +222,6 @@ Instead of going south from Outside the Tavern when the actor is not wearing the
 Before going south from Outside the Tavern when the actor is wearing the hat:
 	say "The man nods at you, then resumes staring into the distance."
 
-Section - The Building Site
+Chapter - The Building Site
 
 The Building Site is west of the Town Square.  "Large building stones are piled around."
