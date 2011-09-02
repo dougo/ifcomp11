@@ -24,48 +24,12 @@ The man is also vaguely described, but is unshaven.
 ]
 
 [
-Ideas:
-PC is a teen boy, perhaps on an errand in town to buy and/or sell something for his family, but discovers some other thing he needs to do-- perhaps help someone who is in trouble?
-
-Need the hat to ward off a bird who keeps attacking your red hair? 
-
-Key is for a locked door nearby the sundial, perhaps a basement?  What's in there?  And why would someone hide the key in the sundial?  Was the sundial made to hold the key, or did the original gnomon just go missing or something?
-]
-
-[
-Two ideas from a list of short story prompts I found online:
-
-At the airport, a stranger offers your character money to carry a mysterious package onto the plane. The stranger assures your character that it's nothing illegal and points out that it has already been through the security check. Your character has serious doubts, but needs the money, and therefore agrees...
-
-Your character is caught shoplifting. The shop owner says that she won't call the police in exchange for a personal favor....
-
-]
-
-[
-
-You are a boy, Tolmy Cubbins, and you are going into town with a basket of cranberries to sell to a greengrocer at the market.
-
-]
-
-[
-
-First, you come to a river, but the bridge was washed out by a recent storm.  Down the river a ways you find a boat tied to a tree, but the rope is all gummed up with mud and you can't untie the knot.  If you look into the river (or try to drink from it), you find a rusty knife, but it's good enough to cut the rope, letting you ride the boat across the river.
-
-Hm, not that interesting a puzzle...  Why would you think of looking in the water?  (Should be clued, e.g. you start getting thirsty.)  Maybe you just find the knife somewhere on the way to town and the cutting happens somewhere else?
-
-In game C, the magic knife is stuck in a tree stump.  Maybe you find it in a stump, or near a stump?
-
-]
-
-[
-You get to the market, find the greengrocer, sell the cranberries... then something happens on your way home?  Or is there some other obstacle/event before the market?
-]
-
-[TO DO:
+TO DO:
 Make pseudonym email address.
 Make cover art.
 Write a blurb.
 Implement help, about, hints, amusing?
+Score?
 ] 
 
 Part - Declarations
