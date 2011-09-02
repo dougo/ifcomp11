@@ -78,13 +78,17 @@ The player carries a rusty knife.  The description of the knife is "Rust covers 
 
 Chapter - The Sunny Town
 
-Town Square is a room.
+Chapter - The Chapel
 
-Chapter - The Sundial
+The Chapel is a room.  "A rickety wooden chapel that was once painted white."
 
-The Wabe is east of the Town Square. "A grass plot around a sundial."  The grass is scenery in the wabe.
+Chapter - The Garden
 
-The sundial is scenery in the wabe.  The description of the sundial is "The sundial is a flat circular slab of granite.  Markings carved around its top edge allow the time to be indicated to the nearest minute."
+The Overgrown Garden is north of the Chapel. "An overgrown garden with a sundial."
+
+Section - The Sundial
+
+The sundial is scenery in the garden.  The description of the sundial is "The sundial is a flat circular slab of granite.  Markings carved around its top edge allow the time to be indicated to the nearest minute."
 Understand "time" as the sundial. [TO DO: this is so e.g. 'check time' works, but 'get time' shouldn't try to lift the sundial!]
 Understand "slab/granite" as the sundial when we have examined the sundial.
 
@@ -143,11 +147,9 @@ Understand "screw [something] into [something]" and "jam [something] into [somet
 Instead of inserting something into the sundial when the sundial contains something:
 	say "It doesn't seem to fit."
 
-Chapter - The Man in the Hat
+Section - The Man in the Hat
 
-Well-Worn Path [TO DO: need better name] is north of the Wabe. "A well-worn path through the grass leads to the front door of a rickety wooden chapel that was once painted white."
-
-The old man is a man in Well-Worn Path.  "An old man sits here, leaning back against the chapel (or perhaps the chapel is leaning against him).  A hat shades his eyes from the sun."
+The old man is a man in the garden.  "An old man sits on a bench.  A hat shades his eyes from the sun."
 
 The old man wears a hat.
 [TO DO: the hat is "surprising"...?]
@@ -163,29 +165,17 @@ After reporting the old man giving the hat to the player:
 	say "Surprisingly, without his hat, the man doesn't look old at all: his face, though unshaven, is smooth and unwrinkled, and his eyes are sharp and clear.  With a crooked grin, he gives a little salute and wanders off.";
 	now the old man is off-stage.
 
-Chapter - The Chapel
+Section - The Bird
 
-The front door is north of the Well-Worn Path and south of the Chapel.
+Instead of going north from the garden when the hat is not worn:
+	say "A bird swoops down from its nest in the eaves of the garden house and attacks your hair!  You wave your arms to shoo it away, but it doesn't go away until you scurry back into the garden."
 
-The front door is an undescribed lockable and locked door.  The brass key unlocks the front door.
+Chapter - The Garden House
 
-The can't go through undescribed doors rule is not listed in the check going rules.
+The Garden House is north of the garden.
 
-Some pews are an enterable supporter in the Chapel.  The pulpit is scenery in the Chapel.
-
-[TO DO: legend of man who stole time - or maybe you hear it in the tavern?]
-
-Chapter - The Tavern
-
-Outside the Tavern is south of the Town Square and north of the Tavern.
-
-The bouncer is a man in Outside the Tavern.  "A man stands by the entrance to the tavern, arms crossed."
-
-Instead of going south from Outside the Tavern when the actor is not wearing the hat:
-	say "The man shakes his head and pushes you back.  'Uh-uh, kid, you ain't old enough to drink.'"
-Before going south from Outside the Tavern when the actor is wearing the hat:
-	say "The man nods at you, then resumes staring into the distance."
+[TO DO: legend of man who stole time]
 
 Chapter - The Building Site
 
-The Building Site is west of the Town Square.  "Large building stones are piled around."
+The Building Site is west of the chapel.  "Large building stones are piled around."
