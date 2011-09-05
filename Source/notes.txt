@@ -2,44 +2,56 @@ The Story:
 
 Last Day of Summer
 
-You are a young boy, Tolmy Cubbins, and you are going into town with a
+You are a boy, Tolmy Cubbins, and you are going into town with a
 basket of cranberries to sell to a greengrocer at the market.  It's
 the last day of summer, i.e. the beginning of harvest.
 
-You find the knife... somewhere.  You use it... somewhere.
+You find a rusty knife... somewhere.  You use it... somewhere.
 
-In town, there's a rickety wooden chapel, next to a building site with
-building stones lying around.  (It's going to be a new stone chapel to
-replace the old wooden chapel, but that should not be obvious.)
+When yoy get to the market, you find the greengrocer missing, so you
+need to search the town to find him.
+
+Elsewhere in town, there's a rickety wooden chapel, next to a building
+site with building stones lying around.  (It's going to be a new stone
+chapel to replace the old wooden chapel, but that should not be
+obvious.)
+
+The greengrocer is in the chapel, sitting at a pew near the altar.
+He's mourning his oldest friend, the preacher, who recently died, and
+the funeral was at dawn this morning.  If you sit next to him, he
+talks about the preacher, who brought him herbs and vegetables from
+his garden, and also historical tidbits and legends.  He says the
+altar reminds him of a legend he heard from the preacher, which he
+tells you (of the man who stole time).  But he won't go back to
+market, or take your cranberries, because he's in a funk.
 
 Behind the wooden chapel is an overgrown garden, with a sundial, a
-gravestone, and a small garden house.  Also the man with a hat is
-sitting on a bench near the gravestone.  The man wants your knife, and
-gives you his hat in return, then leaves.
+freshly placed gravestone, and a small garden house.  Also a man
+with a hat is sitting on a bench near the gravestone.  The man says
+he's paying his respect to the preacher, with maybe a hint that he
+knew him, and perhaps was here to visit him but arrived too late.  The
+man wants your knife, and gives you his hat in return, then leaves.
 
 A bird attacks your hair if you try to go into the garden house.
 Wearing the hat makes the bird ignore you.
 
 In the garden house is a desk with a locked drawer.  The sundial
-gnomon is a key that unlocks the drawer.  In the drawer is a book
-with a note inside.  The legend is on the note, in a different hand.
-You can't really understand the book, but you can read the legend.
+gnomon is a key that unlocks the drawer.  In the drawer is a book.  It
+seems to be a long novel about a man who traveled through time and had
+many adventures through history.  The preacher wrote the book in
+secret, but didn't finish it.
 
-The preacher of the chapel died recently (or a few months ago-- enough
-to let the garden get overgrown, or else he was sick for a while and
-couldn't tend the garden).  He wrote the book in secret, but didn't
-finish it.
-
-The man says he's paying his respect to the preacher.
+If you give the book to the greengrocer, he is surprised and glad, and
+he pays you generously for your cranberries.  You bring the treasure
+home to your family, and live happily ever after...
 
 
 Theme/mood:
 
-You're a young boy, and this is your first encounter with death, and
-change.  The changing seasons is symbolic of the preacher's death,
-which was inevitable, yet he was still unprepared, and didn't have
-time to finish his work.  More generally, it's about time passing, and
-life being too short.
+The changing seasons is symbolic of the preacher's death, which was
+inevitable, yet he was still unprepared, and didn't have time to
+finish his work.  More generally, it's about time passing, and life
+being too short.
 
 
 Questions:
@@ -50,10 +62,6 @@ Where do you use the knife?
 
 Why does the bird attack your hair?
 
-Who wrote the note?
-
-Why is the book important to you?
-
 Why was the book important to the preacher?  Why did he write it in
 secret?
 
@@ -61,19 +69,18 @@ How did the preacher die?  Unexpectedly, but was it an accident, or a
 sudden illness (or an illness that suddenly got worse), or was it foul
 play?
 
-Why does the man know the preacher?  Maybe he had been planning to
-visit, but was too late?  (Ironic, if the man is a time traveler...)
-
-Why can't you just sell the cranberries and go home?
-
 Did you know the preacher?  Did you know he was dead?
 
 Why can't you go anywhere else in town?
 
+Why can't you go home without selling the cranberries?
+
 Who is taking the preacher's place?  Who's funding the building of the
 new stone chapel?
 
+What if you don't have the knife when you meet the man?
 
+Do the man and the greengrocer know each other?
 
 
 Ideas:
@@ -89,18 +96,6 @@ the river.
 Hm, not that interesting a puzzle...  Why would you think of looking
 in the water?  (Should be clued, e.g. you start getting thirsty.)
 Maybe you just find the knife somewhere on the way to town and the
-cutting happens somewhere else?
-
-
-
-The greengrocer was friends with the preacher, who sold stuff from his
-garden to the greengrocer.  He knew about the book?  Perhaps they were
-complicit in some misdeed, and the greengrocer wants the book, maybe to
-get rid of it?
-
-Or, the greengrocer killed the preacher, and the book incriminates
-him?
-
-Or, they were in some noble but secret society together, and the
-greengrocer wants some artifact that belongs to the society.
-
+cutting happens somewhere else?  Maybe the sundial is covered by
+weeds, and you have to cut them away to see it?  Then the man sees you
+use the knife, and it reminds him of a knife he lost.

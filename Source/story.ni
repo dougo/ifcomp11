@@ -1,6 +1,6 @@
 [ Copyright © 2011, Doug Orleans.  This program is distributed under the terms of the GNU Affero General Public License.  See the file COPYING for details. ]
 
-"ifcomp11-D" by Cameron Fox
+"Last Day of Summer" by Cameron Fox.
 
 Part - Notes
 
@@ -34,18 +34,26 @@ Score?
 
 Part - Declarations
 
-Use American dialect, the serial comma, and no scoring.
+Use American dialect, the serial comma, no scoring[, and no deprecated features].
 
 To say --: say Unicode 8212.
 
-Include Small Kindnesses by Aaron Reed, and Extended Grammar by Aaron Reed.
+[I thought this might be nice to have, but I think it's a bit overzealous: 
+Include Extended Grammar by Aaron Reed.
+Understand the command "sit [something]" as something new.
+]
+
+Include Small Kindnesses by Aaron Reed.
 
 [This has to be after Small Kindnesses:]
 Include Neutral Library Messages by Aaron Reed.
 [For debugging:]
 [Use library message alerts.]
 
-Release along with the source text, an interpreter, and a website.
+Release along with the source text, a public solution, the library card, an interpreter, and a website.
+
+[For testers to annotate transcripts:]
+Understand "* [text]" as a mistake ("Noted.").
 
 The time of day is 11:04 AM.
 
@@ -63,12 +71,19 @@ The block giving rule is not listed in the check giving it to rules.
 Instead of giving something to someone when the second noun does not want the noun:
 	say "[The second noun] doesn't want [the noun]."
 
-Fitting into relates various things to various containers.  The verb to fit into (he fits into, they fit into, he fit into, it is fit into, he is fitting into) implies the fitting into relation.
-
-Instead of inserting a thing into a container when the noun does not fit into the second noun:
-	say "It doesn't seem to fit."
+[TO DO: handle exiting, or say something better than this:
+>out
+[You're not inside something. To leave this location, try a direction or "out".]
+]
 
 Part - The Story
+
+Chapter - The Boy
+
+The player carries a basket.  In the basket are some cranberries.
+
+When play begins:
+	say "You're off to the greengrocer's in town to sell a basket of cranberries from your family's bog."
 
 Chapter - The Rusty Knife
 
@@ -76,15 +91,35 @@ The player carries a rusty knife.  The description of the knife is "Rust covers 
 
 [TO DO: find the knife somewhere else, cut something with it]
 
-Chapter - The Sunny Town
+Chapter - The Market
+
+The Market is a room.  "[if unvisited]Oh no!  The greengrocer is nowhere to be found.[end if]"
+
+Chapter - Sunny Town
+
+The Town Square is north of the Market.  Northeast is the Chapel.  Northwest is the Building Site.
+
+"A grassy square marks the center of town, with streets leading out in the four cardinal directions.  The old chapel is on the northeast corner.  The northwest corner is a dusty building site, with stones lying around in piles.  The market is back south."
+
+The grass is scenery in the square.  [TO DO: more scenery?  Something to do here?]
+
+The old chapel is scenery in the square.  "A rickety wooden chapel that was once painted white."  [TO DO: put this in the room desc]
+Instead of entering the old chapel, try going northeast.
+
+Chapter - The Building Site
+
+The Building Site is a room.  "Large building stones are piled around."
+[TO DO: something to do here?  Why no exits?]
 
 Chapter - The Chapel
 
-The Chapel is a room.  "A rickety wooden chapel that was once painted white."
+On some pews is a man called the greengrocer.  The pews are enterable in the chapel.  An altar is a supporter in the chapel.
+
+[TO DO: legend of man who stole time]
 
 Chapter - The Garden
 
-The Overgrown Garden is north of the Chapel. "An overgrown garden with a sundial."
+The Garden is north of the chapel. "An overgrown garden with a sundial."
 
 Section - The Sundial
 
@@ -107,7 +142,7 @@ Instead of examining the sundial:
 
 [TO DO: sun is scenery]
 
-[TO DO: night time?]
+[TO DO: end the game before the sun sets. "Time to get home now!"]
 
 The brass key is a privately-named thing in the sundial.
 The printed name of the key is "slender brass rod".
@@ -133,11 +168,13 @@ After taking the key from the sundial:
 
 Understand "key" as the key when the key is handled.
 
-The key fits into the sundial.
+A thing can be gnomon-shaped.
+Instead of inserting a thing into the sundial when the noun is not gnomon-shaped:
+	say "It doesn't seem to fit."
+
+The key and the knife are gnomon-shaped.
 After inserting the key into the sundial:
 	say "You screw [the key] back into [the sundial]."
-
-The knife fits into the sundial.
 After inserting the knife into the sundial:
 	say "You jam [the knife] into [the sundial].  Strangely, the direction of its shadow seems to have nothing to do with the position of the sun..."
 
@@ -149,10 +186,13 @@ Instead of inserting something into the sundial when the sundial contains someth
 
 Section - The Man in the Hat
 
+[TO DO: no reason for him to be old now.]
 The old man is a man in the garden.  "An old man sits on a bench.  A hat shades his eyes from the sun."
 
 The old man wears a hat.
 [TO DO: the hat is "surprising"...?]
+
+[TO DO: gravestone?]
 
 The old man wants the knife.
 [TO DO: indicate to the player that he wants the knife]
@@ -170,12 +210,19 @@ Section - The Bird
 Instead of going north from the garden when the hat is not worn:
 	say "A bird swoops down from its nest in the eaves of the garden house and attacks your hair!  You wave your arms to shoo it away, but it doesn't go away until you scurry back into the garden."
 
+[TO DO: bird, nest are scenery] 
+
 Chapter - The Garden House
 
 The Garden House is north of the garden.
+A desk is a supporter in the garden house.
+The drawer is part of the desk.
+The drawer is closed and locked.
+The key unlocks the drawer.
+In the drawer is a book.
 
-[TO DO: legend of man who stole time]
+The greengrocer wants the book.
 
-Chapter - The Building Site
-
-The Building Site is west of the chapel.  "Large building stones are piled around."
+After reporting giving the book to the greengrocer:
+	say "The greengrocer thanks you and rewards you handsomely.  You return home with the money for your family.";
+	end the story finally.
