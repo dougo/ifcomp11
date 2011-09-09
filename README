@@ -9,6 +9,10 @@ Extended Grammar by Aaron Reed
 
 You can download them from: http://inform7.com/write/extensions/
 
+Before releasing, use "Import into Skein..." to import the file
+walkthrough.rec, then label its final knot with "***".  This will be
+used for "release along with a solution".
+
 This program is copyright © Doug Orleans 2011.  It is distributed
 under the terms of the GNU Affero General Public License (AGPL) 3.0.
 See the file COPYING for details.  The code is available from the
