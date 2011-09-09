@@ -44,6 +44,9 @@ Understand the command "sit [something]" as something new.
 ]
 
 Include Small Kindnesses by Aaron Reed.
+[Don't list exits:]
+Understand the command "exits" as something new.
+The Small Kindnesses reporting on exits rule is not listed in any rulebook.
 
 [This has to be after Small Kindnesses:]
 Include Neutral Library Messages by Aaron Reed.
@@ -55,20 +58,6 @@ Release along with the source text, a public solution, the library card, an inte
 [For testers to annotate transcripts:]
 Understand "* [text]" as a mistake ("Noted.").
 
-Part - Rules and Relations
-
-[TO DO: this is probably unnecessary.  Just do everything in after rules.]
-The after reporting rules is a rulebook.
-
-A specific action-processing rule (this is the after report stage rule):
-	if action in world is true, abide by the after reporting rules.
-
-Wanting relates a person to various things.  The verb to want (he wants, they want, he wanted, it is wanted, he is wanting) implies the wanting relation.
-
-The block giving rule is not listed in the check giving it to rules.
-Instead of giving something to someone when the second noun does not want the noun:
-	say "[The second noun] doesn't want [the noun]."
-
 [TO DO: handle exiting, or say something better than this:
 >out
 [You're not inside something. To leave this location, try a direction or "out".]
@@ -77,7 +66,7 @@ Instead of giving something to someone when the second noun does not want the no
 Part - The Story
 
 When play begins:
-	say "Today started out so well.  Up with the sun, you went out to the bog, filled a big basket with cranberries, and started for town.  Your dad had brought you along many times before on his trips to the greengrocer to sell his harvest, but you're old enough now to go by yourself.  Your parents will be so proud when you return to the hut with a pocket full of money!
+	say "Today started out so well.  Up with the sun, you went out to the bog, filled a big basket with cranberries, and started for town.  Your dad had brought you along many times before on his trips to the market to sell his harvest to the greengrocer, but you're old enough now to go by yourself.  Your parents will be so proud when you return to the hut with a pocket full of money!
 
 You made your way through the fields on the outskirts of town, a cool but gentle breeze blowing through your hair.  The cloudless sky showed no sign of the huge storm that passed through a few days ago, but when you got to the river you found the mark it left: the splintered remains of the wooden bridge that the flood swept away.  Great, now how are you going to cross the river to get into town?
 
@@ -113,12 +102,15 @@ The scrub and mooring are in the river area.
 The remains of the bridge is scenery in the crossing.
 Understand "splintered/splinter/post/posts/plank/planks" as the remains.
 
-The banks of the river are a backdrop in the river area.  "The river's still higher than you've ever seen it, and wider too."
+The banks of the river are a backdrop in the river area.  "The river's still higher than you've ever seen it, and wider too."  Understand "bank", "near bank", and "far bank" as the banks.
 
 The town is a backdrop in the river area.
 First instead of doing anything with the town: say "The town is a few miles north."
  
 [TO DO: jump, swim, drink, cross, across]
+
+Instead of going north in the river area, say "The river's too deep and swift to ford."
+[TO DO: south]
 
 Section - The Rusty Knife
 
@@ -126,57 +118,77 @@ Before going to the scrub for the first time, say "You walk a ways upstream, unt
 
 A rusty knife is in the scrub.  "A rusty knife lies on the ground."  The description is "Rust covers the blade of the knife, which ends in a tattered leather hilt."  The blade is a part of the knife.  The tattered leather hilt is a part of the knife.
 
+Cutting it with is an action applying to one touchable thing and one carried thing.
+Understand the command "cut" as something new.
+Understand "cut [something] with [something]" as cutting it with.
+[Prefer using the knife, when guessing the second noun:]
+Understand "cut [something] with [the knife]" as cutting it with.
+
+Instead of cutting with when the second noun is not the knife, say "[The second noun] is not sharp enough to cut [the noun]."
+Instead of cutting someone with the knife, say "You wouldn't want to hurt [the noun]."
+Instead of cutting something with the knife, say "You wouldn't want to damage [the noun]."
+Check cutting with: instead say "This rule shouldn't be applied!  Please report this bug."
+
 Section - The Boat
 
 Before going to the mooring for the first time, say "You walk a ways downstream, until you come upon a welcome sight: a fishing boat, still tied securely to the near bank."
 
-A fishing boat is a fixed in place enterable container in the mooring.  The description is "The boat is tied to a metal pole embedded in the near bank."
+A fishing boat is a fixed in place enterable container in the mooring.  The description is "The boat is tied to a metal loop embedded in the near bank."
+[TO DO: don't print (empty)]
+
 Understand "board [the boat]" as entering.
-[TO DO: pull/push boat]
-The metal pole is scenery in the mooring.
-The rope is scenery in the mooring.  "The rope is covered with mud and tangled with wet reeds."  Understand "knot/knots" as the rope.
+[TO DO: pull/push/launch boat]
+The metal loop is scenery in the mooring.
+The rope is scenery in the mooring.  "The knots at both ends of the rope are covered with mud and tangled with wet reeds."  Understand "knot/knots" as the rope.
+The wet reeds are scenery in the mooring.  Understand "reed" as the reeds. 
 
 Untying is an action applying to one touchable thing.
 Understand "untie [something]" as untying.
 Instead of untying the boat, try untying the rope.
-Instead of untying the rope, say "You try to untie the boat, but [if we have not examined the rope]the rope is covered with mud and tangled with wet reeds, and [end if]the knots just won't come undone."
-
-Cutting it with is an action applying to one touchable thing and one carried thing.
-Understand the command "cut" as something new.
-Understand "cut [something] with [something]" as cutting it with.
-Understand "cut [the boat] loose with [something]" as cutting it with.
-
-[Prefer using the knife, when guessing the second noun:]
-Understand "cut [something] with [the knife]" as cutting it with.
-Understand "cut [the boat] loose with [the knife]" as cutting it with.
+Instead of untying the rope, say "You try to untie the boat from its mooring, but [if we have not examined the rope]the knots are covered with mud and tangled with wet reeds, and [end if]the knots just won't come undone."
 
 First instead of cutting the boat with something: try cutting the rope with the second noun.
-Instead of cutting with when the second noun is not the knife, say "[The second noun] is not sharp enough to cut [the noun]."
-Instead of cutting someone with the knife, say "You wouldn't want to hurt [the noun]."
-Instead of cutting something with the knife, say "You wouldn't want to damage [the noun]."
+
+Understand "cut [the boat] loose with [something]" as cutting it with.
+Understand "cut [the boat] loose with [the knife]" as cutting it with.
 
 Instead of cutting the rope with the knife when the actor is not in the boat, say "[one of]You start cutting the rope, and find that the knife is indeed sharp enough.  But if you cut the rope and you're not in the boat, then the boat will float away without you![or]You're still not in the boat.[stopping]".
+
 Instead of cutting the rope with the knife when the actor is in the boat and the cranberries are not enclosed by the boat, say "Wait, you can't go to town without the cranberries!"
+
 Instead of cutting the rope with the knife:
+	[TO DO: wait for a key, clear the screen?]
 	say "It takes a while, but you eventually manage to cut through the rope.  You shove off, and the boat quickly floats across the river.  You clamber up the far bank and set off once again for town.  Whew!
 
-The rest of the trip into town is uneventful.  When you get to town, you head straight for the market."; [TO DO: wait for a key and clear the screen?]
+The rest of the trip into town is uneventful.  When you get to town, you head straight for the market.  You meander through the merchants['] stands until you get to the greengrocer's, only to discover an empty stand and no sign of the greengrocer.";
 	move the cranberries to the basket;
 	move the basket to the player;
 	increase the time of day by one hour;
 	move the player to the market.	 
 
-Check cutting with: instead say "This rule shouldn't be applied!  Please report this bug."
-
 Chapter - The Market
 
-The Market is a room.  "[if unvisited]Oh no!  The greengrocer is nowhere to be found.[end if]"
+The Market is a room.  "Amid the hustle and bustle of the market is the forlorn sight of the empty greengrocer's stand."
+The hustle and bustle is scenery in the market.
+
+The empty greengrocer's stand is a scenery supporter in the market.  "It looks like the greengrocer never even set up his stand this morning."
+
+Before going north from the market for the first time:
+	say "You head toward the center of town."
+
+Instead of going east in the market, try going west.
+Instead of going west in the market:
+	say "You wander aimlessly around town for a while, not sure where to go [if the greengrocer is not mentioned]to find the greengrocer[end if].  Eventually you end up at the town square.";
+	increase the time of day by five minutes;
+	try going north.
+
+[TO DO: south]
 
 Chapter - Sunny Town
 
-The Town Square is north of the Market.  Northeast is the Chapel.  Northwest is the Building Site.
+The Town Square is north of the market.  Northeast is the Chapel.  Northwest is the Building Site.
 
-"A grassy square marks the center of town, with streets leading out in the four cardinal directions.  The old chapel is on the northeast corner.  The northwest corner is a dusty building site, with stones lying around in piles.  The market is back south."
+"A grassy square marks the center of town, with streets leading out in the four cardinal directions.  On the northwest corner is a large dusty building site, with stones lying around in piles.  On the northeast corner is a rickety wooden chapel that was once painted white.  The market is back south."
 
 The grass is scenery in the square.  [TO DO: more scenery?  Something to do here?]
 [TO DO: other streets]
@@ -206,15 +218,10 @@ The traveler wears a hat.
 
 [TO DO: gravestone?]
 
-The traveler wants the knife.
-[TO DO: indicate to the player that he wants the knife]
-
-The player wants the hat.
-After reporting giving the knife to the traveler:
-	try the traveler giving the hat to the actor.
-
-After reporting the traveler giving the hat to the player:
-	say "Surprisingly, without his hat, the man doesn't look old at all: his face, though unshaven, is smooth and unwrinkled, and his eyes are sharp and clear.  With a crooked grin, he gives a little salute and wanders off.";
+Instead of giving the knife to the traveler:
+	say "You hand the knife over to the man.  In return, he gives you his hat, and then wanders off.";
+	move the knife to the traveler;
+	move the hat to the player;
 	now the traveler is off-stage.
 
 Chapter - The Chapel
@@ -311,8 +318,6 @@ Instead of opening the desk, try opening the drawer.
 Before opening the drawer when the drawer is locked and the key is held:
 	try unlocking the drawer with the key.
 
-The greengrocer wants the book.
-
-After reporting giving the book to the greengrocer:
+Instead of giving the book to the greengrocer:
 	say "The greengrocer thanks you and rewards you handsomely.  You return home with the money for your family.";
 	end the story finally.
