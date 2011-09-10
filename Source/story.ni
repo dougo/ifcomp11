@@ -66,6 +66,7 @@ Understand "* [text]" as a mistake ("Noted.").
 Part - The Story
 
 When play begins:
+	now the right hand status line is "";
 	say "Today started out so well.  Up with the sun, you went out to the bog, filled a big basket with cranberries, and started for town.  Your dad had brought you along many times before on his trips to the market to sell his harvest to the greengrocer, but you're old enough now to go by yourself.  Your parents will be so proud when you return to the hut with a pocket full of money!
 
 You made your way through the fields on the outskirts of town, a cool but gentle breeze blowing through your hair.  The cloudless sky showed no sign of the huge storm that passed through a few days ago, but when you got to the river you found the mark it left: the splintered remains of the wooden bridge that the flood swept away.  Great, now how are you going to cross the river to get into town?
@@ -186,7 +187,9 @@ Instead of going west in the market:
 
 Chapter - Sunny Town
 
-The Town Square is north of the market.  Northeast is the Chapel.  Northwest is the Building Site.
+[TO DO: get rid of the square, go directly to the building site from the market; the chapel is inside from the building site.  Maybe the man doesn't show up until after you've been to the garden?] 
+
+The Town Square is north of the market.  Northwest is the Building Site.  Northeast is the Chapel.
 
 "A grassy square marks the center of town, with streets leading out in the four cardinal directions.  On the northwest corner is a large dusty building site, with stones lying around in piles.  On the northeast corner is a rickety wooden chapel that was once painted white.  The market is back south."
 
@@ -226,9 +229,64 @@ Instead of giving the knife to the traveler:
 
 Chapter - The Chapel
 
-On some pews is a man called the greengrocer.  The pews are enterable in the chapel.  An altar is a supporter in the chapel.
+The description of the chapel is "A chapel."
 
-[TO DO: legend of man who stole time]
+The greengrocer is a man in the chapel.  "The greengrocer is here, sitting on a pew near the altar."
+
+The pew is an enterable scenery supporter in the chapel.
+The altar is a scenery supporter in the chapel.
+
+[The greengrocer can be zoned out or alert.  The greengrocer is zoned out.]
+
+[After looking in the chapel when the greengrocer is zoned out:
+	say "The greengrocer doesn't seem to notice you.";
+	now the greengrocer is alert.
+]
+
+Greengrocer-state is a kind of value.  The greengrocer-states are reverie, waiting for you to sit, and done talking.
+The greengrocer has a greengrocer-state called the state.  The state of the greengrocer is reverie.
+Greengrocer Exposition is a recurring scene.
+Greengrocer Exposition begins when the player is in the chapel and the state of the greengrocer is not done talking.
+When Greengrocer Exposition begins:
+	now the state of the greengrocer is reverie;
+	say "The greengrocer doesn't seem to notice you, lost in his thoughts.";
+	the greengrocer notices you in two turns from now.
+
+At the time when the greengrocer notices you:
+	if Greengrocer Exposition is happening:
+		say "The greengrocer stirs from his reverie [one of]and sees you for the first time.  'I know you, you're the Cubbins boy.  Tolmy, right?'[no line  break][or]again.[no line break][stopping]";
+		if the player is not on the pew:
+			say "  He pats the pew.  'Come and sit beside me, son.'";
+			now the state of the greengrocer is waiting for you to sit;
+		otherwise:
+			[TO DO: only nod if he asked you about your name.]
+			say "  You nod, and he goes back to gazing blankly at the altar.[paragraph break]";
+			relate the legend.
+
+[Guess the pew when the player just types "sit":]
+Understand "sit on [the pew]" as entering.
+
+Sitting with is an action applying to one visible thing.
+Understand "sit with/beside [the greengrocer]" and "sit next to [the greengrocer]" as sitting with.
+Instead of sitting with the greengrocer, try entering the pew.
+
+After entering the pew:
+	say "You sit on the pew next to the greengrocer.[run paragraph on]";	
+	if the state of the greengrocer is waiting for you to sit:
+		say "[paragraph break]The greengrocer nods, and goes back to gazing blankly at the altar.[paragraph break]";
+		relate the legend;
+	otherwise:
+		say "[paragraph break]".
+
+To relate the legend:
+	say "After a while, he speaks again.  'That altar reminds me of a legend Preacher once told me.  He was always bringing me tidbits of history and legend with his herbs and vegetables.
+
+'This one was about a man who stole the treasure of time.  Even worse, as the legend goes, he then lost it.  He is cursed to wander until he finds it again, and replaces it on the altar he stole it from.'  The greengrocer chuckles, then goes quiet again.
+
+After another few moments, the greengrocer looks down at the floor, saying in a quavering voice, 'But I guess I won't be hearing any more of Preacher's legends now.'";
+	now the state of the greengrocer is done talking.
+
+Greengrocer Exposition ends when the player is not enclosed by the chapel or the state of the greengrocer is done talking.
 
 Chapter - The Garden
 
@@ -318,6 +376,17 @@ Instead of opening the desk, try opening the drawer.
 Before opening the drawer when the drawer is locked and the key is held:
 	try unlocking the drawer with the key.
 
-Instead of giving the book to the greengrocer:
-	say "The greengrocer thanks you and rewards you handsomely.  You return home with the money for your family.";
+[Instead of showing the book to the greengrocer, try giving it to him.]
+Instead of giving or showing the book to the greengrocer:
+	say "'Here,' you say, 'I found this in the garden house.  I thought you might want it.'  The greengrocer looks at you, his eyes red, then looks down at the book blankly.  Slowly, amazement spreads across his face.
+
+The greengrocer takes the book in his hands, holding it like a treasure.  Tears start to fill his eyes as he pages through it.
+
+He looks up at you, astonished and grateful.  'Tolmy, I[--] I don't know what to say.  I never knew...  Preacher must have been working on this for years, but he never spoke a word about it to me.  Or anyone, I imagine.'
+
+The greengrocer goes back to reading for a moment, then stops, closes the book, and stands up.  'Come with me.'
+
+You follow him outside and through the town, until he stops at a house near the market.  'Wait here,' he says, as he disappears inside, returning a minute later.  'Young Master Cubbins, you have done me[--]and the world![--]a great service today, finding Preacher's life's work.  His words will live forever, now.  Please accept this reward, as a small part of the thanks I owe you.'  He hands you a velvet purse, heavy with clicking coins.  That's more than a whole season's harvest worth of cranberries!
+
+The greengrocer bows to you, and you return the bow, clumsily but earnestly.  He smiles, and says, 'Say hello to your dad for me.'  Patting you on the shoulder, he sends you on your way back home.";
 	end the story finally.
