@@ -1,6 +1,8 @@
 [ Copyright © 2011, Doug Orleans.  This program is distributed under the terms of the GNU Affero General Public License.  See the file COPYING for details. ]
 
 "Last Day of Summer" by Cameron Fox.
+The story description is "It's the last day of summer, and you're old enough now to go into town by yourself."
+The story creation year is 2011.
 
 Part - Notes
 
@@ -25,9 +27,7 @@ The man is also vaguely described, but is unshaven.
 
 [
 TO DO:
-Make pseudonym email address.
 Make cover art.
-Write a blurb.
 Implement help, about, hints, amusing?
 Score?
 ] 
@@ -386,7 +386,7 @@ He looks up at you, astonished and grateful.  'Tolmy, I[--] I don't know what to
 
 The greengrocer goes back to reading for a moment, then stops, closes the book, and stands up.  'Come with me.'
 
-You follow him outside and through the town, until he stops at a house near the market.  'Wait here,' he says, as he disappears inside, returning a minute later.  'Young Master Cubbins, you have done me[--]and the world![--]a great service today, finding Preacher's life's work.  His words will live forever, now.  Please accept this reward, as a small part of the thanks I owe you.'  He hands you a velvet purse, heavy with clicking coins.  That's more than a whole season's harvest worth of cranberries!
+You follow him outside and through the town, until he stops at a house near the market.  'Wait here,' he says, as he disappears inside, returning a minute later.  'Young Master Cubbins, you have done me[--]and the world![no line break][--]a great service today, finding Preacher's life's work.  His words will live forever, now.  Please accept this reward, as a small part of the thanks I owe you.'  He hands you a velvet purse, heavy with clinking coins.  That's more than a whole season's harvest worth of cranberries!
 
 The greengrocer bows to you, and you return the bow, clumsily but earnestly.  He smiles, and says, 'Say hello to your dad for me.'  Patting you on the shoulder, he sends you on your way back home.";
 	end the story finally.
