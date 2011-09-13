@@ -3,6 +3,7 @@
 "Last Day of Summer" by Cameron Fox.
 The story description is "It's the last day of summer, and you're old enough now to go into town by yourself."
 The story creation year is 2011.
+The release number is 1.
 
 Part - Notes
 
@@ -53,7 +54,7 @@ Include Neutral Library Messages by Aaron Reed.
 [For debugging:]
 [Use library message alerts.]
 
-Release along with the source text, a public solution, the library card, an interpreter, and a website.
+Release along with the source text, a public solution, the library card, the introductory booklet, an interpreter, and a website.
 
 [For testers to annotate transcripts:]
 Understand "* [text]" as a mistake ("Noted.").
@@ -67,7 +68,7 @@ Part - The Story
 
 When play begins:
 	now the right hand status line is "";
-	say "Today started out so well.  Up with the sun, you went out to the bog, filled a big basket with cranberries, and started for town.  Your dad had brought you along many times before on his trips to the market to sell his harvest to the greengrocer, but you're old enough now to go by yourself.  Your parents will be so proud when you return to the hut with a pocket full of money!
+	say "Today started out so well.  Up with the sun, you went out to the bog, filled a big basket with cranberries, and started for town.  Dad had brought you along many times before on his trips to the market to sell his harvest to the greengrocer, but you're old enough now to go by yourself.  Dad and Mom will be so proud when you return to the hut with a pocket full of money!
 
 You made your way through the fields on the outskirts of town, a cool but gentle breeze blowing through your hair.  The cloudless sky showed no sign of the huge storm that passed through a few days ago, but when you got to the river you found the mark it left: the splintered remains of the wooden bridge that the flood swept away.  Great, now how are you going to cross the river to get into town?
 
@@ -77,9 +78,11 @@ The time of day is 10:00 AM.
 
 Chapter - The Boy
 
-[TO DO: player description]
+Your clothes are worn by yourself.  They are plural-named.  The description is "You're wearing your best clothes, which are still a bit shabby (and you're starting to outgrow them anyway).  But, if this season's harvest is good enough, Dad can make enough money to buy you new clothes."
+Instead of examining yourself, try examining your clothes.
+Instead of taking off your clothes, say "It's warm, but not that warm."
 
-The player carries a basket.  In the basket are some cranberries.
+The player carries a basket.  In the basket are some cranberries.  Understand "berries" as the cranberries.
 Instead of taking the cranberries when the cranberries are in the basket and the basket is not held:
 	try taking the basket.
 Instead of removing the cranberries from the basket:
@@ -89,7 +92,18 @@ Instead of taking the cranberries when the cranberries are in the basket and the
 
 [TO DO: print as "basket of cranberries" when full] 
 
-[TO DO: eat]
+The cranberries are edible.  [But you can't take them to eat...]
+A cranberry is a part of the cranberries.  A cranberry is edible.  Understand "berry" as a cranberry.
+Understand "eat [a cranberry]" as eating.
+Instead of taking a cranberry, say "You can just imagine Dad saying, 'Don't eat the merchandise!'"
+[TO DO: only print this while trying to eat it.]
+
+Going home is an action applying to nothing.
+Understand "home", "go home", "return home", and "give up" as going home.
+Instead of going home when the time of day is before 5:00 PM, say "You could give up and go back home, but it's still too early for that now."
+Carry out going home:
+	say "The sun's going down, and you'd better be home before dark, so it's time to give up and go back home now.  Maybe you can try again tomorrow.  Or maybe you're not old enough to go into town by yourself after all.";
+	end the story finally.
 
 Chapter - The River
 
@@ -111,7 +125,7 @@ First instead of doing anything with the town: say "The town is a few miles nort
 [TO DO: jump, swim, drink, cross, across]
 
 Instead of going north in the river area, say "The river's too deep and swift to ford."
-[TO DO: south]
+Instead of going south in the river area, try going home.
 
 Section - The Rusty Knife
 
