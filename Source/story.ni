@@ -84,7 +84,9 @@ Before taking off your clothes, instead say "It's warm, but not that warm."
 Instead of taking your clothes, try taking off your clothes.
 Instead of dropping your clothes, try taking off your clothes.
 
-The player carries a basket.  In the basket are some cranberries.  Understand "berries" as the cranberries.
+The player carries a basket.  "Mom wove the basket for you last summer."
+In the basket are some cranberries.  "Red and ripe, ready to be sold at the market."
+Understand "berries" as the cranberries.
 Instead of taking the cranberries when the cranberries are in the basket and the basket is not held:
 	try taking the basket.
 Instead of removing the cranberries from the basket:
@@ -113,27 +115,46 @@ The River Area is a region.
 
 The River Crossing is in the river area.  "All that remains of the bridge is a few splintered posts and planks clinging sadly to both banks of the river.  The town is to the north, across the river."
 
-East is the Scrub.  West is the Mooring.
-The scrub and mooring are in the river area.
-
-The remains of the bridge is scenery in the crossing.
+The remains of the bridge is scenery in the crossing.  "That bridge was sturdy and strong, but the storm was stronger."
 Understand "splintered/splinter/post/posts/plank/planks" as the remains.
 
-The banks of the river are a backdrop in the river area.  "The river's still higher than you've ever seen it, and wider too."  Understand "bank", "near bank", and "far bank" as the banks.
+A backdrop called the river is in the river area.  "The river's still higher than you've ever seen it, and wider too."
+Understand "water" as the river.
+
+The banks are a backdrop in the river area.
+Understand "bank", "near bank", and "far bank" as the banks.
+Instead of examining the banks, try examining the river.
 
 The town is a backdrop in the river area.
 First instead of doing anything with the town: say "The town is a few miles north."
+Instead of examining north in the river area, try examining the town.
  
-[TO DO: jump, swim, drink, cross, across]
+Instead of entering the river, say "The river's too deep and swift to cross."
+Instead of jumping in the river area, try entering the river.
+Understand "jump into/in/across [the river]", "dive into/in [the river]", "leap into/in/across [the river]", "swim across [the river]", or "wade into/in/across [the river]" as entering.
+Instead of going north in the river area, try entering the river.
+Understand "across" as north when in the river area.
 
-Instead of going north in the river area, say "The river's too deep and swift to ford."
 Instead of going south in the river area, try going home.
+
+Instead of drinking the river, say "You take a few sips from the river.  It's cool and refreshing."
+Understand "drink from [the river]" as drinking.
 
 Section - The Rusty Knife
 
+The Scrub is west of the crossing.  "The scrub brush along the river is dense here, but it thins out downstream to the west."
+The scrub is in the river area.
+
 Before going to the scrub for the first time, say "You walk a ways upstream, until the scrub is too dense to go any further."
 
-A rusty knife is in the scrub.  "A rusty knife lies on the ground."  The description is "Rust covers the blade of the knife, which ends in a tattered leather hilt."  The blade is a part of the knife.  The tattered leather hilt is a part of the knife.
+Instead of going west in the scrub, say "The scrub is too dense to go any further upstream."
+
+A rusty knife is in the scrub.  "A rusty knife lies on the ground, half-buried in dirt."
+The description is "Rust covers the blade of the knife, which ends in a tattered leather hilt." 
+The blade is a part of the knife.  "You're not sure the rust-covered blade is sharp enough to cut much."
+The tattered leather hilt is a part of the knife.  "Tattered leather covers the hilt of the knife."
+Instead of opening [e.g. unwrapping] the leather, say "The leather is tattered, but clings stubbornly to the hilt of the knife."
+Instead of opening the knife, try opening the leather.
 
 Cutting it with is an action applying to one touchable thing and one carried thing.
 Understand the command "cut" as something new.
@@ -141,14 +162,28 @@ Understand "cut [something] with [something]" as cutting it with.
 [Prefer using the knife, when guessing the second noun:]
 Understand "cut [something] with [the knife]" as cutting it with.
 
+[TO DO: allow cutting with the blade?]
+
 Instead of cutting with when the second noun is not the knife, say "[The second noun] is not sharp enough to cut [the noun]."
 Instead of cutting someone with the knife, say "You wouldn't want to hurt [the noun]."
 Instead of cutting something with the knife, say "You wouldn't want to damage [the noun]."
 Check cutting with: instead say "This rule shouldn't be applied!  Please report this bug."
 
+The dirt is scenery in the scrub.  "It's just dirt."
+The brush is scenery in the scrub.  "Low scraggly shrubs and bushes."
+Understand "scrub/shrub/shrubs/bush/bushes" as the brush.
+Instead of cutting the brush with the knife, say "The scrub is too dense to clear away."
+
 Section - The Boat
 
+The Mooring is east of the crossing.  "It starts to get marshy here, but dryer land is upstream to the west."
+The mooring is in the river area.
+
 Before going to the mooring for the first time, say "You walk a ways downstream, until you come upon a welcome sight: a fishing boat, still tied securely to the near bank."
+
+Instead of going east in the mooring, say "It's too marshy to go any further downstream."
+
+The marsh is scenery in the mooring.  "Soggy and squishy."
 
 A fishing boat is a fixed in place enterable container in the mooring.  The description is "The boat is tied to a metal loop embedded in the near bank."
 [TO DO: don't print (empty)]
@@ -159,12 +194,18 @@ Understand "board [the boat]" as entering.
 [TO DO: pull/push/launch boat]
 The metal loop is scenery in the mooring.
 The rope is scenery in the mooring.  "The knots at both ends of the rope are covered with mud and tangled with wet reeds."  Understand "knot/knots" as the rope.
-The wet reeds are scenery in the mooring.  Understand "reed" as the reeds. 
+The wet reeds are scenery in the mooring.  "The wet reeds are tangled up into the knots at both ends of the rope."
+Understand "reed" as the reeds.
+The mud is scenery in the mooring.  "The mud covers the knots at both ends of the rope."
+Instead of cutting the mud with the knife, say "The mud is not really something you can cut."
+Instead of cutting the loop with the knife, say "You'd need a hacksaw to cut something as thick as the metal loop."
+Instead of cutting the reeds with the knife, say "The wet reeds are too tangled up in the knots to cut."
 
 Untying is an action applying to one touchable thing.
 Understand "untie [something]" as untying.
+Instead of untying anything, say "You can't untie [the noun]."
 Instead of untying the boat, try untying the rope.
-Instead of untying the rope, say "You try to untie the boat from its mooring, but [if we have not examined the rope]the knots are covered with mud and tangled with wet reeds, and [end if]the knots just won't come undone."
+Instead of untying the rope, say "You try to untie the boat from its mooring, but [if we have not examined the rope]the rope is covered with mud and tangled with wet reeds, and [end if]the knots just won't come undone."
 
 First instead of cutting the boat with something: try cutting the rope with the second noun.
 
@@ -202,12 +243,11 @@ Before going north from the market for the first time:
 	say "You head toward the center of town."
 
 Instead of going east in the market, try going west.
+Instead of going south in the market, try going west.
 Instead of going west in the market:
 	say "You wander aimlessly around town for a while, not sure where to go [if the greengrocer is not mentioned]to find the greengrocer[end if].  Eventually you end up at the town square.";
 	increase the time of day by five minutes;
 	try going north.
-
-[TO DO: south]
 
 Chapter - Sunny Town
 
@@ -256,9 +296,12 @@ Chapter - The Chapel
 
 The chapel is in the town area.
 
-The description of the chapel is "A chapel."
+The description of the chapel is "The inside of the chapel is no less ramshackle than the outside.  It's quiet, though."
 
 The greengrocer is a man in the chapel.  "The greengrocer is here, sitting on a pew near the altar."
+The description is "The greengrocer is dressed up like he's going to church, but it's not Sunday."
+
+Understand "grocer/man" as the greengrocer.
 
 The pew is an enterable scenery supporter in the chapel.
 The altar is a scenery supporter in the chapel.
