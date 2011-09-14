@@ -80,7 +80,9 @@ Chapter - The Boy
 
 Your clothes are worn by yourself.  They are plural-named.  The description is "You're wearing your best clothes, which are still a bit shabby (and you're starting to outgrow them anyway).  But, if this season's harvest is good enough, Dad can make enough money to buy you new clothes."
 Instead of examining yourself, try examining your clothes.
-Instead of taking off your clothes, say "It's warm, but not that warm."
+Before taking off your clothes, instead say "It's warm, but not that warm."
+Instead of taking your clothes, try taking off your clothes.
+Instead of dropping your clothes, try taking off your clothes.
 
 The player carries a basket.  In the basket are some cranberries.  Understand "berries" as the cranberries.
 Instead of taking the cranberries when the cranberries are in the basket and the basket is not held:
@@ -151,6 +153,8 @@ Before going to the mooring for the first time, say "You walk a ways downstream,
 A fishing boat is a fixed in place enterable container in the mooring.  The description is "The boat is tied to a metal loop embedded in the near bank."
 [TO DO: don't print (empty)]
 
+Instead of going north in the mooring, try entering the boat.
+Instead of going south in the mooring when in the boat, try exiting.
 Understand "board [the boat]" as entering.
 [TO DO: pull/push/launch boat]
 The metal loop is scenery in the mooring.
@@ -181,9 +185,15 @@ The rest of the trip into town is uneventful.  When you get to town, you head st
 	increase the time of day by one hour;
 	move the player to the market.	 
 
+Part - The Town
+
+The Town Area is a region.
+
+Before taking off your clothes in the town area, instead say "Not in public!"
+
 Chapter - The Market
 
-The Market is a room.  "Amid the hustle and bustle of the market is the forlorn sight of the empty greengrocer's stand."
+The Market is in the town area.  "Amid the hustle and bustle of the market is the forlorn sight of the empty greengrocer's stand."
 The hustle and bustle is scenery in the market.
 
 The empty greengrocer's stand is a scenery supporter in the market.  "It looks like the greengrocer never even set up his stand this morning."
@@ -204,6 +214,7 @@ Chapter - Sunny Town
 [TO DO: get rid of the square, go directly to the building site from the market; the chapel is inside from the building site.  Maybe the man doesn't show up until after you've been to the garden?] 
 
 The Town Square is north of the market.  Northwest is the Building Site.  Northeast is the Chapel.
+The square is in the town area.
 
 "A grassy square marks the center of town, with streets leading out in the four cardinal directions.  On the northwest corner is a large dusty building site, with stones lying around in piles.  On the northeast corner is a rickety wooden chapel that was once painted white.  The market is back south."
 
@@ -215,7 +226,7 @@ Instead of entering the old chapel, try going northeast.
 
 Chapter - The Building Site
 
-The Building Site is a room.  "Large building stones are piled around."
+The Building Site is in the town area.  "Large building stones are piled around."
 [TO DO: Why no exits?]
 
 A pile of building stones is scenery in the building site.
@@ -242,6 +253,8 @@ Instead of giving the knife to the traveler:
 	now the traveler is off-stage.
 
 Chapter - The Chapel
+
+The chapel is in the town area.
 
 The description of the chapel is "A chapel."
 
@@ -305,6 +318,7 @@ Greengrocer Exposition ends when the player is not enclosed by the chapel or the
 Chapter - The Garden
 
 The Garden is north of the chapel. "An overgrown garden with a sundial."
+The garden is in the town area.
 
 Section - The Sundial
 
@@ -380,6 +394,7 @@ Instead of going north from the garden when the hat is not worn:
 Chapter - The Garden House
 
 The Garden House is north of the garden.
+The garden house is in the town area.
 A desk is a supporter in the garden house.
 The drawer is part of the desk.
 The drawer is closed and locked.
