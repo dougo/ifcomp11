@@ -64,7 +64,7 @@ Understand "* [text]" as a mistake ("Noted.").
 [You're not inside something. To leave this location, try a direction or "out".]
 ]
 
-Part - The Story
+Part - The Beginning
 
 When play begins:
 	now the right hand status line is "";
@@ -109,7 +109,7 @@ Carry out going home:
 	say "The sun's going down, and you'd better be home before dark, so it's time to give up and go back home now.  Maybe you can try again tomorrow.  Or maybe you're not old enough to go into town by yourself after all.";
 	end the story finally.
 
-Chapter - The River
+Part - The River
 
 The River Area is a region.
 
@@ -140,7 +140,7 @@ Instead of going south in the river area, try going home.
 Instead of drinking the river, say "You take a few sips from the river.  It's cool and refreshing."
 Understand "drink from [the river]" as drinking.
 
-Section - The Rusty Knife
+Chapter - The Rusty Knife
 
 The Scrub is west of the crossing.  "The scrub brush along the river is dense here, but it thins out downstream to the west."
 The scrub is in the river area.
@@ -174,9 +174,9 @@ The brush is scenery in the scrub.  "Low scraggly shrubs and bushes."
 Understand "scrub/shrub/shrubs/bush/bushes" as the brush.
 Instead of cutting the brush with the knife, say "The scrub is too dense to clear away."
 
-Section - The Boat
+Chapter - The Boat
 
-The Mooring is east of the crossing.  "It starts to get marshy here, but dryer land is upstream to the west."
+The Mooring is east of the crossing.  "It starts to get marshy here, but drier land is upstream to the west."
 The mooring is in the river area.
 
 Before going to the mooring for the first time, say "You walk a ways downstream, until you come upon a welcome sight: a fishing boat, still tied securely to the near bank."
@@ -239,37 +239,30 @@ The hustle and bustle is scenery in the market.
 
 The empty greengrocer's stand is a scenery supporter in the market.  "It looks like the greengrocer never even set up his stand this morning."
 
-Before going north from the market for the first time:
-	say "You head toward the center of town."
+Instead of going east in the market, try going north.
+Instead of going south in the market, try going north.
+Instead of going west in the market, try going north.
+Before going north in the market:
+	say "You wander aimlessly around town for a while, not sure where to go to find the greengrocer.  The cobblestone streets are full of people, but nobody pays you any attention.
+	
+Eventually, you come to a plot of dirt where a stone building is starting to be built.  There doesn't seem to be anybody working on it today, though, so you make your way among the piles of building stones to get away from the crowds for a bit.
 
-Instead of going east in the market, try going west.
-Instead of going south in the market, try going west.
-Instead of going west in the market:
-	say "You wander aimlessly around town for a while, not sure where to go [if the greengrocer is not mentioned]to find the greengrocer[end if].  Eventually you end up at the town square.";
-	increase the time of day by five minutes;
-	try going north.
-
-Chapter - Sunny Town
-
-[TO DO: get rid of the square, go directly to the building site from the market; the chapel is inside from the building site.  Maybe the man doesn't show up until after you've been to the garden?] 
-
-The Town Square is north of the market.  Northwest is the Building Site.  Northeast is the Chapel.
-The square is in the town area.
-
-"A grassy square marks the center of town, with streets leading out in the four cardinal directions.  On the northwest corner is a large dusty building site, with stones lying around in piles.  On the northeast corner is a rickety wooden chapel that was once painted white.  The market is back south."
-
-The grass is scenery in the square.  [TO DO: more scenery?  Something to do here?]
-[TO DO: other streets]
-
-The old chapel is scenery in the square.  "A rickety wooden chapel that was once painted white."  [TO DO: put this in the room description]
-Instead of entering the old chapel, try going northeast.
+Nearby is a rickety wooden chapel that was once painted white.  The door is open, and inside it you see a familiar figure.  Could it be...?  Yes, it's the greengrocer at last!";
+	increase the time of day by ten minutes.
 
 Chapter - The Building Site
 
-The Building Site is in the town area.  "Large building stones are piled around."
-[TO DO: Why no exits?]
+The Building Site is north of the market.  It is in the town area.
+"Large building stones are piled around.  The chapel is to the east."
 
-A pile of building stones is scenery in the building site.
+Instead of going north in the building site, try going south.
+Instead of going west in the building site, try going south.
+Instead of going south in the building site when the greengrocer has not been mentioned, say "But the greengrocer is right there in the chapel!  Surely he'll buy your cranberries from you."
+Instead of going south in the building site, say "You're not really sure where you are or which way to go, and the crowded streets of the town are still intimidating."
+
+Instead of going inside in the building site, try going east.
+
+A pile of building stones is an enterable scenery supporter in the building site.
 
 Section - The Man in the Hat
 
@@ -278,8 +271,6 @@ Section - The Man in the Hat
 The traveler is a privately-named man.  ["An old man sits on a bench.  A hat shades his eyes from the sun."]
 
 Understand "man" as the traveler.  The printed name of the traveler is "man".
-
-The traveler is on the pile of building stones.
 
 The traveler wears a hat.
 [TO DO: the hat is "surprising"...?]
@@ -294,9 +285,13 @@ Instead of giving the knife to the traveler:
 
 Chapter - The Chapel
 
-The chapel is in the town area.
+The front door is a scenery open door.  It is east of the building site. [TO DO: desc]
+The Chapel is east of the front door.  "The inside of the chapel is no less ramshackle than the outside.  It's quiet, though.  A slight breeze blows in through a door to the north, bringing the scent of a garden.  The front door leads back out to the west."
+It is in the town area.
 
-The description of the chapel is "The inside of the chapel is no less ramshackle than the outside.  It's quiet, though."
+Understand "chapel" as the front door when in the building site.
+Instead of going outside in the chapel, try going west.
+Instead of exiting in the chapel when the player is not on the pew, try going west.
 
 The greengrocer is a man in the chapel.  "The greengrocer is here, sitting on a pew near the altar."
 The description is "The greengrocer is dressed up like he's going to church, but it's not Sunday."
@@ -360,8 +355,14 @@ Greengrocer Exposition ends when the player is not enclosed by the chapel or the
 
 Chapter - The Garden
 
-The Garden is north of the chapel. "An overgrown garden with a sundial."
+The back door is a scenery open door.  It is north of the chapel.  [TO DO: desc]
+The Garden is north of the back door. "An overgrown garden with a sundial."  [TO DO]
 The garden is in the town area.
+
+Before going north from the chapel for the first time, now the traveler is in the building site.
+
+Instead of going west in the garden, try going east.
+Instead of going east in the garden, say "The garden is fenced in."
 
 Section - The Sundial
 
@@ -436,7 +437,7 @@ Instead of going north from the garden when the hat is not worn:
 
 Chapter - The Garden House
 
-The Garden House is north of the garden.
+The Garden House is north of the garden.  [TO DO: description]
 The garden house is in the town area.
 A desk is a supporter in the garden house.
 The drawer is part of the desk.
@@ -448,7 +449,8 @@ Instead of opening the desk, try opening the drawer.
 Before opening the drawer when the drawer is locked and the key is held:
 	try unlocking the drawer with the key.
 
-[Instead of showing the book to the greengrocer, try giving it to him.]
+[TO DO: recognize the boy if he hasn't already.]
+
 Instead of giving or showing the book to the greengrocer:
 	say "'Here,' you say, 'I found this in the garden house.  I thought you might want it.'  The greengrocer looks at you, his eyes red, then looks down at the book blankly.  Slowly, amazement spreads across his face.
 
