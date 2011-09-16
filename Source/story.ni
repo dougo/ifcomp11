@@ -64,6 +64,10 @@ Understand "* [text]" as a mistake ("Noted.").
 [You're not inside something. To leave this location, try a direction or "out".]
 ]
 
+Asking about the story is an action out of world.
+Report asking about the story: say "This is the IF Competition 2011 version of Last Day of Summer."
+Understand "about" as asking about the story.
+
 Part - The Beginning
 
 When play begins:
@@ -139,6 +143,8 @@ Instead of going south in the river area, try going home.
 
 Instead of drinking the river, say "You take a few sips from the river.  It's cool and refreshing."
 Understand "drink from [the river]" as drinking.
+
+[TO DO: drop/put/throw anything into the river]
 
 Chapter - The Rusty Knife
 
