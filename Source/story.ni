@@ -306,11 +306,10 @@ Understand "grocer/man" as the greengrocer.
 The pew is an enterable scenery supporter in the chapel.  [TO DO: descs]
 The altar is a scenery supporter in the chapel.
 
-Greengrocer-state is a kind of value.  The greengrocer-states are reverie, stirring, waiting for you to sit, and done talking.
-The greengrocer has a greengrocer-state called the state.  The state of the greengrocer is reverie.
+The greengrocer is either lost in thought, stirring, waiting for you to sit, or done talking.
 
-Every turn when the state of the greengrocer is reverie and the player is in the chapel:
-	now the state of the greengrocer is stirring;
+Every turn when the greengrocer is lost in thought and the player is in the chapel:
+	now the greengrocer is stirring;
 	say "The greengrocer doesn't seem to notice you, lost in his thoughts.";
 	the greengrocer notices you in two turns from now.
 	
@@ -319,16 +318,16 @@ At the time when the greengrocer notices you:
 		say "The greengrocer stirs from his reverie [one of]and sees you for the first time.  'I know you, you're the Cubbins boy.  Tolmy, right?'[no line  break][or]again.[no line break][stopping]";
 		if the player is not on the pew:
 			say "  He pats the pew.  'Come and sit beside me, son.'";
-			now the state of the greengrocer is waiting for you to sit;
+			now the greengrocer is waiting for you to sit;
 		otherwise:
 			[TO DO: only nod if he asked you about your name.]
 			say "  You nod, and he goes back to gazing blankly at the altar.[paragraph break]";
 			relate the legend;
 	otherwise:
-		now the state of the greengrocer is reverie.
+		now the greengrocer is lost in thought.
 
-After going from the chapel when the state of the greengrocer is waiting for you to sit:
-	now the state of the greengrocer is reverie;
+After going from the chapel when the greengrocer is waiting for you to sit:
+	now the greengrocer is lost in thought;
 	continue the action.
 
 [Guess the pew when the player just types "sit":]
@@ -340,7 +339,7 @@ Instead of sitting with the greengrocer, try entering the pew.
 
 After entering the pew:
 	say "You sit on the pew next to the greengrocer.[run paragraph on]";	
-	if the state of the greengrocer is waiting for you to sit:
+	if [the state of] the greengrocer is waiting for you to sit:
 		say "[paragraph break]The greengrocer nods, and goes back to gazing blankly at the altar.[paragraph break]";
 		relate the legend;
 	otherwise:
@@ -352,7 +351,7 @@ To relate the legend:
 'This one was about a man who stole the treasure of time.  Even worse, as the legend goes, he then lost it.  He is cursed to wander until he finds it again, and replaces it on the altar he stole it from.'  The greengrocer chuckles, then goes quiet again.
 
 After another few moments, the greengrocer looks down at the floor, saying in a quavering voice, 'But I guess I won't be hearing any more of Preacher's legends now.'";
-	now the state of the greengrocer is done talking.
+	now the greengrocer is done talking.
 
 Chapter - The Garden
 
