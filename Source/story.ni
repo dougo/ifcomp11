@@ -65,7 +65,7 @@ Understand "* [text]" as a mistake ("Noted.").
 ]
 
 Asking about the story is an action out of world.
-Report asking about the story: say "This is the IF Competition 2011 version of Last Day of Summer."
+Report asking about the story: say "This is the IF Competition 2011 beta-test version of Last Day of Summer."
 Understand "about" as asking about the story.
 
 Part - The Beginning
@@ -223,7 +223,6 @@ Instead of cutting the rope with the knife when the actor is not in the boat, sa
 Instead of cutting the rope with the knife when the actor is in the boat and the cranberries are not enclosed by the boat, say "Wait, you can't go to town without the cranberries!"
 
 Instead of cutting the rope with the knife:
-	[TO DO: wait for a key, clear the screen?]
 	say "It takes a while, but you eventually manage to cut through the rope.  You shove off, and the boat quickly floats across the river.  You clamber up the far bank and set off once again for town.  Whew!
 
 The rest of the trip into town is uneventful.  When you get to town, you head straight for the market.  You meander through the merchants['] stands until you get to the greengrocer's, only to discover an empty stand and no sign of the greengrocer.";
@@ -304,27 +303,19 @@ The description is "The greengrocer is dressed up like he's going to church, but
 
 Understand "grocer/man" as the greengrocer.
 
-The pew is an enterable scenery supporter in the chapel.
+The pew is an enterable scenery supporter in the chapel.  [TO DO: descs]
 The altar is a scenery supporter in the chapel.
 
-[The greengrocer can be zoned out or alert.  The greengrocer is zoned out.]
-
-[After looking in the chapel when the greengrocer is zoned out:
-	say "The greengrocer doesn't seem to notice you.";
-	now the greengrocer is alert.
-]
-
-Greengrocer-state is a kind of value.  The greengrocer-states are reverie, waiting for you to sit, and done talking.
+Greengrocer-state is a kind of value.  The greengrocer-states are reverie, stirring, waiting for you to sit, and done talking.
 The greengrocer has a greengrocer-state called the state.  The state of the greengrocer is reverie.
-Greengrocer Exposition is a recurring scene.
-Greengrocer Exposition begins when the player is in the chapel and the state of the greengrocer is not done talking.
-When Greengrocer Exposition begins:
-	now the state of the greengrocer is reverie;
+
+Every turn when the state of the greengrocer is reverie and the player is in the chapel:
+	now the state of the greengrocer is stirring;
 	say "The greengrocer doesn't seem to notice you, lost in his thoughts.";
 	the greengrocer notices you in two turns from now.
-
+	
 At the time when the greengrocer notices you:
-	if Greengrocer Exposition is happening:
+	if the player is enclosed by the chapel:
 		say "The greengrocer stirs from his reverie [one of]and sees you for the first time.  'I know you, you're the Cubbins boy.  Tolmy, right?'[no line  break][or]again.[no line break][stopping]";
 		if the player is not on the pew:
 			say "  He pats the pew.  'Come and sit beside me, son.'";
@@ -332,7 +323,13 @@ At the time when the greengrocer notices you:
 		otherwise:
 			[TO DO: only nod if he asked you about your name.]
 			say "  You nod, and he goes back to gazing blankly at the altar.[paragraph break]";
-			relate the legend.
+			relate the legend;
+	otherwise:
+		now the state of the greengrocer is reverie.
+
+After going from the chapel when the state of the greengrocer is waiting for you to sit:
+	now the state of the greengrocer is reverie;
+	continue the action.
 
 [Guess the pew when the player just types "sit":]
 Understand "sit on [the pew]" as entering.
@@ -356,8 +353,6 @@ To relate the legend:
 
 After another few moments, the greengrocer looks down at the floor, saying in a quavering voice, 'But I guess I won't be hearing any more of Preacher's legends now.'";
 	now the state of the greengrocer is done talking.
-
-Greengrocer Exposition ends when the player is not enclosed by the chapel or the state of the greengrocer is done talking.
 
 Chapter - The Garden
 
