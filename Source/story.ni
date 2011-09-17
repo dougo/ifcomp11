@@ -307,6 +307,7 @@ The pew is an enterable scenery supporter in the chapel.  [TO DO: descs]
 The altar is a scenery supporter in the chapel.
 
 The greengrocer is either lost in thought, stirring, waiting for you to sit, or done talking.
+Yourself can be recognized.
 
 Every turn when the greengrocer is lost in thought and the player is in the chapel:
 	now the greengrocer is stirring;
@@ -315,14 +316,18 @@ Every turn when the greengrocer is lost in thought and the player is in the chap
 	
 At the time when the greengrocer notices you:
 	if the player is enclosed by the chapel:
-		say "The greengrocer stirs from his reverie [one of]and sees you for the first time.  'I know you, you're the Cubbins boy.  Tolmy, right?'[no line  break][or]again.[no line break][stopping]";
+		say "The greengrocer stirs from his reverie ";
+		if the player is not recognized:
+			say "and sees you for the first time.  'I know you, you're the Cubbins boy.  Tolmy, right?'[no line  break]";
+		otherwise:
+			say "again.[no line break]";
 		if the player is not on the pew:
-			say "  He pats the pew.  'Come and sit beside me, son.'";
+			say "  He [if the player is recognized]notices you standing there, and [end if]pats the pew.  'Come and sit beside me, son.'";
 			now the greengrocer is waiting for you to sit;
 		otherwise:
-			[TO DO: only nod if he asked you about your name.]
-			say "  You nod, and he goes back to gazing blankly at the altar.[paragraph break]";
+			say "  [if the player is not recognized]You nod, and he[else]He notices you sitting beside him, then nods and[end if] goes back to gazing blankly at the altar.[paragraph break]";
 			relate the legend;
+		now the player is recognized;
 	otherwise:
 		now the greengrocer is lost in thought.
 
@@ -339,7 +344,7 @@ Instead of sitting with the greengrocer, try entering the pew.
 
 After entering the pew:
 	say "You sit on the pew next to the greengrocer.[run paragraph on]";	
-	if [the state of] the greengrocer is waiting for you to sit:
+	if the greengrocer is waiting for you to sit:
 		say "[paragraph break]The greengrocer nods, and goes back to gazing blankly at the altar.[paragraph break]";
 		relate the legend;
 	otherwise:
@@ -452,7 +457,10 @@ Before opening the drawer when the drawer is locked and the key is held:
 [TO DO: recognize the boy if he hasn't already.]
 
 Instead of giving or showing the book to the greengrocer:
-	say "'Here,' you say, 'I found this in the garden house.  I thought you might want it.'  The greengrocer looks at you, his eyes red, then looks down at the book blankly.  Slowly, amazement spreads across his face.
+	say "The greengrocer ";
+	if the greengrocer is not waiting for you to sit:
+		say "looks at you[if the player is not recognized].  'I know you, you're the Cubbins boy.  Tolmy, right?'  He[otherwise], his eyes red, then [end if]";
+	say "looks down at the book blankly.  Slowly, amazement spreads across his face.
 
 The greengrocer takes the book in his hands, holding it like a treasure.  Tears start to fill his eyes as he pages through it.
 
