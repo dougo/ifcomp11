@@ -39,17 +39,6 @@ Use American dialect, the serial comma, no scoring[, and no deprecated features]
 
 To say --: say Unicode 8212.
 
-[I thought this might be nice to have, but I think it's a bit overzealous: 
-Include Extended Grammar by Aaron Reed.
-Understand the command "sit [something]" as something new.
-]
-
-Include Small Kindnesses by Aaron Reed.
-[Don't list exits:]
-Understand the command "exits" as something new.
-The Small Kindnesses reporting on exits rule is not listed in any rulebook.
-
-[This has to be after Small Kindnesses:]
 Include Neutral Library Messages by Aaron Reed.
 [For debugging:]
 [Use library message alerts.]
@@ -102,7 +91,7 @@ Instead of taking the cranberries when the cranberries are in the basket and the
 	say "There's too many cranberries to hold in your hands."
 
 [TO DO: print as "basket of cranberries" when full]
-[TO DO: don't include cranberries in get all]
+Rule for deciding whether all includes something in the basket: it does not.
 
 The cranberries are edible.  [But you can't take them to eat...]
 A cranberry is a part of the cranberries.  A cranberry is edible.  Understand "berry" as a cranberry.
@@ -202,7 +191,9 @@ A fishing boat is a fixed in place enterable container in the mooring.  The desc
 [TO DO: don't print (empty)]
 
 Instead of going north in the mooring, try entering the boat.
+Instead of going inside in the mooring, try entering the boat.
 Instead of going south in the mooring when in the boat, try exiting.
+Instead of going outside in the mooring when in the boat, try exiting.
 Understand "board [the boat]" as entering.
 [TO DO: pull/push/launch boat]
 The metal loop is scenery in the mooring.
@@ -402,7 +393,7 @@ After taking the key from the sundial:
 
 Understand "key" as the key when the key is handled.
 
-[TO DO: Don't include the brass rod in GET ALL until it's been handled.]
+Rule for deciding whether all includes the key when the key is not handled: it does not.
 
 A thing can be gnomon-shaped.
 Instead of inserting a thing into the sundial when the noun is not gnomon-shaped:
@@ -439,7 +430,7 @@ Before going north from the chapel for the first time, now the traveler is in th
 
 Before going west from the chapel when the traveler is in the building site for the first time:
 	say "As you step back out into the building site, a man in a hat walks up and peers around you through the door into the chapel.  'Oh, it looks like I'm too late,' he says, somberly.  He looks you up and down for a moment, stroking his unshaven chin.  'Say, that knife reminds me of one I used to have.  I don't suppose you'd trade it to me for my hat?'[run paragraph on]";
-	if the knife is carried:
+	if the knife is enclosed by the player:
 		say "[paragraph break]";
 	otherwise:
 		say "[paragraph break](That's odd, didn't you leave the knife in [the location of the knife]?  Nope, there it is, you still have it.)";
