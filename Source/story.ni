@@ -64,6 +64,10 @@ Understand "* [text]" as a mistake ("Noted.").
 [You're not inside something. To leave this location, try a direction or "out".]
 ]
 
+[TO DO: standing shouldn't print the room desc again.]
+
+[TO DO: fix default message for give/show.  And say.  And maybe push/pull/turn?]
+
 Asking about the story is an action out of world.
 Report asking about the story: say "This is the IF Competition 2011 beta-test version of Last Day of Summer."
 Understand "about" as asking about the story.
@@ -85,8 +89,7 @@ Chapter - The Boy
 Your clothes are worn by yourself.  They are plural-named.  The description is "You're wearing your best clothes, which are still a bit shabby (and you're starting to outgrow them anyway).  But, if this season's harvest is good enough, Dad can make enough money to buy you new clothes."
 Instead of examining yourself, try examining your clothes.
 Before taking off your clothes, instead say "It's warm, but not that warm."
-Instead of taking your clothes, try taking off your clothes.
-Instead of dropping your clothes, try taking off your clothes.
+[TO DO: don't show clothes in inventory]
 
 The player carries a basket.  "Mom wove the basket for you last summer."
 In the basket are some cranberries.  "Red and ripe, ready to be sold at the market."
@@ -98,7 +101,8 @@ Instead of removing the cranberries from the basket:
 Instead of taking the cranberries when the cranberries are in the basket and the basket is held:
 	say "There's too many cranberries to hold in your hands."
 
-[TO DO: print as "basket of cranberries" when full] 
+[TO DO: print as "basket of cranberries" when full]
+[TO DO: don't include cranberries in get all]
 
 The cranberries are edible.  [But you can't take them to eat...]
 A cranberry is a part of the cranberries.  A cranberry is edible.  Understand "berry" as a cranberry.
@@ -155,8 +159,9 @@ Before going to the scrub for the first time, say "You walk a ways upstream, unt
 
 Instead of going west in the scrub, say "The scrub is too dense to go any further upstream."
 
-A rusty knife is in the scrub.  "A rusty knife lies on the ground, half-buried in dirt."
-The description is "Rust covers the blade of the knife, which ends in a tattered leather hilt." 
+The rusty knife is in the scrub.  "A rusty knife lies on the ground, half-buried in dirt."
+The description is "Rust covers the blade of the knife, which ends in a tattered leather hilt."
+
 The blade is a part of the knife.  "You're not sure the rust-covered blade is sharp enough to cut much."
 The tattered leather hilt is a part of the knife.  "Tattered leather covers the hilt of the knife."
 Instead of opening [e.g. unwrapping] the leather, say "The leather is tattered, but clings stubbornly to the hilt of the knife."
@@ -173,6 +178,8 @@ Understand "cut [something] with [the knife]" as cutting it with.
 Instead of cutting with when the second noun is not the knife, say "[The second noun] is not sharp enough to cut [the noun]."
 Instead of cutting someone with the knife, say "You wouldn't want to hurt [the noun]."
 Instead of cutting something with the knife, say "You wouldn't want to damage [the noun]."
+Instead of cutting scenery with the knife, parser say "That is just scenery, and can't be cut."
+Instead of cutting the knife with the knife, say "That's not possible."
 Check cutting with: instead say "This rule shouldn't be applied!  Please report this bug."
 
 The dirt is scenery in the scrub.  "It's just dirt."
@@ -269,25 +276,6 @@ Instead of going inside in the building site, try going east.
 
 A pile of building stones is an enterable scenery supporter in the building site.
 
-Section - The Man in the Hat
-
-[TO DO: no reason for him to be old now.]
-
-The traveler is a privately-named man.  ["An old man sits on a bench.  A hat shades his eyes from the sun."]
-
-Understand "man" as the traveler.  The printed name of the traveler is "man".
-
-The traveler wears a hat.
-[TO DO: the hat is "surprising"...?]
-
-[TO DO: gravestone?]
-
-Instead of giving the knife to the traveler:
-	say "You hand the knife over to the man.  In return, he gives you his hat, and then wanders off.";
-	move the knife to the traveler;
-	move the hat to the player;
-	now the traveler is off-stage.
-
 Chapter - The Chapel
 
 The front door is a scenery open door.  It is east of the building site. [TO DO: desc]
@@ -311,7 +299,7 @@ Yourself can be recognized.
 
 Every turn when the greengrocer is lost in thought and the player is in the chapel:
 	now the greengrocer is stirring;
-	say "The greengrocer doesn't seem to notice you, lost in his thoughts.";
+	say "The greengrocer doesn't seem to notice you arrive, lost in his thoughts.";
 	the greengrocer notices you in two turns from now.
 	
 At the time when the greengrocer notices you:
@@ -364,10 +352,9 @@ The back door is a scenery open door.  It is north of the chapel.  [TO DO: desc]
 The Garden is north of the back door. "An overgrown garden with a sundial."  [TO DO]
 The garden is in the town area.
 
-Before going north from the chapel for the first time, now the traveler is in the building site.
-
 Instead of going west in the garden, try going east.
 Instead of going east in the garden, say "The garden is fenced in."
+The fence is scenery in the garden.  [TO DO: describe]
 
 Section - The Sundial
 
@@ -415,6 +402,8 @@ After taking the key from the sundial:
 
 Understand "key" as the key when the key is handled.
 
+[TO DO: Don't include the brass rod in GET ALL until it's been handled.]
+
 A thing can be gnomon-shaped.
 Instead of inserting a thing into the sundial when the noun is not gnomon-shaped:
 	say "It doesn't seem to fit."
@@ -431,7 +420,6 @@ Understand "screw [something] into [something]" and "jam [something] into [somet
 Instead of inserting something into the sundial when the sundial contains something:
 	say "It doesn't seem to fit."
 
-
 Section - The Bird
 
 Instead of going north from the garden when the hat is not worn:
@@ -439,6 +427,32 @@ Instead of going north from the garden when the hat is not worn:
 
 [TO DO: bird, nest, eaves are scenery] 
 
+Chapter - The Man in the Hat
+
+The traveler is a man.  "The man in the hat stands here."
+The description is "He looks like some sort of traveler.  Or, at least, he's not from around here."
+
+Understand "man", "man in the hat", "man in a hat", and "man in hat" as the traveler.
+The printed name of the traveler is "man in the hat".
+
+Before going north from the chapel for the first time, now the traveler is in the building site.
+
+Before going west from the chapel when the traveler is in the building site for the first time:
+	say "As you step back out into the building site, a man in a hat walks up and peers around you through the door into the chapel.  'Oh, it looks like I'm too late,' he says, somberly.  He looks you up and down for a moment, stroking his unshaven chin.  'Say, that knife reminds me of one I used to have.  I don't suppose you'd trade it to me for my hat?'[run paragraph on]";
+	if the knife is carried:
+		say "[paragraph break]";
+	otherwise:
+		say "[paragraph break](That's odd, didn't you leave the knife in [the location of the knife]?  Nope, there it is, you still have it.)";
+		move the knife to the player.
+[TO DO: print the room name as lowercase?]
+
+A hat is worn by the traveler.  The description is "The hat is surprisingly... well, it's just... surprising."
+
+Instead of giving the knife to the traveler:
+	say "You hand the knife over to the man.  He looks at it, briefly smiling to himself, then with a quick bow, tips his hat into his hand and gives it to you.  'Thank you kindly.  Wear it in good health.'  He then turns and wanders off through the piles of building stones.";
+	move the knife to the traveler;
+	move the hat to the player;
+	now the traveler is off-stage.
 
 Chapter - The Garden House
 
@@ -453,8 +467,6 @@ In the drawer is a book.
 Instead of opening the desk, try opening the drawer.
 Before opening the drawer when the drawer is locked and the key is held:
 	try unlocking the drawer with the key.
-
-[TO DO: recognize the boy if he hasn't already.]
 
 Instead of giving or showing the book to the greengrocer:
 	say "The greengrocer ";
