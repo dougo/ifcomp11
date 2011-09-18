@@ -265,7 +265,10 @@ Instead of going south in the building site, say "You're not really sure where y
 
 Instead of going inside in the building site, try going east.
 
-A pile of building stones is an enterable scenery supporter in the building site.
+Some large building stones are scenery in the building site.  [TO DO: desc]
+Understand "stone", "building stone", "large building stone" as the stones.
+
+[TO DO: chapel is scenery]
 
 Chapter - The Chapel
 
@@ -340,12 +343,16 @@ After another few moments, the greengrocer looks down at the floor, saying in a 
 Chapter - The Garden
 
 The back door is a scenery open door.  It is north of the chapel.  [TO DO: desc]
-The Garden is north of the back door. "An overgrown garden with a sundial."  [TO DO]
+The Garden is north of the back door. "Behind the chapel is a small garden, if it can still be called a garden, overrun by weeds.  A sundial pokes out of the weeds in the center of the garden.  A tidy brick garden house stands to the north."
 The garden is in the town area.
 
 Instead of going west in the garden, try going east.
 Instead of going east in the garden, say "The garden is fenced in."
-The fence is scenery in the garden.  [TO DO: describe]
+The fence is scenery in the garden.  "Like the chapel, the fence was once painted white."
+The weeds are scenery in the garden.
+Instead of cutting the weeds with the knife, say "You don't much feel like gardening."
+
+[TO DO: chapel and garden house are scenery]
 
 Section - The Sundial
 
@@ -416,7 +423,7 @@ Section - The Bird
 Instead of going north from the garden when the hat is not worn:
 	say "[one of]You head towards the garden house, but a bird swoops down from its nest in the eaves of the garden house and attacks your hair!  You wave your arms to shoo it away, but it doesn't go away until you scurry back into the garden[or]The bird attacks you again.  No way you're getting into that garden house[stopping]."
 
-[TO DO: bird, nest, eaves are scenery] 
+[TO DO: bird, nest, eaves are scenery]
 
 Chapter - The Man in the Hat
 
@@ -447,17 +454,39 @@ Instead of giving the knife to the traveler:
 
 Chapter - The Garden House
 
-The Garden House is north of the garden.  [TO DO: description]
+The Garden House is north of the garden.  "Gardening tools are neatly arranged around the walls.  A small desk and chair sit in the middle.  The desktop is empty except for a pen and inkwell."
 The garden house is in the town area.
-A desk is a supporter in the garden house.
+
+A desk is scenery in the garden house.  "The desk has a single wide drawer underneath."
+
+A pen and an inkwell are scenery on the desk.  [TO DO: descs]
+
+A chair is an enterable scenery supporter in the garden house.
+
+Some gardening tools are scenery in the garden house.
+
 The drawer is part of the desk.
 The drawer is closed and locked.
 The key unlocks the drawer.
-In the drawer is a book.
+
+Understand "unlock [the drawer] with [the key]" as unlocking it with.
+Understand "lock [the drawer] with [the key]" as locking it with.
 
 Instead of opening the desk, try opening the drawer.
+Instead of unlocking the desk with something, try unlocking the drawer with the second noun.
+Instead of closing the desk, try closing the drawer.
+Instead of locking the desk with something, try locking the drawer with the second noun.
+
 Before opening the drawer when the drawer is locked and the key is held:
+	say "(first unlocking the drawer)";
 	try unlocking the drawer with the key.
+
+After unlocking the drawer with the key for the first time:
+	say "You fit the brass key into the drawer lock and turn.  With a quiet click, the drawer unlocks."
+
+Section - The Book
+
+In the drawer is a book.  [TO DO: describe!]
 
 Instead of giving or showing the book to the greengrocer:
 	say "The greengrocer ";
@@ -467,7 +496,7 @@ Instead of giving or showing the book to the greengrocer:
 
 The greengrocer takes the book in his hands, holding it like a treasure.  Tears start to fill his eyes as he pages through it.
 
-He looks up at you, astonished and grateful.  'Tolmy, I[--] I don't know what to say.  I never knew...  Preacher must have been working on this for years, but he never spoke a word about it to me.  Or anyone, I imagine.'
+He looks up at you, astonished and grateful.  'Tolmy, I[--] I don't know what to say.  I never knew...  Preacher must have been working on this book for years, but he never spoke a word about it to me.  Or anyone, I imagine.'
 
 The greengrocer goes back to reading for a moment, then stops, closes the book, and stands up.  'Come with me.'
 
