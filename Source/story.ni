@@ -100,7 +100,7 @@ Instead of taking a cranberry, say "You can just imagine Dad saying, 'Don't eat 
 [TO DO: only print this while trying to eat it.]
 
 An outdoor room is a kind of room.
-The sun is a backdrop.
+The sun is a backdrop.  Understand "sky" as the sun.
 Instead of examining the sun:
 	if the time of day is before 2 PM:
 		say "The sun is still high in the sky.";
@@ -432,10 +432,22 @@ Instead of inserting something into the sundial when the sundial contains someth
 
 Section - The Bird
 
-Instead of going north from the garden when the hat is not worn:
-	say "[one of]You head towards the garden house, but a bird swoops down from its nest in the eaves of the garden house and attacks your hair!  You wave your arms to shoo it away, but it doesn't go away until you scurry back into the garden[or]The bird attacks you again.  No way you're getting into that garden house[stopping]."
+Some eaves are scenery.  "The bird's nest is up in the eaves of the garden house."
+The nest is scenery.  The bird is scenery.
+Instead of examining the bird, try examining the eaves.
+Instead of examining the nest, try examining the eaves.
+Instead of doing anything other than examining with the eaves, say "It's too high up to reach."
+Instead of doing anything other than examining with the bird, say "It's too high up to reach."
+Instead of doing anything other than examining with the nest, say "It's too high up to reach."
 
-[TO DO: bird, nest, eaves are scenery]
+Instead of going north from the garden when the hat is not worn:
+	move the eaves to the garden;
+	move the bird to the garden;
+	move the nest to the garden;
+	say "[one of]You head towards the garden house, but a bird swoops down from its nest in the eaves of the garden house and attacks you, pecking your head and pulling your hair!  You wave your arms to shoo it away, but it doesn't go away until you scurry back into the garden[or]The bird attacks you again.  No way you're getting into that garden house[stopping]."
+
+Before going north from the garden when the hat is worn for the first time:
+	say "The bird seems uninterested in you this time, and you make it into the garden house unscathed."
 
 Chapter - The Man in the Hat
 
@@ -445,7 +457,7 @@ The description is "He looks like some sort of traveler.  Or, at least, he's not
 Understand "man", "man in the hat", "man in a hat", and "man in hat" as the traveler.
 The printed name of the traveler is "man in the hat".
 
-Before going north from the chapel for the first time, now the traveler is in the building site.
+Before going north in the garden for the first time, now the traveler is in the building site.
 
 Before going west from the chapel when the traveler is in the building site for the first time:
 	say "As you step back out into the building site, a man in a hat walks up and peers around you through the door into the chapel.  'Oh, it looks like I'm too late,' he says, somberly.
