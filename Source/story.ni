@@ -143,7 +143,7 @@ Instead of entering the river, say "The river's too deep and swift to cross."
 Instead of jumping in the river area, try entering the river.
 Understand "jump into/in/across [the river]", "dive into/in [the river]", "leap into/in/across [the river]", "swim across [the river]", or "wade into/in/across [the river]" as entering.
 Instead of going north in the river area, try entering the river.
-Understand "across" as north when in the river area.
+Understand "across" as north when the player is in the river area.
 
 Instead of going south in the river area, try going home.
 
@@ -205,8 +205,8 @@ A fishing boat is a fixed in place enterable container in the mooring.  The desc
 
 Instead of going north in the mooring, try entering the boat.
 Instead of going inside in the mooring, try entering the boat.
-Instead of going south in the mooring when in the boat, try exiting.
-Instead of going outside in the mooring when in the boat, try exiting.
+Instead of going south in the mooring when the actor is in the boat, try exiting.
+Instead of going outside in the mooring when the actor is in the boat, try exiting.
 Understand "board [the boat]" as entering.
 [TO DO: pull/push/launch boat]
 The metal loop is scenery in the mooring.
@@ -289,7 +289,7 @@ The front door is a scenery open door.  It is east of the building site. [TO DO:
 The Chapel is east of the front door.  "The inside of the chapel is no less ramshackle than the outside.  It's quiet, though.  A slight breeze blows in through a door to the north, bringing the scent of a garden.  The front door leads back out to the west."
 It is in the town area.
 
-Understand "chapel" as the front door when in the building site.
+Understand "chapel" as the front door when the player is in the building site.
 Instead of going outside in the chapel, try going west.
 Instead of exiting in the chapel when the player is not on the pew, try going west.
 
@@ -307,7 +307,7 @@ Yourself can be recognized.
 
 Every turn when the greengrocer is lost in thought and the player is in the chapel:
 	now the greengrocer is stirring;
-	say "The greengrocer doesn't seem to notice you arrive, lost in his thoughts.";
+	say "The greengrocer, doesn't seem to notice you arrive, lost in his thoughts.";
 	the greengrocer notices you in two turns from now.
 	
 At the time when the greengrocer notices you:
@@ -380,7 +380,7 @@ The description of the markings is "[if anything is in the sundial][A gnomon] pr
 Understand "markings" as the markings when we have examined the sundial.
 Understand "shadow" as the markings when we have examined the sundial and anything is in the sundial.
 
-To say a gnomon: say "[contents of the sundial]" in sentence case.
+To say a gnomon: say "[a list of things in the sundial]" in sentence case.
 To say the sundial time: say "[if the knife is in the sundial]9:37 am[else][the time of day]".
 
 [Custom printing of the sundial contents:]
