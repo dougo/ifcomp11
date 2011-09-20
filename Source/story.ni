@@ -265,7 +265,7 @@ Instead of going south in the building site, say "You're not really sure where y
 
 Instead of going inside in the building site, try going east.
 
-Some large building stones are scenery in the building site.  [TO DO: desc]
+Some large building stones are scenery in the building site.  "The stones are neatly cut.  This will be a fine building, if it's ever finished."
 Understand "stone", "building stone", "large building stone" as the stones.
 
 [TO DO: chapel is scenery]
@@ -285,8 +285,9 @@ The description is "The greengrocer is dressed up like he's going to church, but
 
 Understand "grocer/man" as the greengrocer.
 
-The pew is an enterable scenery supporter in the chapel.  [TO DO: descs]
-The altar is a scenery supporter in the chapel.
+The pew is an enterable scenery supporter in the chapel.  "Rows of wooden pews fill the chapel."
+Understand "pews" as the pew.
+The altar is a scenery supporter in the chapel.  "The altar stands empty along the eastern wall of the chapel."
 
 The greengrocer is either lost in thought, stirring, waiting for you to sit, or done talking.
 Yourself can be recognized.
