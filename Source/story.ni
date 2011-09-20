@@ -35,7 +35,7 @@ Score?
 
 Part - Declarations
 
-Use American dialect, the serial comma, no scoring[, and no deprecated features].
+Use American dialect, the serial comma, brief room descriptions, no scoring[, and no deprecated features].
 
 To say --: say Unicode 8212.
 
@@ -71,7 +71,7 @@ You made your way through the fields on the outskirts of town, a cool but gentle
 
 It's the last day of summer, and the sun shines bright and beautiful.  No sense in turning back so soon."
 
-The time of day is 10:00 AM.
+The time of day is 10 AM.
 
 Chapter - The Boy
 
@@ -99,16 +99,29 @@ Understand "eat [a cranberry]" as eating.
 Instead of taking a cranberry, say "You can just imagine Dad saying, 'Don't eat the merchandise!'"
 [TO DO: only print this while trying to eat it.]
 
+An outdoor room is a kind of room.
+The sun is a backdrop.
+Instead of examining the sun:
+	if the time of day is before 2 PM:
+		say "The sun is still high in the sky.";
+	otherwise if the time of day is before 5 PM:
+		say "The sun is on its way down, but you still have plenty of day left.";
+	otherwise:
+		say "The sun is going down.  You'd better be getting back home soon."
+
+At 5 PM: say "The sun is starting to go down.  You'd better be getting back home soon."
+At 6 PM: try going home.
+
 Going home is an action applying to nothing.
 Understand "home", "go home", "return home", and "give up" as going home.
-Instead of going home when the time of day is before 5:00 PM, say "You could give up and go back home, but it's still too early for that now."
+Instead of going home when the time of day is before 5 PM, say "You could give up and go back home, but it's still too early for that now."
 Carry out going home:
 	say "The sun's going down, and you'd better be home before dark, so it's time to give up and go back home now.  Maybe you can try again tomorrow.  Or maybe you're not old enough to go into town by yourself after all.";
-	end the story finally.
+	end the story.
 
 Part - The River
 
-The River Area is a region.
+The River Area is a region.  The sun is in the river area.
 
 The River Crossing is in the river area.  "All that remains of the bridge is a few splintered posts and planks clinging sadly to both banks of the river.  The town is to the north, across the river."
 
@@ -141,7 +154,7 @@ Understand "drink from [the river]" as drinking.
 
 Chapter - The Rusty Knife
 
-The Scrub is west of the crossing.  "The scrub brush along the river is dense here, but it thins out downstream to the west."
+The Scrub is west of the crossing.  "The scrub brush along the river is dense here, but it thins out downstream to the east."
 The scrub is in the river area.
 
 Before going to the scrub for the first time, say "You walk a ways upstream, until the scrub is too dense to go any further."
@@ -238,7 +251,7 @@ Before taking off your clothes in the town area, instead say "Not in public!"
 Chapter - The Market
 
 The Market is in the town area.  "Amid the hustle and bustle of the market is the forlorn sight of the empty greengrocer's stand."
-The hustle and bustle is scenery in the market.
+The hustle and bustle is scenery in the market.  [TO DO: desc]
 
 The empty greengrocer's stand is a scenery supporter in the market.  "It looks like the greengrocer never even set up his stand this morning."
 
@@ -246,7 +259,7 @@ Instead of going east in the market, try going north.
 Instead of going south in the market, try going north.
 Instead of going west in the market, try going north.
 Before going north in the market:
-	say "You wander aimlessly around town for a while, not sure where to go to find the greengrocer.  The cobblestone streets are full of people, but nobody pays you any attention.
+	say "You wander aimlessly around town for a while, not sure where to go to find the greengrocer.  The sunny cobblestone streets are full of people, but nobody pays you any attention.
 	
 Eventually, you come to a plot of dirt where a stone building is starting to be built.  There doesn't seem to be anybody working on it today, though, so you make your way among the piles of building stones to get away from the crowds for a bit.
 
@@ -355,6 +368,8 @@ Instead of cutting the weeds with the knife, say "You don't much feel like garde
 
 [TO DO: chapel and garden house are scenery]
 
+The sun is in the market, the building site, and the garden.
+
 Section - The Sundial
 
 The sundial is scenery in the garden.  "The sundial has markings carved around its top edge to allow the time to be indicated to the nearest minute."
@@ -372,10 +387,6 @@ To say the sundial time: say "[if the knife is in the sundial]9:37 am[else][the 
 Instead of examining the sundial:
 	say "[the description of the noun][paragraph break][the description of the markings][line break]";
 	rule succeeds. [So that "we have examined the sundial" will be true.]
-
-[TO DO: sun is scenery]
-
-[TO DO: end the game before the sun sets. "Time to get home now!"]
 
 The brass key is a privately-named thing in the sundial.
 The printed name of the key is "slender brass rod".
@@ -437,7 +448,9 @@ The printed name of the traveler is "man in the hat".
 Before going north from the chapel for the first time, now the traveler is in the building site.
 
 Before going west from the chapel when the traveler is in the building site for the first time:
-	say "As you step back out into the building site, a man in a hat walks up and peers around you through the door into the chapel.  'Oh, it looks like I'm too late,' he says, somberly.  He looks you up and down for a moment, stroking his unshaven chin.  'Say, that knife reminds me of one I used to have.  I don't suppose you'd trade it to me for my hat?'[run paragraph on]";
+	say "As you step back out into the building site, a man in a hat walks up and peers around you through the door into the chapel.  'Oh, it looks like I'm too late,' he says, somberly.
+
+He looks you up and down for a moment, stroking his unshaven chin.  'Say, that knife reminds me of one I used to have.  I don't suppose you'd trade it to me for my hat?'[run paragraph on]";
 	if the knife is enclosed by the player:
 		say "[paragraph break]";
 	otherwise:
@@ -544,7 +557,7 @@ Report reading the book:
 Instead of giving or showing the book to the greengrocer:
 	say "The greengrocer ";
 	if the greengrocer is not waiting for you to sit:
-		say "looks at you[if the player is not recognized].  'I know you, you're the Cubbins boy.  Tolmy, right?'  He[otherwise], his eyes red, then [end if]";
+		say "looks at you[if the player is not recognized].  'I know you, you're the Cubbins boy.  Tolmy, right?'  He [otherwise], his eyes red, then [end if]";
 	say "looks down at the book blankly.  Slowly, amazement spreads across his face.
 
 The greengrocer takes the book in his hands, holding it like a treasure.  Tears start to fill his eyes as he pages through it.
@@ -563,4 +576,5 @@ Rule for amusing a victorious player:
 [paragraph break]  sitting beside the greengrocer?
 [line break]  reading the book?
 [line break]  replacing the gnomon?
-[line break]  feathering your hat?"
+[line break]  feathering your hat?
+[line break]  waiting for the sun to go down?"
