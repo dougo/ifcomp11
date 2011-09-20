@@ -3,7 +3,7 @@
 "Last Day of Summer" by Cameron Fox.
 The story description is "It's the last day of summer, and you're old enough now to go into town by yourself."
 The story creation year is 2011.
-The release number is 1.
+The release number is 2.
 
 Part - Notes
 
