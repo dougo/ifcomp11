@@ -63,8 +63,8 @@ Your clothes are worn by yourself.  They are plural-named.  The description is "
 Instead of examining yourself, try examining your clothes.
 Before taking off your clothes, instead say "It's warm, but not that warm."
 
-The player carries a basket.  "Mom wove the basket for you last summer."
-In the basket are some cranberries.  "Red and ripe, ready to be sold at the market."
+A basket is carried by the player.  The description is "Mom wove the basket for you last summer."
+Some cranberries are in the basket.  The description is "Red and ripe, ready to be sold at the market."
 Understand "berries" as the cranberries.
 Instead of taking the cranberries when the cranberries are in the basket and the basket is not held:
 	try taking the basket.
@@ -79,6 +79,7 @@ The cranberries are edible.  [But you can't take them to eat...]
 A cranberry is a part of the cranberries.  A cranberry is edible.  Understand "berry" as a cranberry.
 Understand "eat [a cranberry]" as eating.
 Instead of taking a cranberry, say "You can just imagine Dad saying, 'Don't eat the merchandise!'"
+Instead of examining the cranberry, try examining the cranberries.
 
 An outdoor room is a kind of room.
 The sun is a backdrop.  Understand "sky" as the sun.
