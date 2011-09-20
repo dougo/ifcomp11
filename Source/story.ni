@@ -472,12 +472,18 @@ A quill pen is in the inkwell.  The description is "A quill pen made from a goos
 Understand "goose feather" and "goose/feather" as the pen.
 After taking the pen from the inkwell for the first time, say "You wiggle the pen loose from the hardened ink."
 
-Instead of putting the pen on the hat, try tying the pen to the hat.
-This is the tying rule:
-	unless the noun is the pen:
-		abide by the block tying rule.
-The tying rule is listed instead of the block tying rule in the check tying it to rulebook.
-Report tying:
+Attaching it to is an action applying to one carried thing and one touchable thing.
+Understand the command "attach" as something new.
+Understand "attach [something] to [something]" as attaching it to.
+Understand the command "fasten" as something new.
+Understand "fasten [something] to [something]" as attaching it to.
+Understand "feather [something] with [something]" as attaching it to (with nouns reversed).
+Understand "feather [something] with [the pen]" as attaching it to (with nouns reversed).
+Instead of putting the pen on the hat, try attaching the pen to the hat.
+
+Instead of attaching anything to anything:
+	parser say "There's no way to attach [the noun] to [the second noun]."
+Instead of attaching the pen to the hat:
 	say "You put the quill pen onto the hat, making it a feathered hat.  It looks splendid!";
 	now the pen is part of the hat;
 	now the description of the hat is "A splendid feathered hat."
