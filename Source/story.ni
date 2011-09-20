@@ -30,12 +30,12 @@ The man is also vaguely described, but is unshaven.
 TO DO:
 Make cover art.
 Implement help, hints?
-Score?
 ] 
 
 Part - Declarations
 
-Use American dialect, the serial comma, brief room descriptions, no scoring[, and no deprecated features].
+Use American dialect, the serial comma, brief room descriptions[, and no deprecated features].
+The maximum score is 5.
 
 To say --: say Unicode 8212.
 
@@ -64,7 +64,7 @@ Understand "about" as asking about the story.
 Part - The Beginning
 
 When play begins:
-	now the right hand status line is "";
+[	now the right hand status line is "";]
 	say "Today started out so well.  Up with the sun, you went out to the bog, filled a big basket with cranberries, and started for town.  Dad had brought you along many times before on his trips to the market to sell his harvest to the greengrocer, but you're old enough now to go by yourself.  Dad and Mom will be so proud when you return to the hut with a pocket full of money!
 
 You made your way through the fields on the outskirts of town, a cool but gentle breeze blowing through your hair.  The cloudless sky showed no sign of the huge storm that passed through a few days ago, but when you got to the river you found the mark it left: the splintered remains of the wooden bridge that the flood swept away.  Great, now how are you going to cross the river to get into town?
@@ -237,6 +237,7 @@ Instead of cutting the rope with the knife:
 	say "It takes a while, but you eventually manage to cut through the rope.  You shove off, and the boat quickly floats across the river.  You clamber up the far bank and set off once again for town.  Whew!
 
 The rest of the trip into town is uneventful.  When you get to town, you head straight for the market.  You meander through the merchants['] stands until you get to the greengrocer's, only to discover an empty stand and no sign of the greengrocer.";
+	increment the score;
 	move the cranberries to the basket;
 	move the basket to the player;
 	increase the time of day by one hour;
@@ -407,6 +408,7 @@ After taking the key from the sundial:
 		say line break;
 	otherwise:
 		say "[paragraph break]Huh, look at that[--]it's actually a key!";
+		increment the score;
 		now the printed name of the key is "brass key";
 		now the description of the key is "A slender brass rod with key-teeth on one end."
 
@@ -447,6 +449,7 @@ Instead of going north from the garden when the hat is not worn:
 	say "[one of]You head towards the garden house, but a bird swoops down from its nest in the eaves of the garden house and attacks you, pecking your head and pulling your hair!  You wave your arms to shoo it away, but it doesn't go away until you scurry back into the garden[or]The bird attacks you again.  No way you're getting into that garden house[stopping]."
 
 Before going north from the garden when the hat is worn for the first time:
+	increment the score;
 	say "The bird seems uninterested in you this time, and you make it into the garden house unscathed."
 
 Chapter - The Man in the Hat
@@ -539,6 +542,7 @@ Before opening the drawer when the drawer is locked and the key is held:
 	try unlocking the drawer with the key.
 
 After unlocking the drawer with the key for the first time:
+	increment the score;
 	say "You fit the brass key into the drawer lock and turn.  With a quiet click, the drawer unlocks."
 
 Section - The Book
@@ -581,6 +585,7 @@ The greengrocer goes back to reading for a moment, then stops, closes the book, 
 You follow him outside and through the town, until he stops at a house near the market.  'Wait here,' he says, as he disappears inside, returning a minute later.  'Young Master Cubbins, you have done me[--]and the world![no line break][--]a great service today, finding Preacher's life's work.  His words will live forever, now.  Please accept this reward, as a small part of the thanks I owe you.'  He hands you a velvet purse, heavy with clinking coins.  That's more than a whole season's harvest worth of cranberries!
 
 The greengrocer bows to you, and you return the bow, clumsily but earnestly.  He smiles, and says, 'Say hello to your dad for me.'  Patting you on the shoulder, he sends you on your way back home.";
+	increment the score;
 	end the story finally.
 
 Rule for amusing a victorious player:
