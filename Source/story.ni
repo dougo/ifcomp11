@@ -16,7 +16,7 @@ You find a rusty knife, which you use to cut some stuff. You also come across a 
 
 Somewhere in this town, you come across a legend: a man who has stolen the treasure of time. Even worse, he then lost it. He is cursed to wander until he finds it again, and replaces it on the altar he stole it from.
 
-So maybe just add a legend, or a legend element, that the treasure was split into two pieces which must be reunited?
+(Later: So maybe just add a legend, or a legend element, that the treasure was split into two pieces which must be reunited?)
 
 The rusty knife in game D is the magic knife in game C.
 If you unscrew the sundial gnomon and stick the knife in it, the shadow
@@ -335,7 +335,7 @@ After entering the pew:
 To relate the legend:
 	say "After a while, he speaks again.  'That altar reminds me of a legend Preacher once told me.  He was always bringing me tidbits of history and legend with his herbs and vegetables.
 
-'This one was about a man who stole the treasure of time.  Even worse, as the legend goes, he then lost it.  He is cursed to wander until he finds it again, and replaces it on the altar he stole it from.'  The greengrocer chuckles, then goes quiet again.
+'This one was about a man who stole the treasure of time.  Even worse, as the legend goes, he then lost it, and it was split into two pieces.  He is cursed to wander until he finds the pieces again, reunites them, and replaces it on the altar he stole it from.'  The greengrocer chuckles, then goes quiet again.
 
 After another few moments, the greengrocer looks down at the floor, saying in a quavering voice, 'But I guess I won't be hearing any more of Preacher's legends now.'";
 	now the greengrocer is done talking.
@@ -486,7 +486,28 @@ After unlocking the drawer with the key for the first time:
 
 Section - The Book
 
-In the drawer is a book.  [TO DO: describe!]
+A book is in the drawer.
+The description is "A large leather-bound volume, but with no title or other markings on the outside."
+Understand "stories/story" as the book.
+
+Reading is an action applying to one touchable thing.
+Understand the command "read" as something new.
+Understand "read [something preferably held]" as reading.
+Understand "read [the book]" as reading.
+
+Check reading something:
+	unless the noun is the book:
+		instead parser say "There's nothing written on [the noun]."
+
+Instead of opening the book, try reading the book.
+Report reading the book for the first time:
+	say "You flip through the pages.  They are handwritten in black ink, with many lines scratched out and notes written in the margins.
+	
+There are many words you can't understand, but you can get the general idea.  It seems to be a series of stories about a man who has many adventures traveling through history, with castles and queens, hurricanes and earthquakes, treachery and valiant deeds.  
+
+The handwriting gets shakier near the end, until it stops abruptly mid-chapter.  The last fifth or so of the book is blank."
+Report reading the book:
+	say "You could keep reading the book for days, but now's not the time."
 
 Instead of giving or showing the book to the greengrocer:
 	say "The greengrocer ";
