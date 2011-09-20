@@ -26,12 +26,6 @@ The hat has no specific physical description, but the protagonist in game D find
 The man is also vaguely described, but is unshaven.
 ]
 
-[
-TO DO:
-Make cover art.
-Implement help, hints?
-] 
-
 Part - Declarations
 
 Use American dialect, the serial comma, brief room descriptions[, and no deprecated features].
@@ -47,15 +41,6 @@ Release along with the source text, a public solution, the library card, the int
 
 [For testers to annotate transcripts:]
 Understand "* [text]" as a mistake ("Noted.").
-
-[TO DO: handle exiting, or say something better than this:
->out
-[You're not inside something. To leave this location, try a direction or "out".]
-]
-
-[TO DO: standing shouldn't print the room desc again.]
-
-[TO DO: fix default message for give/show.  And say.  And maybe push/pull/turn?]
 
 Asking about the story is an action out of world.
 Report asking about the story: say "This is the IF Competition 2011 beta-test version of Last Day of Summer."
@@ -77,7 +62,6 @@ Chapter - The Boy
 Your clothes are worn by yourself.  They are plural-named.  The description is "You're wearing your best clothes, which are still a bit shabby (and you're starting to outgrow them anyway).  But, if this season's harvest is good enough, Dad can make enough money to buy you new clothes."
 Instead of examining yourself, try examining your clothes.
 Before taking off your clothes, instead say "It's warm, but not that warm."
-[TO DO: don't show clothes in inventory]
 
 The player carries a basket.  "Mom wove the basket for you last summer."
 In the basket are some cranberries.  "Red and ripe, ready to be sold at the market."
@@ -89,14 +73,12 @@ Instead of removing the cranberries from the basket:
 Instead of taking the cranberries when the cranberries are in the basket and the basket is held:
 	say "There's too many cranberries to hold in your hands."
 
-[TO DO: print as "basket of cranberries" when full]
 Rule for deciding whether all includes something in the basket: it does not.
 
 The cranberries are edible.  [But you can't take them to eat...]
 A cranberry is a part of the cranberries.  A cranberry is edible.  Understand "berry" as a cranberry.
 Understand "eat [a cranberry]" as eating.
 Instead of taking a cranberry, say "You can just imagine Dad saying, 'Don't eat the merchandise!'"
-[TO DO: only print this while trying to eat it.]
 
 An outdoor room is a kind of room.
 The sun is a backdrop.  Understand "sky" as the sun.
@@ -149,8 +131,6 @@ Instead of going south in the river area, try going home.
 Instead of drinking the river, say "You take a few sips from the river.  It's cool and refreshing."
 Understand "drink from [the river]" as drinking.
 
-[TO DO: drop/put/throw anything into the river]
-
 Chapter - The Rusty Knife
 
 The Scrub is west of the crossing.  "The scrub brush along the river is dense here, but it thins out downstream to the east."
@@ -173,8 +153,6 @@ Understand the command "cut" as something new.
 Understand "cut [something] with [something]" as cutting it with.
 [Prefer using the knife, when guessing the second noun:]
 Understand "cut [something] with [the knife]" as cutting it with.
-
-[TO DO: allow cutting with the blade?]
 
 Instead of cutting with when the second noun is not the knife, say "[The second noun] is not sharp enough to cut [the noun]."
 Instead of cutting someone with the knife, say "You wouldn't want to hurt [the noun]."
@@ -200,14 +178,13 @@ Instead of going east in the mooring, say "It's too marshy to go any further dow
 The marsh is scenery in the mooring.  "Soggy and squishy."
 
 A fishing boat is a fixed in place enterable container in the mooring.  The description is "The boat is tied to a metal loop embedded in the near bank."
-[TO DO: don't print (empty)]
 
 Instead of going north in the mooring, try entering the boat.
 Instead of going inside in the mooring, try entering the boat.
 Instead of going south in the mooring when the actor is in the boat, try exiting.
 Instead of going outside in the mooring when the actor is in the boat, try exiting.
 Understand "board [the boat]" as entering.
-[TO DO: pull/push/launch boat]
+
 The metal loop is scenery in the mooring.
 The rope is scenery in the mooring.  "The knots at both ends of the rope are covered with mud and tangled with wet reeds."  Understand "knot/knots" as the rope.
 The wet reeds are scenery in the mooring.  "The wet reeds are tangled up into the knots at both ends of the rope."
@@ -251,7 +228,7 @@ Before taking off your clothes in the town area, instead say "Not in public!"
 Chapter - The Market
 
 The Market is in the town area.  "Amid the hustle and bustle of the market is the forlorn sight of the empty greengrocer's stand."
-The hustle and bustle is scenery in the market.  [TO DO: desc]
+The hustle and bustle is scenery in the market.
 
 The empty greengrocer's stand is a scenery supporter in the market.  "It looks like the greengrocer never even set up his stand this morning."
 
@@ -281,11 +258,9 @@ Instead of going inside in the building site, try going east.
 Some large building stones are scenery in the building site.  "The stones are neatly cut.  This will be a fine building, if it's ever finished."
 Understand "stone", "building stone", "large building stone" as the stones.
 
-[TO DO: chapel is scenery]
-
 Chapter - The Chapel
 
-The front door is a scenery open door.  It is east of the building site. [TO DO: desc]
+The front door is a scenery open door.  It is east of the building site.
 The Chapel is east of the front door.  "The inside of the chapel is no less ramshackle than the outside.  It's quiet, though.  A slight breeze blows in through a door to the north, bringing the scent of a garden.  The front door leads back out to the west."
 It is in the town area.
 
@@ -307,7 +282,7 @@ Yourself can be recognized.
 
 Every turn when the greengrocer is lost in thought and the player is in the chapel:
 	now the greengrocer is stirring;
-	say "The greengrocer doesn't seem to notice you arrive, lost in his thoughts.";
+	say "The greengrocer doesn't seem to notice you arrive, but sits lost in his thoughts.";
 	the greengrocer notices you in two turns from now.
 	
 At the time when the greengrocer notices you:
@@ -356,7 +331,7 @@ After another few moments, the greengrocer looks down at the floor, saying in a 
 
 Chapter - The Garden
 
-The back door is a scenery open door.  It is north of the chapel.  [TO DO: desc]
+The back door is a scenery open door.  It is north of the chapel.
 The Garden is north of the back door. "Behind the chapel is a small garden, if it can still be called a garden, overrun by weeds.  A sundial pokes out of the weeds in the center of the garden.  A tidy brick garden house stands to the north."
 The garden is in the town area.
 
@@ -366,14 +341,12 @@ The fence is scenery in the garden.  "Like the chapel, the fence was once painte
 The weeds are scenery in the garden.
 Instead of cutting the weeds with the knife, say "You don't much feel like gardening."
 
-[TO DO: chapel and garden house are scenery]
-
 The sun is in the market, the building site, and the garden.
 
 Section - The Sundial
 
 The sundial is scenery in the garden.  "The sundial has markings carved around its top edge to allow the time to be indicated to the nearest minute."
-Understand "time" as the sundial. [TO DO: this is so e.g. 'check time' works, but 'get time' shouldn't try to lift the sundial!]
+Understand "time" as the sundial.
 
 The markings are a privately-named part of the sundial.
 The description of the markings is "[if anything is in the sundial][A gnomon] protrudes from the center of the sundial at an angle, casting a shadow pointing to [the sundial time].[otherwise]There's nothing to cast a shadow onto the markings, making it pretty useless as a sundial."
@@ -453,7 +426,7 @@ Before going north from the garden when the hat is worn for the first time:
 
 Chapter - The Man in the Hat
 
-The traveler is a man.  "The man in the hat stands here."  [TO DO: something else after leaving and coming back]
+The traveler is a man.  "The man in the hat stands here."
 The description is "He looks like some sort of traveler.  Or, at least, he's not from around here."
 
 Understand "man", "man in the hat", "man in a hat", and "man in hat" as the traveler.
@@ -471,7 +444,6 @@ He looks you up and down for a moment, stroking his unshaven chin.  'Say, that k
 		say "[paragraph break](That's odd, didn't you leave the knife in [the location of the knife]?  Nope, there it is, you still have it.)";
 		move the knife to the player;
 	continue the action.
-[TO DO: print the room name as lowercase?]
 
 A hat is worn by the traveler.  The description is "The hat is surprisingly... well, it's just... surprising."
 The hat is a container.
@@ -592,6 +564,7 @@ Rule for amusing a victorious player:
 	say "Did you try...
 [paragraph break]  sitting beside the greengrocer?
 [line break]  reading the book?
+[line break]  leaving the knife somewhere?
 [line break]  replacing the gnomon?
 [line break]  feathering your hat?
 [line break]  waiting for the sun to go down?"
