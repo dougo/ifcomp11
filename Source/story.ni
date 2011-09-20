@@ -445,6 +445,12 @@ Before going west from the chapel when the traveler is in the building site for 
 [TO DO: print the room name as lowercase?]
 
 A hat is worn by the traveler.  The description is "The hat is surprisingly... well, it's just... surprising."
+The hat is a container.
+Before inserting something into the hat when the hat is worn:
+	say "(first taking off the hat)";
+	silently try taking off the hat.
+Instead of wearing the hat when the hat contains something:
+	say "The hat's not empty."
 
 Instead of giving the knife to the traveler:
 	say "You hand the knife over to the man.  He looks at it, briefly smiling to himself, then with a quick bow, tips his hat into his hand and gives it to you.  'Thank you kindly.  Wear it in good health.'  He then turns and wanders off through the piles of building stones.";
@@ -454,12 +460,30 @@ Instead of giving the knife to the traveler:
 
 Chapter - The Garden House
 
-The Garden House is north of the garden.  "Gardening tools are neatly arranged around the walls.  A small desk and chair sit in the middle.  The desktop is empty except for a pen and inkwell."
+The Garden House is north of the garden.  "Gardening tools are neatly arranged around the walls.  A small desk and chair sit in the middle.  The desktop is empty except for a quill pen and inkwell."
 The garden house is in the town area.
 
 A desk is scenery in the garden house.  "The desk has a single wide drawer underneath."
 
-A pen and an inkwell are scenery on the desk.  [TO DO: descs]
+An inkwell is scenery on the desk.  "The ink in the inkwell has hardened to a dry mass."
+Instead of taking the inkwell, say "The inkwell is fastened to the desk."
+
+A quill pen is in the inkwell.  The description is "A quill pen made from a goose feather."
+Understand "goose feather" and "goose/feather" as the pen.
+After taking the pen from the inkwell for the first time, say "You wiggle the pen loose from the hardened ink."
+
+Instead of putting the pen on the hat, try tying the pen to the hat.
+This is the tying rule:
+	unless the noun is the pen:
+		abide by the block tying rule.
+The tying rule is listed instead of the block tying rule in the check tying it to rulebook.
+Report tying:
+	say "You put the quill pen onto the hat, making it a feathered hat.  It looks splendid!";
+	now the pen is part of the hat;
+	now the description of the hat is "A splendid feathered hat."
+Understand "feathered" and "feathered hat" as the hat when the pen is part of the hat.
+Instead of taking the pen when the pen is part of the hat:
+	say "No, you're quite proud of your feathered hat!"
 
 A chair is an enterable scenery supporter in the garden house.
 
