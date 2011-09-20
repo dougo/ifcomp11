@@ -29,7 +29,7 @@ The man is also vaguely described, but is unshaven.
 [
 TO DO:
 Make cover art.
-Implement help, about, hints, amusing?
+Implement help, hints?
 Score?
 ] 
 
@@ -427,7 +427,7 @@ Instead of going north from the garden when the hat is not worn:
 
 Chapter - The Man in the Hat
 
-The traveler is a man.  "The man in the hat stands here."
+The traveler is a man.  "The man in the hat stands here."  [TO DO: something else after leaving and coming back]
 The description is "He looks like some sort of traveler.  Or, at least, he's not from around here."
 
 Understand "man", "man in the hat", "man in a hat", and "man in hat" as the traveler.
@@ -470,6 +470,7 @@ Instead of taking the inkwell, say "The inkwell is fastened to the desk."
 
 A quill pen is in the inkwell.  The description is "A quill pen made from a goose feather."
 Understand "goose feather" and "goose/feather" as the pen.
+The pen is gnomon-shaped.
 After taking the pen from the inkwell for the first time, say "You wiggle the pen loose from the hardened ink."
 
 Attaching it to is an action applying to one carried thing and one touchable thing.
@@ -531,7 +532,7 @@ Check reading something:
 
 Instead of opening the book, try reading the book.
 Report reading the book for the first time:
-	say "You flip through the pages.  They are handwritten in black ink, with many lines scratched out and notes written in the margins.
+	instead say "You flip through the pages.  They are handwritten in black ink, with many lines scratched out and notes written in the margins.
 	
 There are many words you can't understand, but you can get the general idea.  It seems to be a series of stories about a man who has many adventures traveling through history, with castles and queens, hurricanes and earthquakes, treachery and valiant deeds.  
 
@@ -555,3 +556,10 @@ You follow him outside and through the town, until he stops at a house near the 
 
 The greengrocer bows to you, and you return the bow, clumsily but earnestly.  He smiles, and says, 'Say hello to your dad for me.'  Patting you on the shoulder, he sends you on your way back home.";
 	end the story finally.
+
+Rule for amusing a victorious player:
+	say "Did you try...
+[paragraph break]  sitting beside the greengrocer?
+[line break]  reading the book?
+[line break]  replacing the gnomon?
+[line break]  feathering your hat?"
