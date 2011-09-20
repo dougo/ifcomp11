@@ -64,7 +64,6 @@ Understand "about" as asking about the story.
 Part - The Beginning
 
 When play begins:
-[	now the right hand status line is "";]
 	say "Today started out so well.  Up with the sun, you went out to the bog, filled a big basket with cranberries, and started for town.  Dad had brought you along many times before on his trips to the market to sell his harvest to the greengrocer, but you're old enough now to go by yourself.  Dad and Mom will be so proud when you return to the hut with a pocket full of money!
 
 You made your way through the fields on the outskirts of town, a cool but gentle breeze blowing through your hair.  The cloudless sky showed no sign of the huge storm that passed through a few days ago, but when you got to the river you found the mark it left: the splintered remains of the wooden bridge that the flood swept away.  Great, now how are you going to cross the river to get into town?
@@ -308,7 +307,7 @@ Yourself can be recognized.
 
 Every turn when the greengrocer is lost in thought and the player is in the chapel:
 	now the greengrocer is stirring;
-	say "The greengrocer, doesn't seem to notice you arrive, lost in his thoughts.";
+	say "The greengrocer doesn't seem to notice you arrive, lost in his thoughts.";
 	the greengrocer notices you in two turns from now.
 	
 At the time when the greengrocer notices you:
@@ -462,7 +461,7 @@ The printed name of the traveler is "man in the hat".
 
 Before going north in the garden for the first time, now the traveler is in the building site.
 
-Before going west from the chapel when the traveler is in the building site for the first time:
+After going west from the chapel when the traveler is in the building site for the first time:
 	say "As you step back out into the building site, a man in a hat walks up and peers around you through the door into the chapel.  'Oh, it looks like I'm too late,' he says, somberly.
 
 He looks you up and down for a moment, stroking his unshaven chin.  'Say, that knife reminds me of one I used to have.  I don't suppose you'd trade it to me for my hat?'[run paragraph on]";
@@ -470,7 +469,8 @@ He looks you up and down for a moment, stroking his unshaven chin.  'Say, that k
 		say "[paragraph break]";
 	otherwise:
 		say "[paragraph break](That's odd, didn't you leave the knife in [the location of the knife]?  Nope, there it is, you still have it.)";
-		move the knife to the player.
+		move the knife to the player;
+	continue the action.
 [TO DO: print the room name as lowercase?]
 
 A hat is worn by the traveler.  The description is "The hat is surprisingly... well, it's just... surprising."
