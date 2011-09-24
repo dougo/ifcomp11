@@ -3,7 +3,7 @@
 "Last Day of Summer" by Cameron Fox.
 The story description is "It's the last day of summer, and you're old enough now to go into town by yourself."
 The story creation year is 2011.
-The release number is 2.
+The release number is 3.
 
 Part - Notes
 
@@ -28,7 +28,7 @@ The man is also vaguely described, but is unshaven.
 
 Part - Declarations
 
-Use American dialect, the serial comma, brief room descriptions[, and no deprecated features].
+Use American dialect, the serial comma[, and no deprecated features].
 The maximum score is 5.
 
 To say --: say Unicode 8212.
