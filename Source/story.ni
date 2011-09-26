@@ -94,6 +94,12 @@ Instead of examining the sun:
 At 5 PM: say "The sun is starting to go down.  You'd better be getting back home soon."
 At 6 PM: try going home.
 
+Saying the magic word is an action applying to nothing.
+Understand "xyzzy", "regleotis", and "say xyzzy/regleotis" as saying the magic word.
+Instead of saying the magic word:
+	now the time of day is 5:55 PM;
+	say "You say the magic word.  Nothing seems to happen, but then you get very very sleepy, so you lie down and rest your eyes for a bit.  When you wake up, the sun is low in the sky.  You'd better be getting back home soon."
+
 Going home is an action applying to nothing.
 Understand "home", "go home", "return home", and "give up" as going home.
 Instead of going home when the time of day is before 5 PM, say "You could give up and go back home, but it's still too early for that now."
@@ -597,4 +603,5 @@ Rule for amusing a victorious player:
 [line break]  reading the book?
 [line break]  leaving the knife somewhere?
 [line break]  replacing the gnomon?
-[line break]  decorating your hat?"
+[line break]  decorating your hat?
+[line break]  saying the magic word?"
