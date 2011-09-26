@@ -393,7 +393,7 @@ Instead of examining the sundial:
 	say "[the description of the noun][paragraph break][the description of the markings][line break]";
 	rule succeeds. [So that "we have examined the sundial" will be true.]
 
-The brass key is a privately-named thing in the sundial.
+The brass key is a privately-named thing in the sundial.  The description is "A slender brass rod[if the key is not in the sundial] with key-teeth on one end[end if]."
 The printed name of the key is "slender brass rod".
 Understand "slender/brass/rod" as the key when the key is mentioned.
 Understand "gnomon" as the key when the key is mentioned and the key is in the sundial.
@@ -413,8 +413,7 @@ After taking the key from the sundial:
 	otherwise:
 		say "[paragraph break]Huh, look at that[--]it's actually a key!";
 		increment the score;
-		now the printed name of the key is "brass key";
-		now the description of the key is "A slender brass rod with key-teeth on one end."
+		now the printed name of the key is "brass key".
 
 Understand "key" as the key when the key is handled.
 
