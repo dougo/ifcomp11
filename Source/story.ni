@@ -493,7 +493,7 @@ Instead of giving the knife to the traveler:
 
 Chapter - The Garden House
 
-The Garden House is north of the garden.  "Gardening tools are neatly arranged around the walls.  A small desk and chair sit in the middle.  The desktop is empty except for a quill pen and inkwell."
+The Garden House is north of the garden.  "Gardening tools are neatly arranged around the walls.  A small desk and chair sit in the middle.  The desktop is empty except for [if the pen is in the inkwell]a quill pen and[otherwise]an[end if] inkwell."
 The garden house is in the town area.
 
 A desk is scenery in the garden house.  "The desk has a single wide drawer underneath."
