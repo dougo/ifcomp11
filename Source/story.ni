@@ -597,5 +597,4 @@ Rule for amusing a victorious player:
 [line break]  reading the book?
 [line break]  leaving the knife somewhere?
 [line break]  replacing the gnomon?
-[line break]  feathering your hat?
-[line break]  waiting for the sun to go down?"
+[line break]  decorating your hat?"
