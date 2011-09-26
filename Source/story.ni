@@ -251,7 +251,7 @@ The Building Site is north of the market.  It is in the town area.
 
 Instead of going north in the building site, try going south.
 Instead of going west in the building site, try going south.
-Instead of going south in the building site when the greengrocer has not been mentioned, say "But the greengrocer is right there in the chapel!  Surely he'll buy your cranberries from you."
+Instead of going south in the building site when the chapel is unvisited, say "But the greengrocer is right there in the chapel!  Surely he'll buy your cranberries from you."
 Instead of going south in the building site, say "You're not really sure where you are or which way to go, and the crowded streets of the town are still intimidating."
 
 Instead of going inside in the building site, try going east.
@@ -259,15 +259,33 @@ Instead of going inside in the building site, try going east.
 Some large building stones are scenery in the building site.  "The stones are neatly cut.  This will be a fine building, if it's ever finished."
 Understand "stone", "building stone", "large building stone" as the stones.
 
+The chapel-exterior is a privately-named backdrop in the building site.  "The rickety wooden chapel stands (or, rather, leans) to the [if the player is in the building site]east.  [The description of the front door][otherwise]south.  [The description of the back door][end if]".
+The printed name of the chapel-exterior is "the chapel".
+Understand "rickety wooden chapel", "wooden chapel", and "rickety/wooden/chapel/church/greengrocer/grocer/man/pew/altar" as the chapel-exterior.
+Instead of examining east in the building site, try examining the chapel-exterior.
+Instead of examining inside in the building site, try examining the chapel-exterior.
+Instead of searching the chapel-exterior, try examining the chapel-exterior.
+
 Chapter - The Chapel
 
-The front door is a scenery open door.  It is east of the building site.
-The Chapel is east of the front door.  "The inside of the chapel is no less ramshackle than the outside.  It's quiet, though.  A slight breeze blows in through a door to the north, bringing the scent of a garden.  The front door leads back out to the west."
+The front door is a scenery open door.  It is east of the building site.  "[The front door]."
+To say the front door:
+	if the front door is open:
+		say "Through the open front door you can see ";
+		if the player is in the building site:
+			say "the greengrocer sitting on a pew near the altar";
+		otherwise:
+			say "the building site";
+	otherwise:
+		say "The front door is closed".
+Instead of searching the front door, try examining the front door.
+The Chapel is east of the front door.  "The inside of the chapel is no less ramshackle than the outside.  It's quiet, though.  [if the back door is open]A slight breeze blows in through a door to the north, bringing the scent of a garden.[otherwise]In the north wall is the back door.[end if]  The front door leads back out to the west."
 It is in the town area.
 
-Understand "chapel" as the front door when the player is in the building site.
 Instead of going outside in the chapel, try going west.
 Instead of exiting in the chapel when the player is not on the pew, try going west.
+Instead of examining west in the chapel, try examining the front door.
+Instead of examining outside in the chapel, try examining the front door.
 
 The greengrocer is a man in the chapel.  "The greengrocer is here, sitting on a pew near the altar."
 The description is "The greengrocer is dressed up like he's going to church, but it's not Sunday."
@@ -332,9 +350,22 @@ After another few moments, the greengrocer looks down at the floor, saying in a 
 
 Chapter - The Garden
 
-The back door is a scenery open door.  It is north of the chapel.
+The back door is a scenery open door.  It is north of the chapel.  "[The back door]."
+To say the back door:
+	if the back door is open:
+		say "Through the open back door you can see ";
+		if the player is in the garden:
+			say "the greengrocer sitting on a pew near the altar";
+		otherwise:
+			say "an overgrown garden";
+	otherwise:
+		say "The back door is closed".
+Instead of searching the back door, try examining the back door.
+Instead of examining south in the garden, try examining the back door.
 The Garden is north of the back door. "Behind the chapel is a small garden, if it can still be called a garden, overrun by weeds.  A sundial pokes out of the weeds in the center of the garden.  A tidy brick garden house stands to the north."
 The garden is in the town area.
+
+The chapel-exterior is in the garden.
 
 Instead of going west in the garden, try going east.
 Instead of going east in the garden, say "The garden is fenced in."
