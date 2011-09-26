@@ -501,6 +501,10 @@ A desk is scenery in the garden house.  "The desk has a single wide drawer under
 An inkwell is scenery on the desk.  "The ink in the inkwell has hardened to a dry mass."
 Instead of taking the inkwell, say "The inkwell is fastened to the desk."
 
+The ink is scenery in the inkwell.
+Instead of examining the ink, say "[The description of the inkwell][line break]".
+Instead of taking the ink, say "[The description of the inkwell][line break]".
+
 A quill pen is in the inkwell.  The description is "A quill pen made from a goose feather."
 Understand "goose feather" and "goose/feather" as the pen.
 The pen is gnomon-shaped.
