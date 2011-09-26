@@ -545,10 +545,6 @@ Instead of unlocking the desk with something, try unlocking the drawer with the 
 Instead of closing the desk, try closing the drawer.
 Instead of locking the desk with something, try locking the drawer with the second noun.
 
-Before opening the drawer when the drawer is locked and the key is held:
-	say "(first unlocking the drawer)";
-	try unlocking the drawer with the key.
-
 After unlocking the drawer with the key for the first time:
 	increment the score;
 	say "You fit the brass key into the drawer lock and turn.  With a quiet click, the drawer unlocks."
