@@ -48,6 +48,11 @@ Understand "about" and "credits" as asking about the story.
 
 Understand "help" and "hint" and "hints" as a mistake ("[as the parser]A walkthrough is available from the competition page.[as normal]").
 
+Understand the commands "say", "tell", "ask", "answer", "sorry", "yes", "no" as something new.
+Understand "talk to [someone]" , "say [text]", "tell [someone] about [text]", "ask [someone] about [text]",
+	"ask [someone] for [text]", "answer [text]", "answer [text] to [someone]", "sorry", "yes", "no" as a mistake
+	("[as the parser]You don't need to converse in this story.[as normal]").
+
 Part - The Beginning
 
 When play begins:
