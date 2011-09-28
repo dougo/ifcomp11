@@ -65,6 +65,20 @@ Your clothes are worn by yourself.  They are plural-named.  The description is "
 Instead of examining yourself, try examining your clothes.
 Before taking off your clothes, instead say "It's warm, but not that warm."
 
+This is the print empty inventory without clothes rule:
+	if the player holds exactly one thing, stop the action with
+		library message taking inventory action number 1.
+The print empty inventory without clothes rule is listed instead of the print empty inventory rule in the carry out taking inventory rules.
+
+This is the print inventory without clothes rule:
+	issue library message taking inventory action number 2;
+	say ":[line break]";
+	now all things enclosed by the player are marked for listing;
+	now the clothes are unmarked for listing;
+	list the contents of the player, with newlines, indented, including contents,
+		giving inventory information, with extra indentation, listing marked items only.
+The print inventory without clothes rule is listed instead of the print standard inventory rule in the carry out taking inventory rules.
+
 A basket is carried by the player.  The description is "Mom wove the basket for you last summer."
 Some cranberries are in the basket.  The description is "Red and ripe, ready to be sold at the market."
 Understand "berries" as the cranberries.
