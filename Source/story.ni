@@ -120,7 +120,7 @@ A backdrop called the river is in the river area.  "The river's still higher tha
 Understand "water" as the river.
 
 The banks are a backdrop in the river area.
-Understand "bank", "near bank", and "far bank" as the banks.
+Understand "bank", "near bank", "far bank", "south bank", and "north bank" as the banks.
 Instead of examining the banks, try examining the river.
 
 The town is a backdrop in the river area.
@@ -187,13 +187,16 @@ The marsh is scenery in the mooring.  "Soggy and squishy."
 A fishing boat is a fixed in place enterable container in the mooring.  The description is "The boat is tied to a metal loop embedded in the near bank."
 
 Instead of going north in the mooring, try entering the boat.
+Instead of going north in the mooring when the player is in the boat, say "The boat is still tied to the south bank."
 Instead of going inside in the mooring, try entering the boat.
 Instead of going south in the mooring when the actor is in the boat, try exiting.
 Instead of going outside in the mooring when the actor is in the boat, try exiting.
 Understand "board [the boat]" as entering.
 
-The metal loop is scenery in the mooring.
-The rope is scenery in the mooring.  "The knots at both ends of the rope are covered with mud and tangled with wet reeds."  Understand "knot/knots" as the rope.
+The metal loop is scenery in the mooring.  "A loop of metal embedded into the south bank.  The boat is tied to it with a rope."
+Understand "mooring" as the metal loop.
+The rope is scenery in the mooring.  "The knots at both ends of the rope are covered with mud and tangled with wet reeds."
+Understand "knot/knots" as the rope.
 The wet reeds are scenery in the mooring.  "The wet reeds are tangled up into the knots at both ends of the rope."
 Understand "reed" as the reeds.
 The mud is scenery in the mooring.  "The mud covers the knots at both ends of the rope."
