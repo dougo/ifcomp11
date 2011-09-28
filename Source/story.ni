@@ -43,8 +43,8 @@ Release along with the source text, a public solution, the library card, the int
 Understand "* [text]" as a mistake ("Noted.").
 
 Asking about the story is an action out of world.
-Report asking about the story: say "This is the IF Competition 2011 beta-test version of Last Day of Summer."
-Understand "about" as asking about the story.
+Report asking about the story: say "This is the IF Competition 2011 version of Last Day of Summer.[paragraph break]Thanks to my beta testers: Theophilus Alltext, Peter Haigha Bobbin, Guen, James Edward, I.M., and Sanjo Osnola.[paragraph break]Special thanks to James for the spark, and Peter for the foundation."
+Understand "about" and "credits" as asking about the story.
 
 Part - The Beginning
 
