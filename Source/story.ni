@@ -46,6 +46,8 @@ Asking about the story is an action out of world.
 Report asking about the story: say "This is the IF Competition 2011 version of Last Day of Summer.[paragraph break]Thanks to my beta testers: Theophilus Alltext, Peter Haigha Bobbin, Guen, James Edward, I.M., and Sanjo Osnola.[paragraph break]Special thanks to James for the spark, and Peter for the foundation."
 Understand "about" and "credits" as asking about the story.
 
+Understand "help" and "hint" and "hints" as a mistake ("[as the parser]A walkthrough is available from the competition page.[as normal]").
+
 Part - The Beginning
 
 When play begins:
