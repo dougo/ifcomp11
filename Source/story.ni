@@ -207,6 +207,10 @@ The marsh is scenery in the mooring.  "Soggy and squishy."
 
 A fishing boat is a fixed in place enterable container in the mooring.  The description is "The boat is tied to a metal loop embedded in the near bank."
 
+Rule for printing the name of the boat:
+	say "fishing boat";
+	omit contents in listing.
+
 Instead of going north in the mooring, try entering the boat.
 Instead of going north in the mooring when the player is in the boat, say "The boat is still tied to the south bank."
 Instead of going inside in the mooring, try entering the boat.
