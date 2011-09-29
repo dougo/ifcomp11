@@ -451,8 +451,8 @@ Instead of examining the sundial:
 
 The brass key is a privately-named thing in the sundial.  The description is "A slender brass rod[if the key is not in the sundial] with key-teeth on one end[end if]."
 The printed name of the key is "slender brass rod".
-Understand "slender/brass/rod" as the key when the key is mentioned.
-Understand "gnomon" as the key when the key is mentioned and the key is in the sundial.
+Understand "slender/brass/rod" as the key when we have examined the sundial.
+Understand "gnomon" as the key when we have examined the sundial and the key is in the sundial.
 
 Instead of taking the sundial, say "[The sundial] is far too heavy to lift."
 
