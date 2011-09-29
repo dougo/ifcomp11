@@ -340,7 +340,7 @@ Every turn when the greengrocer is lost in thought and the player is in the chap
 	
 At the time when the greengrocer notices you:
 	if the player is enclosed by the chapel:
-		say "The greengrocer stirs from his reverie ";
+		say "After a moment, the greengrocer stirs from his reverie ";
 		if the player is not recognized:
 			say "and sees you for the first time.  'I know you, you're the Cubbins boy.  Tolmy, right?'[no line  break]";
 		otherwise:
@@ -376,12 +376,19 @@ After entering the pew:
 		say "[paragraph break]".
 
 To relate the legend:
-	say "After a while, he speaks again.  'That altar reminds me of a legend Preacher once told me.  He was always bringing me tidbits of history and legend with his herbs and vegetables.
+	say "A while later, he speaks again.  'That altar reminds me of a legend Preacher once told me.  He was always bringing me tidbits of history and legend with his herbs and vegetables.
 
 'This one was about a man who stole the treasure of time.  Even worse, as the legend goes, he then lost it, and it was split into two pieces.  He is cursed to wander until he finds the pieces again, reunites them, and replaces it on the altar he stole it from.'  The greengrocer chuckles, then goes quiet again.
 
 After another few moments, the greengrocer looks down at the floor, saying in a quavering voice, 'But I guess I won't be hearing any more of Preacher's legends now.'";
 	now the greengrocer is done talking.
+
+Understand "sell [something] to [someone]" as showing it to.
+Instead of giving anything to the greengrocer, try showing the noun to the greengrocer.
+Instead of showing anything to the greengrocer:
+	say "The greengrocer doesn't seem to notice you[if the greengrocer is done talking], but is deep in his shell of sorrow[end if]."
+Instead of showing anything to the greengrocer when the greengrocer is waiting for you to sit:
+	say "The greengrocer waves away [the noun], but motions again for you to sit."
 
 Chapter - The Garden
 
