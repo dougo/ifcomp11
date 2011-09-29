@@ -43,7 +43,7 @@ Release along with the source text, a public solution, the library card, the int
 Understand "* [text]" as a mistake ("Noted.").
 
 Asking about the story is an action out of world.
-Report asking about the story: say "This is the IF Competition 2011 version of Last Day of Summer.[paragraph break]Thanks to my beta testers: Theophilus Alltext, Peter Haigha Bobbin, Guen, James Edward, I.M., and Sanjo Osnola.[paragraph break]Special thanks to James for the spark, and Peter for the foundation."
+Report asking about the story: say "This is the IF Competition 2011 version of Last Day of Summer.  Please send any comments or bug reports (preferably with transcripts) to camhfox@gmail.com.[paragraph break]Thanks to my beta testers: Theophilus Alltext, Peter Haigha Bobbin, Guen, James Edward, I.M., and Sanjo Osnola.[paragraph break]Special thanks to James for the spark, and Peter for the foundation."
 Understand "about" and "credits" as asking about the story.
 
 Understand "help" and "hint" and "hints" as a mistake ("[as the parser]A walkthrough is available from the competition page.[as normal]").
@@ -359,9 +359,9 @@ After going from the chapel when the greengrocer is waiting for you to sit:
 	now the greengrocer is lost in thought;
 	continue the action.
 
-[Guess the pew when the player just types "sit":]
-Understand "sit on [the pew]" as entering.
-Understand "sit down on [the pew]" as entering.
+[Guess an enterable when the player just types "sit":]
+Understand "sit on [something enterable]" as entering.
+Understand "sit down on [something enterable]" as entering.
 
 Sitting with is an action applying to one visible thing.
 Understand "sit with/beside [the greengrocer]" and "sit next to [the greengrocer]" as sitting with.
@@ -408,6 +408,20 @@ The Garden is north of the back door. "Behind the chapel is a small garden, if i
 The garden is in the town area.
 
 The chapel-exterior is in the garden.
+
+The garden-house-exterior is privately-named scenery in the garden.  "A brick building to the north containing gardening tools.  You can also see a writing desk in there, incongruously."
+Understand "garden house", "house", "tidy", "brick", and "doorway" as the garden-house-exterior.
+The printed name of the garden-house-exterior is "garden house".
+
+The remote-writing-desk is privately-named scenery in the garden.
+Understand "writing desk" and "desk" as the remote-writing-desk when the player is in the garden.
+The printed name of the remote-writing-desk is "writing desk".
+Instead of doing anything with the remote-writing-desk, say "You'll have to go into the garden house first."
+
+The remote-gardening-tools are scenery in the garden.
+Understand "gardening tools" and "tools" as the remote-gardening-tools when the player is in the garden.
+The printed name of the remote-gardening-tools is "gardening tools".
+Instead of doing anything with the remote-gardening-tools, say "You'll have to go into the garden house first."
 
 Instead of going west in the garden, try going east.
 Instead of going east in the garden, say "The garden is fenced in."
@@ -495,7 +509,7 @@ Instead of going north from the garden when the hat is not worn:
 
 Before going north from the garden when the hat is worn for the first time:
 	increment the score;
-	say "The bird seems uninterested in you this time, and you make it into the garden house unscathed."
+	say "The bird seems uninterested in you this time, since your hair is covered, and you make it into the garden house unscathed."
 
 Chapter - The Man in the Hat
 
@@ -534,10 +548,10 @@ Instead of giving the knife to the traveler:
 
 Chapter - The Garden House
 
-The Garden House is north of the garden.  "Gardening tools are neatly arranged around the walls.  A small desk and chair sit in the middle.  The desktop is empty except for [if the pen is in the inkwell]a quill pen and[otherwise]an[end if] inkwell."
+The Garden House is north of the garden.  "Gardening tools are neatly arranged around the walls.  A small writing desk and chair sit in the middle.  The desktop is empty except for [if the pen is in the inkwell]a quill pen and[otherwise]an[end if] inkwell."
 The garden house is in the town area.
 
-A desk is scenery in the garden house.  "The desk has a single wide drawer underneath."
+A writing desk is scenery in the garden house.  "The desk has a single wide drawer underneath."
 
 An inkwell is scenery on the desk.  "The ink in the inkwell has hardened to a dry mass."
 Instead of taking the inkwell, say "The inkwell is fastened to the desk."
