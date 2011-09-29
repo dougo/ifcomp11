@@ -361,6 +361,7 @@ After going from the chapel when the greengrocer is waiting for you to sit:
 
 [Guess the pew when the player just types "sit":]
 Understand "sit on [the pew]" as entering.
+Understand "sit down on [the pew]" as entering.
 
 Sitting with is an action applying to one visible thing.
 Understand "sit with/beside [the greengrocer]" and "sit next to [the greengrocer]" as sitting with.
