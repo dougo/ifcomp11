@@ -565,11 +565,12 @@ Understand "fasten [something] to [something]" as attaching it to.
 Understand "feather [something] with [something]" as attaching it to (with nouns reversed).
 Understand "feather [something] with [the pen]" as attaching it to (with nouns reversed).
 Instead of putting the pen on the hat, try attaching the pen to the hat.
+Instead of inserting the pen into the hat, try attaching the pen to the hat.
 
 Instead of attaching anything to anything:
 	parser say "There's no way to attach [the noun] to [the second noun]."
 Instead of attaching the pen to the hat:
-	say "You put the quill pen onto the hat, making it a feathered hat.  It looks splendid!";
+	say "You insert the quill pen into the fabric of the hat, making it a feathered hat.  It looks splendid!";
 	now the pen is part of the hat;
 	now the description of the hat is "A splendid feathered hat."
 Understand "feathered" and "feathered hat" as the hat when the pen is part of the hat.
