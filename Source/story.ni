@@ -598,10 +598,12 @@ After unlocking the drawer with the key for the first time:
 	increment the score;
 	say "You fit the brass key into the drawer lock and turn.  With a quiet click, the drawer unlocks."
 
+After opening the drawer when the book is in the drawer, say "You open the drawer, revealing a book.  [The description of the book][line break]".
+
 Section - The Book
 
 A book is in the drawer.
-The description is "A large leather-bound volume, but with no title or other markings on the outside."
+The description is "It is a large leather-bound volume, but with no title or other markings on the outside."
 Understand "stories/story" as the book.
 
 Reading is an action applying to one touchable thing.
