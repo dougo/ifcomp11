@@ -235,8 +235,7 @@ Instead of cutting the rope with the knife:
 
 The rest of the trip into town is uneventful.  When you get to town, you head straight for the market.  You meander through the merchants['] stands until you get to the greengrocer's, only to discover an empty stand and no sign of the greengrocer.";
 	increment the score;
-	move the cranberries to the basket;
-	move the basket to the player;
+	move the cranberries to the player;
 	increase the time of day by one hour;
 	move the player to the market.	 
 
@@ -257,17 +256,17 @@ Instead of going east in the market, try going north.
 Instead of going south in the market, try going north.
 Instead of going west in the market, try going north.
 Before going north in the market:
-	say "You wander aimlessly around town for a while, not sure where to go to find the greengrocer.  The sunny cobblestone streets are full of people, but nobody pays you any attention.
+	say "You wander aimlessly around town for a long while, not sure where to go to find the greengrocer.  The sunny cobblestone streets are full of people, but nobody pays you any attention as they go about their business.  It's all a bit overwhelming, and you're starting to have second thoughts about coming to town by yourself today.
 	
-Eventually, you come to a plot of dirt where a stone building is starting to be built.  There doesn't seem to be anybody working on it today, though, so you make your way among the piles of building stones to get away from the crowds for a bit.
+Eventually, you come to a plot of dirt where a stone building is starting to be built.  There doesn't seem to be anybody working on it today, though, so you make your way among the piles of building stones to get away from the crowds.
 
 Nearby is a rickety wooden chapel that was once painted white.  The door is open, and inside it you see a familiar figure.  Could it be...?  Yes, it's the greengrocer at last!";
-	increase the time of day by ten minutes.
+	increase the time of day by one hour.
 
 Chapter - The Building Site
 
 The Building Site is north of the market.  It is in the town area.
-"Large building stones are piled around.  The chapel is to the east."
+"A large plot of dirt in the middle of town.  Building stones are piled around.  The chapel is to the east."
 
 Instead of going north in the building site, try going south.
 Instead of going west in the building site, try going south.
@@ -276,8 +275,8 @@ Instead of going south in the building site, say "You're not really sure where y
 
 Instead of going inside in the building site, try going east.
 
-Some large building stones are scenery in the building site.  "The stones are neatly cut.  This will be a fine building, if it's ever finished."
-Understand "stone", "building stone", "large building stone" as the stones.
+Some building stones are scenery in the building site.  "The stones are neatly cut.  This will be a fine building, if it's ever finished."
+Understand "stone" and "building stone" as the stones.
 
 The chapel-exterior is a privately-named backdrop in the building site.  "The rickety wooden chapel stands (or, rather, leans) to the [if the player is in the building site]east.  [The description of the front door][otherwise]south.  [The description of the back door][end if]".
 The printed name of the chapel-exterior is "the chapel".
