@@ -591,9 +591,10 @@ Understand "feathered" and "feathered hat" as the hat when the pen is part of th
 Instead of taking the pen when the pen is part of the hat:
 	say "No, you're quite proud of your feathered hat!"
 
-A chair is an enterable scenery supporter in the garden house.
+A chair is an enterable scenery supporter in the garden house.  "A plain wooden chair."
 
-Some gardening tools are scenery in the garden house.
+Some gardening tools are scenery in the garden house.  "Various tools for maintaining the garden, which apparently haven't been used in a while."
+Understand "tool" and "gardening tool" as the tools.
 
 The drawer is part of the desk.
 The drawer is closed and locked.
