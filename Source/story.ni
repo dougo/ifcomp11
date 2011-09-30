@@ -53,6 +53,8 @@ Understand "talk to [someone]" , "say [text]", "tell [someone] about [text]", "a
 	"ask [someone] for [text]", "answer [text]", "answer [text] to [someone]", "sorry", "yes", "no" as a mistake
 	("[as the parser]You don't need to converse in this story.[as normal]").
 
+Instead of exiting when the player is not inside anything, parser say "You're not inside anything."
+
 Part - The Beginning
 
 When play begins:
@@ -87,6 +89,10 @@ The print inventory without clothes rule is listed instead of the print standard
 A basket of cranberries is a container carried by the player.  The description is "Mom wove the basket for you last summer.  The cranberries are red and ripe, ready to be sold at the market."
 Instead of eating the cranberries, say "You can just imagine Dad saying, 'Don't eat the merchandise!'"
 Understand "cranberry/berry/berries" as the cranberries.
+Rule for printing the name of the basket:
+	say "basket of cranberries";
+	if the basket contains nothing:
+		omit contents in listing.
 
 An outdoor room is a kind of room.
 The sun is a backdrop.  Understand "sky" as the sun.
@@ -420,6 +426,8 @@ The fence is scenery in the garden.  "Like the chapel, the fence was once painte
 The weeds are scenery in the garden.
 Instead of cutting the weeds with the knife, say "You don't much feel like gardening."
 
+Instead of going inside in the garden, say "You can go south into the chapel or north into the garden house."
+
 The sun is in the market, the building site, and the garden.
 
 Section - The Sundial
@@ -546,6 +554,8 @@ Chapter - The Garden House
 
 The Garden House is north of the garden.  "Gardening tools are neatly arranged around the walls.  A small writing desk and chair sit in the middle.  The desktop is empty except for [if the pen is in the inkwell]a quill pen and[otherwise]an[end if] inkwell."
 The garden house is in the town area.
+Instead of exiting in the garden house, try going south.
+Instead of going outside in the garden house, try going south.
 
 A writing desk is scenery in the garden house.  "The desk has a single wide drawer underneath."
 
