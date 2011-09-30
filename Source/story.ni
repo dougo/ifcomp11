@@ -3,7 +3,7 @@
 "Last Day of Summer" by Cameron Fox.
 The story description is "It's the last day of summer, and you're old enough now to go into town by yourself."
 The story creation year is 2011.
-The release number is 4.
+The release number is 5.
 
 Part - Notes
 
@@ -84,23 +84,9 @@ This is the print inventory without clothes rule:
 		giving inventory information, with extra indentation, listing marked items only.
 The print inventory without clothes rule is listed instead of the print standard inventory rule in the carry out taking inventory rules.
 
-A basket is carried by the player.  The description is "Mom wove the basket for you last summer."
-Some cranberries are in the basket.  The description is "Red and ripe, ready to be sold at the market."
-Understand "berries" as the cranberries.
-Instead of taking the cranberries when the cranberries are in the basket and the basket is not held:
-	try taking the basket.
-Instead of removing the cranberries from the basket:
-	say "There's too many cranberries to hold in your hands."
-Instead of taking the cranberries when the cranberries are in the basket and the basket is held:
-	say "There's too many cranberries to hold in your hands."
-
-Rule for deciding whether all includes something in the basket: it does not.
-
-The cranberries are edible.  [But you can't take them to eat...]
-A cranberry is a part of the cranberries.  A cranberry is edible.  Understand "berry" as a cranberry.
-Understand "eat [a cranberry]" as eating.
-Instead of taking a cranberry, say "You can just imagine Dad saying, 'Don't eat the merchandise!'"
-Instead of examining the cranberry, try examining the cranberries.
+A basket of cranberries is a container carried by the player.  The description is "Mom wove the basket for you last summer.  The cranberries are red and ripe, ready to be sold at the market."
+Instead of eating the cranberries, say "You can just imagine Dad saying, 'Don't eat the merchandise!'"
+Understand "cranberry/berry/berries" as the cranberries.
 
 An outdoor room is a kind of room.
 The sun is a backdrop.  Understand "sky" as the sun.
@@ -384,9 +370,10 @@ After another few moments, the greengrocer looks down at the floor, saying in a 
 	now the greengrocer is done talking.
 
 Understand "sell [something] to [someone]" as showing it to.
+Understand "sell [someone] [something]" as showing it to (with nouns reversed).
 Instead of giving anything to the greengrocer, try showing the noun to the greengrocer.
 Instead of showing anything to the greengrocer:
-	say "The greengrocer doesn't seem to notice you[if the greengrocer is done talking], but is deep in his shell of sorrow[end if]."
+	say "The greengrocer is [if the greengrocer is done talking]deep in his shell of sorrow[otherwise]lost in his thoughts[end if] and doesn't react."
 Instead of showing anything to the greengrocer when the greengrocer is waiting for you to sit:
 	say "The greengrocer waves away [the noun], but motions again for you to sit."
 
