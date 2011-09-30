@@ -145,6 +145,8 @@ Instead of going south in the river area, try going home.
 Instead of drinking the river, say "You take a few sips from the river.  It's cool and refreshing."
 Understand "drink from [the river]" as drinking.
 
+Instead of inserting anything into the river, say "No, you'd never see [the noun] again."
+
 Chapter - The Rusty Knife
 
 The Scrub is west of the crossing.  "The scrub brush along the river is dense here, but it thins out downstream to the east."
