@@ -248,9 +248,11 @@ Before taking off your clothes in the town area, instead say "Not in public!"
 Chapter - The Market
 
 The Market is in the town area.  "Amid the hustle and bustle of the market is the forlorn sight of the empty greengrocer's stand."
+There is a thing called hustle and bustle.  "The market is crowded with people streaming by, doing their daily business."
 The hustle and bustle is scenery in the market.
+Understand "market/people/crowd" as the hustle and bustle.
 
-The empty greengrocer's stand is a scenery supporter in the market.  "It looks like the greengrocer never even set up his stand this morning."
+The empty greengrocer's stand is a scenery supporter in the market.  "The stand is empty of its usual heaps of fruits and vegetables.  It looks like the greengrocer never even set it up this morning."
 
 Instead of going east in the market, try going north.
 Instead of going south in the market, try going north.
