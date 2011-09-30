@@ -55,6 +55,9 @@ Understand "talk to [someone]" , "say [text]", "tell [someone] about [text]", "a
 
 Instead of exiting when the holder of the player is the location of the player, parser say "You're not inside anything."
 
+The describe room stood up into rule is not listed in any rulebook.
+The describe room emerged into rule is not listed in any rulebook.
+
 Part - The Beginning
 
 When play begins:
