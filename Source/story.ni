@@ -371,8 +371,8 @@ To relate the legend:
 After another few moments, the greengrocer looks down at the floor, saying in a quavering voice, 'But I guess I won't be hearing any more of Preacher's legends now.'";
 	now the greengrocer is done talking.
 
-Understand "sell [something] to [someone]" as showing it to.
-Understand "sell [someone] [something]" as showing it to (with nouns reversed).
+Understand "sell [something] to [someone]" as giving it to.
+Understand "sell [someone] [something]" as giving it to (with nouns reversed).
 Instead of giving anything to the greengrocer, try showing the noun to the greengrocer.
 Instead of showing anything to the greengrocer:
 	say "The greengrocer is [if the greengrocer is done talking]deep in his shell of sorrow[otherwise]lost in his thoughts[end if] and doesn't react."
@@ -515,7 +515,8 @@ After going west from the chapel when the traveler is in the building site for t
 	if the knife is enclosed by the player:
 		say "[paragraph break]";
 	otherwise:
-		say "[paragraph break](That's odd, didn't you leave the knife in [the location of the knife]?  Nope, there it is, you still have it.)";
+		let where be "[the location of the knife]" in lower case;
+		say "[paragraph break](That's odd, didn't you leave the knife in [where]?  Nope, there it is, you still have it.)";
 		move the knife to the player;
 	continue the action.
 
