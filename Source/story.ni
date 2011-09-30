@@ -157,8 +157,9 @@ Instead of going west in the scrub, say "The scrub is too dense to go any furthe
 The rusty knife is in the scrub.  "A rusty knife lies on the ground, half-buried in dirt."
 The description is "Rust covers the blade of the knife, which ends in a tattered leather hilt."
 
-The blade is a part of the knife.  "You're not sure the rust-covered blade is sharp enough to cut much."
-The tattered leather hilt is a part of the knife.  "Tattered leather covers the hilt of the knife."
+The blade is a part of the knife.  The description is "You're not sure the rust-covered blade is sharp enough to cut much."
+Understand "rust" as the blade.
+The tattered leather hilt is a part of the knife.  The description is "Tattered leather covers the hilt of the knife."
 Instead of opening [e.g. unwrapping] the leather, say "The leather is tattered, but clings stubbornly to the hilt of the knife."
 Instead of opening the knife, try opening the leather.
 
