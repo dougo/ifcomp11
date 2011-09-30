@@ -501,7 +501,7 @@ Before going north from the garden when the hat is worn for the first time:
 
 Chapter - The Man in the Hat
 
-The traveler is a man.  "The man in the hat stands here."
+The traveler is a man.  "The man in the hat [one of]stands here[or]strolls about through the building stones, idly whistling[stopping]."
 The description is "He looks like some sort of traveler.  Or, at least, he's not from around here."
 
 Understand "man", "man in the hat", "man in a hat", and "man in hat" as the traveler.
@@ -510,9 +510,7 @@ The printed name of the traveler is "man in the hat".
 Before going north in the garden for the first time, now the traveler is in the building site.
 
 After going west from the chapel when the traveler is in the building site for the first time:
-	say "As you step back out into the building site, a man in a hat walks up and peers around you through the door into the chapel.  'Oh, it looks like I'm too late,' he says, somberly.
-
-He looks you up and down for a moment, stroking his unshaven chin.  'Say, that knife reminds me of one I used to have.  I don't suppose you'd trade it to me for my hat?'[run paragraph on]";
+	say "As you step back out into the building site, a man in a hat walks up and peers around you through the door into the chapel.  'Oh, it looks like I'm too late,' he says, somberly.[paragraph break]He looks you up and down for a moment, stroking his unshaven chin.  'Say, that knife reminds me of one I used to have.  I don't suppose you'd trade it to me for my hat?'[run paragraph on]";
 	if the knife is enclosed by the player:
 		say "[paragraph break]";
 	otherwise:
@@ -528,6 +526,12 @@ Before inserting something into the hat when the hat is worn:
 Instead of wearing the hat when the hat contains something:
 	say "The hat's not empty."
 
+Instead of giving anything to the traveler, say "The man says, 'No, you'd better keep that.'"
+Instead of showing anything to the traveler, say "The man nods politely."
+
+Instead of showing the key to the traveler, say "The man looks at the key, and breaks into a grin.  'Oh, did Preacher make that?  How clever!'"
+
+Instead of showing the knife to the traveler, say "The man inspects the knife and says, 'Yes, it's a bit rustier than mine was, but it'll do nicely.'"
 Instead of giving the knife to the traveler:
 	say "You hand the knife over to the man.  He looks at it, briefly smiling to himself, then with a quick bow, tips his hat into his hand and gives it to you.  'Thank you kindly.  Wear it in good health.'  He then turns and wanders off through the piles of building stones.";
 	move the knife to the traveler;
@@ -639,6 +643,7 @@ Rule for amusing a victorious player:
 	say "Did you try...
 [paragraph break]  sitting beside the greengrocer?
 [line break]  reading the book?
+[line break]  showing the key to the traveler?
 [line break]  leaving the knife somewhere?
 [line break]  replacing the gnomon?
 [line break]  decorating your hat?
