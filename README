@@ -1,6 +1,7 @@
-This is an Inform 7 project.  Open this directory in the IDE; it will
-complain about the missing Skein, but you can ignore that.  You may
-need to install the following extensions:
+This is an Inform 7 project.  Open the "Last Day of Summer.inform"
+directory in the IDE; it will complain about the missing Skein, but
+you can ignore that.  You may need to install the following
+extensions:
 
 Default Messages by Ron Newcomb
 Neutral Library Messages by Aaron Reed
