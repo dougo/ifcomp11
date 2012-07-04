@@ -1,6 +1,6 @@
-[ Copyright © 2011, Doug Orleans.  This program is distributed under the terms of the GNU Affero General Public License.  See the file COPYING for details. ]
+[ Copyright © 2011-2012, Doug Orleans.  This program is distributed under the terms of the GNU Affero General Public License.  See the file COPYING for details. ]
 
-"Last Day of Summer" by Cameron Fox.
+"Last Day of Summer" by Doug Orleans (as "Cameron Fox").
 The story description is "It's the last day of summer, and you're old enough now to go into town by yourself."
 The story creation year is 2011.
 The release number is 6.
@@ -43,7 +43,7 @@ Release along with the source text, a public solution, the library card, the int
 Understand "* [text]" as a mistake ("Noted.").
 
 Asking about the story is an action out of world.
-Report asking about the story: say "This is the updated IF Competition 2011 version of Last Day of Summer.  Please send any comments or bug reports (preferably with transcripts) to camhfox@gmail.com.[paragraph break]Thanks to my beta testers: Theophilus Alltext, Peter Haigha Bobbin, James Edward, Guen, I.M., Sanjo Osnola, and Edmund Wells.[paragraph break]Special thanks to James for the spark, and Peter for the foundation."
+Report asking about the story: say "This is the post-comp version of Last Day of Summer.  Please send any comments or bug reports (preferably with transcripts) to dougorleans@gmail.com.[paragraph break]Last Day of Summer placed 25th in IF Comp 2011 (out of 38 entries).  There is a metapuzzle that can be solved by playing this game and three other IF Comp 2011 entries: Cold Iron, The Life (and Deaths) of Doctor M, and Playing Games; this metapuzzle won the 2011 XYZZY Award for Best Individual Puzzle.[paragraph break]Thanks to my beta testers: Brendan Desilets (as 'Theophilus Alltext'), Andrew Plotkin (as 'Peter Haigha Bobbin'), Kevin Jackson-Mead (as 'James Edward'), Adri (as 'Guen'), Iain Merrick (as 'I.M.'), Jason Alonso (as 'Sanjo Osnola'), and Michael Hilborn (as 'Edmund Wells').[paragraph break]Special thanks to Kevin for the spark, and Andrew for the foundation.[paragraph break]The source code for Last Day of Summer is available under the terms of the GNU Affero General Public License v3 from a Mercurial repository at Bitbucket: http://bitbucket.org/dougo/ifcomp11".
 Understand "about" and "credits" as asking about the story.
 
 Understand "help" and "hint" and "hints" as a mistake ("[as the parser]A walkthrough is available from the competition page.[as normal]").
