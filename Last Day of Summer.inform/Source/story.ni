@@ -90,6 +90,7 @@ This is the print inventory without clothes rule:
 The print inventory without clothes rule is listed instead of the print standard inventory rule in the carry out taking inventory rules.
 
 A basket of cranberries is a container carried by the player.  The description is "Mom wove the basket for you last summer.  The cranberries are red and ripe, ready to be sold at the market."
+Instead of searching the basket, try examining the basket.
 Instead of eating the cranberries, say "You can just imagine Dad saying, 'Don't eat the merchandise!'"
 Understand "cranberry/berry/berries" as the cranberries.
 Rule for printing the name of the basket:
