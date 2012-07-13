@@ -450,6 +450,7 @@ To say the sundial time: say "[if the knife is in the sundial]9:37 am[else][the 
 Instead of examining the sundial:
 	say "[the description of the noun][paragraph break][the description of the markings][line break]";
 	rule succeeds. [So that "we have examined the sundial" will be true.]
+Instead of searching the sundial, try examining the sundial.
 
 The brass key is a privately-named thing in the sundial.  The description is "A slender brass rod[if the key is not in the sundial] with key-teeth on one end[end if]."
 The printed name of the key is "slender brass rod".
