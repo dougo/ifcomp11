@@ -260,9 +260,9 @@ Before taking off your clothes in the town area, instead say "Not in public!"
 Chapter - The Market
 
 The Market is in the town area.  "Amid the hustle and bustle of the market is the forlorn sight of the empty greengrocer's stand."
-There is a thing called hustle and bustle.  "The market is crowded with people streaming by, doing their daily business."
-The hustle and bustle is scenery in the market.
-Understand "market/people/crowd" as the hustle and bustle.
+There are plural-named improper-named people called the crowd.  "The market is crowded with people streaming by, doing their daily business."
+The crowd is scenery in the market.
+Understand "market/people/hustle/bustle" and "hustle and bustle" as the crowd.
 
 The empty greengrocer's stand is a scenery supporter in the market.  "The stand is empty of its usual heaps of fruits and vegetables.  It looks like the greengrocer never even set it up this morning."
 
