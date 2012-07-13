@@ -312,7 +312,7 @@ To say the front door:
 	otherwise:
 		say "The front door is closed".
 Instead of searching the front door, try examining the front door.
-The Chapel is east of the front door.  "The inside of the chapel is no less ramshackle than the outside.  It's quiet, though.  [if the back door is open]A slight breeze blows in through a door to the north, bringing the scent of a garden.[otherwise]In the north wall is the back door.[end if]  The front door leads back out to the west."
+The Chapel is east of the front door.  "The inside of the chapel is no less ramshackle than the outside.  It's quiet, though.[paragraph break][if the back door is open]A slight breeze blows in through a door to the north, bringing the scent of a garden.[otherwise]In the north wall is the back door.[end if]  The front door leads back out to the west."
 It is in the town area.
 
 Instead of going outside in the chapel, try going west.
@@ -404,6 +404,10 @@ To say the back door:
 		say "The back door is closed".
 Instead of searching the back door, try examining the back door.
 Instead of examining south in the garden, try examining the back door.
+
+Instead of smelling the back door in the chapel, say "The faint scent of a garden wafts in from a door to the north."
+Instead of smelling the chapel, try smelling the back door.
+
 The Garden is north of the back door. "Behind the chapel is a small garden, if it can still be called a garden, overrun by weeds.  A sundial pokes out of the weeds in the center of the garden.  A tidy brick garden house stands to the north."
 The garden is in the town area.
 
